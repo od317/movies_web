@@ -6,7 +6,7 @@ let router = useRouter()
 let films = ref([
 {
   img:'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg',
-  title:'Avengers End Game',
+  title:'Avengers ',
   num:6
  },
  {  
@@ -15,7 +15,7 @@ let films = ref([
   num:1
  },
  {
-  img:'https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg',
+  img:'https://image.pmgstatic.com/cache/resized/w420/files/images/film/posters/167/197/167197360_88ca26.jpg',
   title:'John Wick 4',
   id:'tt10366206',
   num:2
@@ -36,7 +36,7 @@ let trans = ref(150)
 let du = ref(true)
 let slide_val = ref(150)
 
-let slide = setInterval(backward,3000)
+//let slide = setInterval(backward,3000)
 
 
 function forward  (){
@@ -46,7 +46,7 @@ function forward  (){
       let f = films.value.pop()
       films.value = [f].concat(films.value)
       trans.value=slide_val.value
-    },610)
+    },600)
     du.value=true
     films.value[0].num=1
       films.value[1].num=2
@@ -66,7 +66,7 @@ function backward (){
       films.value = films.value.slice(1)
       films.value.push(f)
       trans.value=slide_val.value
-    },610)
+    },600)
     du.value=true
       films.value[2].num=1
       films.value[3].num=2
@@ -94,18 +94,19 @@ let view = (title)=>{
       <div class=" whitespace-nowrap  ">
 
 
-        <div :class="`w-[50%]  px-[2.3%] inline-block  ${du ? 'transition-all duration-[500ms]':''}
+        <div :class="`w-[50%]  px-[2.3%] inline-block mt-[2%]  ${du ? 'transition-all duration-[500ms]':''}
           translate-x-[-${trans}%] ${f.num===1 ? ' -skew-y-6':(f.num===3? ' skew-y-6':'')}`" 
           v-for="f in films">
                   <div class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] px-[5%] flex flex-row  rounded-md bg-c2">
                     
-                         <div class="w-[50%]">
-                          <img :src="f.img" class="  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-6%] rounded-md" alt="">
+                         <div class="w-[50%]   relative">
+                          <div class="animate-pulse absolute bg-slate-700 w-[100%] h-full z-[20]  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md"></div>
+                          <img :src="f.img" class=" z-[30] h-full absolute w-full shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md" alt="">
                         </div>
 
                          <div class="p-[5%] w-[50%] whitespace-normal flex flex-col">
 
-                              <label class="lg:text-[1.3rem]">
+                              <label  class="lg:text-[1.3rem]">
                                        {{ f.title }}
                               </label>
 
@@ -150,5 +151,11 @@ let view = (title)=>{
 
 
 </template>
+<style scoped>
+@media screen and (min-width: 1526px){
+  img{
+  height: 30rem;
+}
+}
 
-
+</style>

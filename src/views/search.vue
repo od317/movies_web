@@ -36,7 +36,7 @@ fetchapi()
 
 
 <div class="md:mt-[5%] md:px-[6%] mb-[1rem] flex flex-row md:justify-start justify-evenly ">
-    <div class="group inline-block md:mr-[2%] text-black z-20">
+    <div class="group inline-block md:mr-[2%] text-white z-20">
  
   <button
     class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
@@ -66,7 +66,7 @@ fetchapi()
   </ul>
     </div>
 
-    <div class="group inline-block md:mr-[2%] text-black z-20">
+    <div class="group inline-block md:mr-[2%] text-white z-20">
  
  <button
    class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
@@ -97,7 +97,7 @@ fetchapi()
    </div>
 
 
-   <div class="group inline-block md:mr-[2%] text-black z-20 ">
+   <div class="group inline-block md:mr-[2%] text-white z-20 ">
  
  <button
    class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
@@ -131,18 +131,27 @@ fetchapi()
 
 </div>
 
-<div class=" grid grid-cols-3 h-auto md:gap-x-[1%] md:gap-y-[2%] md:grid-cols-4 lg:grid-cols-6 md:px-[6%] pb-[29%]">
-             <div   v-for="f in movies" :key="f"   class="flex flex-col relative z-10" >
-              <img   @click="console.log('ok')" class=" h-full " :src="f.image"  alt="">
-                    <div class=" absolute bg-opacity-[50%]  bg-zinc-900 p-[.5rem] h-[100%] w-[100%] flex flex-col justify-end whitespace-normal "  for="">
-                        <label for="">{{ f.title }}</label>
-                        <label for=""> <ion-icon name="star-outline"></ion-icon> 4.5</label>
-                    </div>
+<div class=" grid grid-cols-3 mt-[2%] h-auto md:gap-x-[1%] md:gap-y-[1%] md:grid-cols-4 lg:grid-cols-5 md:px-[6%] pb-[29%]">
+             <div   v-for="f in movies" :key="f"   class="flex flex-col relative  z-10" >
+                  <div class="relative pb-[150.666667%]">
+                        <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+                            <img   @click="console.log('ok')" class=" md:hover:scale-105 transition-all duration-200 cursor-pointer absolute h-full w-[100%] rounded-sm" :src="f.image"  alt="">
+                        </div>
+                        <div class=" relative hidden md:flex  bg-opacity-[50%]   md:p-[22%] lg:p-[15%] w-[100%]  flex-col justify-end whitespace-normal "  for="">
+                          <div class=" absolute w-full flex flex-col justify-center h-full bottom-0 left-0">
+                          <label class="truncate" for="">{{ f.title }}sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</label>
+                          <label for=""> <ion-icon name="star-outline"></ion-icon> 4.5</label>
+                        </div>
+                        </div>
                 </div> 
 
-                <div      class="flex flex-col relative z-10" >
-              <img   @click="console.log('ok')" class="" :src="'s'"  alt="">
-                    <div class=" absolute bg-opacity-[50%]  bg-zinc-900 p-[.5rem] h-[100%] w-[100%] flex flex-col justify-end whitespace-normal "  for="">
+                <div class="flex flex-col relative z-10" >
+                  <div class="relative lg:h-[20rem]">
+                    <div class=" h-[90%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+                    <img   @click="console.log('ok')" class="z-[30]  md:h-[18rem] lg:h-[20rem] w-[100%]" :src="'https://m.media-amaszon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg'"  alt="">
+                  </div>
+                    
+              <div class=" bg-opacity-[50%]  bg-zinc-900 p-[.5rem] h-[100%] w-[100%] flex flex-col justify-end whitespace-normal "  for="">
                         <label for="">f.title</label>
                         <label for=""> f.load </label>
                         <label for=""> <ion-icon name="star-outline"></ion-icon> 4.5</label>

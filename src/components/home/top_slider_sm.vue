@@ -2,7 +2,7 @@
     <Carousel class=""  :items-to-show="1.3" :wrap-around="true" ref="myCarousel">
       <Slide  :class="` `" v-for="slide in 5" :key="slide">
         <div  class="carousel__item w-full rounded-md">
-            <img :src="films[slide-1].img" alt="">
+            <img :src="films[slide-1].img" alt="" @load="loads(films[slide-1])">
         </div>
       </Slide>
   
@@ -17,17 +17,27 @@
   import 'vue3-carousel/dist/carousel.css'
 
   import { ref } from 'vue';
-  let films = [{
+  let films = ref([{
     img:'https://wallpapercave.com/wp/wp1817975.jpg',
+    load:false
   },{
     img:'https://wallpapercave.com/wp/wp1817975.jpg',
+    load:false
   },{
     img:'https://wallpapercave.com/wp/wp1817975.jpg',
+    load:false
   },{
     img:'https://wallpapercave.com/wp/wp1817975.jpg',
+    load:false
   },{
     img:'https://wallpapercave.com/wp/wp1817975.jpg',
-  }]
+    load:false
+  }])
+
+  let loads = (img)=>{
+    img.load=true
+    console.log(img)
+  }
 
   </script>
   

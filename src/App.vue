@@ -81,7 +81,9 @@ watch(page,()=>{
      } 
 })
 
-console.log(route.fullPath)
+let loads = ()=>{
+   console.log('ok')
+}
 
 
 </script>
@@ -91,7 +93,7 @@ console.log(route.fullPath)
 <template>
 
 
-<div class="bg-c1 text-white overflow-x-clip">
+<div class="bg-c1 text-white overflow-x-clip min-h-screen">
     
   
   <!-- lg nav_bar -->
@@ -125,8 +127,8 @@ console.log(route.fullPath)
             <div  :class="`w-[40%]  py-[1%] text-[1.2rem] flex items-center text-center ${page=='search'?'':''} justify-center`">
             <div  class=" ">
                <form class="group" @submit="search()" @submit.prevent="onSubmit" action="">
-               <button  :class="``" @click="page='search'" type="submit"><ion-icon  name="search-outline"></ion-icon></button>
-                  <input  v-model="search_q" :class="`  w-[0%] lg:group-hover:w-[80%] md:group-hover:w-[70%] transition-all duration-300  outline-none border-b-[.1rem] bg-transparent text-black text-[1.2rem]`" type="text">
+               <button  :class="``" @click="page='search'" type="submit"><ion-icon :class="`${page=='search'?'text-c2':''} `" name="search-outline"></ion-icon></button>
+                  <input  v-model="search_q" :class="`${search_q.length!==0 ? 'w-[70%]':''} text-white  w-[0%] lg:group-hover:w-[80%] ml-[4%] md:group-hover:w-[70%] md:group-hover:px-1 transition-all duration-300  outline-none border-b-[.1rem] bg-transparent  text-[1.2rem]`" type="text">
                </form>
                </div> 
          </div>
@@ -183,11 +185,15 @@ console.log(route.fullPath)
         
     </div>
 
+    <div class="">
+    </div>
+
     <router-view></router-view>
    <div class="hidden">
     <test/>
    </div>
    </div>
+   
 </template>
 
 <style>

@@ -109,8 +109,10 @@ async function fetchapi() {
 <div class="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4  justify-center items-center gap-x-[5%]">
 
   <div v-for="f in films_grid" :class="`mt-[10%]  flex flex-col ${f.c}`">
-
-    <img class="rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  md:hover:shadow-none md:hover:p-1 h-full md:transition-all   ease-in-out md:duration-300 " :src="f.img" alt="">
+   <div class="relative pb-[140.666667%]">
+                        <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+                            <img   @click="console.log('ok')" class="md:transition-all  ease-in-out md:duration-300 rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  md:hover:shadow-none md:hover:p-1 absolute h-full w-[100%]" :src="f.img"  alt="">
+                        </div>
      <label class="text-[110%]" for="">{{f.title}}</label>
      <div>
      <label for=""><ion-icon name="star"></ion-icon></label>
@@ -127,7 +129,7 @@ async function fetchapi() {
 </div>
 
 
-<label class="px-[10%] mt-[3rem] text-[110%]" for="">recommended seris</label>
+<label class="px-[10%] mt-[3rem]  text-[110%]" for="">recommended seris</label>
 
 <div class="grid grid-rows-1 file:md:grid-rows-0 md:grid-cols-2 px-[10%] mt-[1rem] ">
 
@@ -136,8 +138,7 @@ async function fetchapi() {
        </div>
        <div class="hidden h-full md:grid grid-rows-3 gap-[10%] md:pl-[5%]">
          
-             <div class=" bg-[url('https://www.vobss.com/wp-content/uploads/2022/02/viking-wallpaper-vobss-2.jpg')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
-             <div class=" bg-[url('https://www.vobss.com/wp-content/uploads/2022/02/viking-wallpaper-vobss-2.jpg')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
+             <div class=" row-span-2 bg-[url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-HD-Vikings-Images.jpg')] bg-top bg-cover shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
              <div class=" bg-[url('https://www.vobss.com/wp-content/uploads/2022/02/viking-wallpaper-vobss-2.jpg')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
 
 
@@ -147,6 +148,5 @@ async function fetchapi() {
 
 
 <div class="mt-[2rem]">osama</div>
-
 
 </template>
