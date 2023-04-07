@@ -94,7 +94,7 @@ let g1 = [
 
 <template>
 
-                <div  class=" grid grid-cols-3 md:grid-cols-5 h-auto pb-[22%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
+                <div  class=" md:pt-[3%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[22%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
                          <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
                          rounded-sm bg-center  bg-cover  transition-all duration-500
                             ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} 
@@ -197,18 +197,22 @@ let g1 = [
             </div>
 
 
-             <div class="flex flex-row items-center justify-center  bg-red-600 mt-[10%] mb-[10%]">
-                 <div class=" lg:h-[30rem] md:h-[25rem] h-[16rem] cursor-pointer bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] w-[100%] md:w-[40%] c3">
+            <div class="  mt-[9%] md:pb-[2%] md:pt-[1%]">
+            
+               <label class=" ml-[1rem] md:ml-[7%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
+            
+             <div v-motion-slide-visible-once-bottom class="flex  flex-row items-center justify-center">
+                 <div class="  lg:h-[30rem] md:h-[25rem]  h-[16rem] hover: rounded-md cursor-pointer bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] w-[100%] md:w-[40%] c3">
+                       <div class="w-full group  text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30 ">
+                                <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 md:opacity-[0%] " for="">batman</label>
+                       </div>
+                 </div>
+                 <div class=" lg:h-[30rem] md:h-[25rem] h-[16rem] rounded-md cursor-pointer bg-cover bg-center bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')] w-[100%] md:w-[40%] c3">
                        <div class="w-full group text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30">
                                 <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 md:opacity-[0%] " for="">batman</label>
                        </div>
                  </div>
-                 <div class=" lg:h-[30rem] md:h-[25rem] h-[16rem] cursor-pointer bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] w-[100%] md:w-[40%] c3">
-                       <div class="w-full group text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30">
-                                <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 md:opacity-[0%] " for="">batman</label>
-                       </div>
-                 </div>
-                 <div class=" lg:h-[30rem] md:h-[25rem] cursor-pointer bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] hidden md:inline-block md:w-[40%] c3">
+                 <div class=" lg:h-[30rem] md:h-[25rem] rounded-md cursor-pointer bg-cover bg-center bg-[url('https://www.themarysue.com/wp-content/uploads/2022/04/Everything-Everywhere-All-At-Once-Michelle-Yeoh-New-Movie-Daniels.jpg?fit=1920%2C1080')] hidden md:inline-block md:w-[40%] c3">
                        <div class="w-full group text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30">
                                 <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 opacity-[0%] " for="">batman</label>
                        </div>
@@ -216,6 +220,18 @@ let g1 = [
 
              </div>
 
+            </div>
+
+            
+            <div  class="hidden md:block mt-[10%] ">
+                <grid_lg :grid="g1"/>
+            </div>
+
+                    
+            <div class="md:hidden ">
+                <slide_sm2  :type="t1" :films="g1"/>
+            </div>
+            
 
      </div>
 s
@@ -235,6 +251,7 @@ s
    clip-path:polygon(20% 0%,100% 0% ,80% 100% , 0% 100%);
 }
 
+
 @media screen and (max-width: 1024px){
    .c2{
    clip-path:polygon(100% 0% ,75% 0%,60% 100%,100% 100%);
@@ -246,9 +263,14 @@ s
    clip-path:polygon(100% 0% ,75% 0%,60% 100%,100% 100%);
 }
 }
-@media screen and (max-width: 768x){
+@media screen and (max-width:768px){
    .c3{
-   clip-path:polygon(0% 0%,100% 0% ,100% 100%,0% 100%);
+   clip-path:polygon(0% 0%, 100% 0%,100% 100%,0% 100%);
+   margin-left: 1rem;
+   margin-right: 1rem;
 }
 }
+
+
+
 </style>
