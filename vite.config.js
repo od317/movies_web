@@ -5,6 +5,9 @@ import vue from '@vitejs/plugin-vue'
 
 
 export default defineConfig({
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+ },
   server: {
     proxy: {
       // string shorthand for simple case

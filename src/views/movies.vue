@@ -151,7 +151,7 @@ let g1 = [
 
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
-            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%]  ">
+            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
             <div class=" relative">
             <img src="https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg" class="rounded-sm bg-cover bg-center bg-no-repeat  p-0
              bg-[url('')]  h-full">
@@ -234,7 +234,6 @@ let g1 = [
             
 
      </div>
-s
 </template>
 
 <style scoped>

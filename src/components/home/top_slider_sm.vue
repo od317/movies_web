@@ -36,7 +36,6 @@
 
   let loads = (img)=>{
     img.load=true
-    console.log(img)
   }
 
   </script>

@@ -139,7 +139,7 @@ async function fetchapi() {
        <div class="hidden h-full md:grid grid-rows-3 gap-[10%] md:pl-[5%]">
          
              <div class=" row-span-2 bg-[url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-HD-Vikings-Images.jpg')] bg-top bg-cover shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
-             <div class=" bg-[url('https://www.vobss.com/wp-content/uploads/2022/02/viking-wallpaper-vobss-2.jpg')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
+             <div class=" bg-[url('https://www.scranton.edu/alumni/AlumniEvents/virtual-game-night/office-zoom.png')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
 
 
        </div>
@@ -147,6 +147,5 @@ async function fetchapi() {
 </div>
 
 
-<div class="mt-[2rem]">osama</div>
 
 </template>
