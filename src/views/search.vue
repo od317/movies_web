@@ -14,8 +14,8 @@ let router = useRouter()
 let movies = ref([])
 
 async function fetchapi() {
-//k_bb3vvmqp k_unodv9vg
-let resp  = await fetch(`https://imdb-api.com/API/AdvancedSearch/k_bb3vvmqp?title=${title}&title_type=feature,tv_series`)
+//k_bb3vvmqp k_unodv9vg k_zdj1as3m
+let resp  = await fetch(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=feature,tv_series`)
 movies.value =  await resp.json()
 movies.value =  movies.value.results
 movies.value = movies.value.filter(e=>{

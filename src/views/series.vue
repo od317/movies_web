@@ -100,46 +100,69 @@ window.scrollTo({top:0})
 
 <template>
 
-                <div  class="  md:bg-neutral-900  md:pt-[7%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
-                         <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
-                         rounded-sm bg-center  bg-cover  transition-all duration-500
-                            ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} 
-                            h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
-                           <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div>
-                            <img class="opacity-0" src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="">
-
-                        </div>
-                         <div :class="`relative group bg-[url('https://m.media-amazon.com/images/M/MV5BZWY3ODE1NDctMGE3OS00ODQxLWFjNDktMGViMTA3YTExYmI3XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg')] rounded-sm bg-center bg-cover h-[150%] md:translate-y-[5%] md:transition-all md:duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">  <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div></div>
-                         <div :class=" `relative group bg-[url('https://filmfare.wwmindia.com/content/2022/jul/thorloveandthunder51657084424.jpg')] rounded-sm bg-center h-[150%] bg-cover md:translate-y-[9%] md:transition-all md:duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] `">  <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div></div>
-                         <div :class="`relative group hidden md:inline-block bg-[url('https://m.media-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_FMjpg_UX1000_.jpg')] rounded-sm bg-center  bg-cover h-[150%] translate-y-[2%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] `">
-                            <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div>
-                            <img class="opacity-0" src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="">
-                         </div>
-                         <div :class="`hidden group relative md:inline-block bg-[url('https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg')] rounded-sm bg-center bg-cover h-[150%] translate-y-[10%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">
-                            <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div></div>
-                         <div :class="`hidden group relative lg:inline-block bg-[url('https://wallpaperaccess.com/full/6381170.jpg')] rounded-sm bg-center  bg-cover h-[150%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">
-                            <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
-                            <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
-                            </div></div>
+   <!-- large header --> 
+         <div class=" hidden md:flex flex-row   w-full">
+ 
+               <div class="w-[100%] relative  lg:pb-[44%] md:pb-[50%]  bg-neutral-900 ">
+                   
+                      <div class="w-[61%] h-full bg-[url('https://variety.com/wp-content/uploads/2016/12/always-sunny.jpg?w=1000')] z-[10] bg-cover absolute c4 "></div>
+                      <div class="w-[61%] h-full bg-slate-700   animate-pulse absolute c4 z-[5]"></div>
+                      <div class="w-[61%] h-full bg-zinc-900 bg-opacity-50 bg-cover absolute flex items-center justify-start z-[10] c4">
+                           <label class="ml-[10%] lg:text-[300%] md:text-[190%] font-bold" for=""> Collection Of Best Series</label>
+                      </div>
                 
-                        </div>
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[74.6%] md:translate-y-[91.8%] translate-x-[382%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%] bg-white   animate-pulse z-[4] c5 "></div>
+
+
+                    
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%] bg-white   animate-pulse z-[4] c5 "></div>
+                    
+                      
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[441.7%] bg-white   animate-pulse z-[4] c5 "></div>
+
+                    
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[322.5%] bg-white   animate-pulse z-[4] c5 "></div>
+                    
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[441.7%] bg-white   animate-pulse z-[4] c5 "></div>
+                    
+
+                    </div>
+
+
+         </div>
                
+
+   <!-- sm header --> 
+
+   <div class="flex flex-row justify-between mt-[10%]">
+          <div class="pb-[50%] w-[35%] pl-[5%] relative ">
+                    <img class=" absolute h-full w-[100%] opacity-[100%] z-[10] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"   src="https://cdn.europosters.eu/image/750/posters/vikings-key-art-i24091.jpg" alt="">
+                    <img class=" absolute h-[90%] w-[100%]  z-[9] rotate-[10deg] translate-x-[12%] translate-y-[-5%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="https://image.tmdb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="">
+                    <img class=" absolute h-[80%] w-[100%]  z-[8] rotate-[20deg] translate-x-[15%] translate-y-[-8%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="https://i.pinimg.com/originals/d4/65/2d/d4652d0351fd059977785a8f7a14e400.jpg" alt="">
+
+          </div>
+          <div class=" relative pb-[50%] w-[40%] pr-[5%]">
+            
+            <img class=" absolute h-full w-[85%] opacity-[100%] z-[10] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"   src="https://m.media-amazon.com/images/I/71Qv1c1zFXL._AC_UF894,1000_QL80_.jpg" alt="">
+
+          </div>
+
+   </div>
+   
+
+
+
+
 
       <div class="    md:px-[10%] ">
 
@@ -270,6 +293,15 @@ window.scrollTo({top:0})
 
 .c3{
    clip-path:polygon(20% 0%,100% 0% ,80% 100% , 0% 100%);
+}
+
+
+.c4{
+   clip-path:polygon(0% 0%,66% 0% ,100% 50%,66% 100% ,0% 100%);
+}
+
+.c5{
+   clip-path:polygon(50% 0%,100% 50% ,50% 100%,0% 50%);
 }
 
 

@@ -88,8 +88,8 @@ let view = (title)=>{
 
 <template>
 
-  <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50" @click="forward()"></button>
-  <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100] mb-10" @click="backward()"></button>
+  <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50" @click="forward()">></button>
+  <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100] mb-10" @click="backward()">></button>
 
       <div class=" whitespace-nowrap  ">
 
@@ -116,6 +116,7 @@ let view = (title)=>{
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
                                 <ion-icon name="star"></ion-icon>
+                                <label class="ml-[.4rem] mt-[5%]" for="">imbd</label>
                               </label>
 
                               <label class=" whitespace-normal md:text-[.7rem] md:max-h-[7.3rem] lg:text-[.9rem] lg:max-h-[8rem] mt-[5%]  overflow-hidden  " for="">
@@ -147,12 +148,7 @@ let view = (title)=>{
 
 
       </div>
-     <div class="flex flex-row w-full justify-center">
-      <div class="w-[41%] flex flex-row justify-center gap-[2%] pt-[1%]">
-        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50 " @click="forward()"><ion-icon name="chevron-back-outline"></ion-icon></button>
-        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100]" @click="backward()"><ion-icon name="chevron-forward-outline"></ion-icon></button>
-      </div>
-    </div>
+
 
 </template>
 <style scoped>

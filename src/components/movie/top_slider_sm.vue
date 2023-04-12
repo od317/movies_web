@@ -1,8 +1,10 @@
 <template>
     <Carousel class=""  :items-to-show="4.1" :wrap-around="false" ref="myCarousel">
-      <Slide  :class="` `" v-for="slide in 10" :key="slide">
-        <div  class="carousel__item  w-full  rounded-md ">
+      <Slide  :class="` `" v-for="slide in items.length" :key="slide">
+        <div  class="carousel__item relative w-full  rounded-md ">
             <img class=" absolute h-full w-full " :src="items[slide-1].image" alt="" >
+            <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+
         </div>
       </Slide>
   
