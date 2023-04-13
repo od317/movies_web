@@ -158,12 +158,12 @@ window.scrollTo({top:0})
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
             <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
-            <div class=" relative">
-            <img src="https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg" class="rounded-sm bg-cover bg-center bg-no-repeat  p-0
-             bg-[url('')]  h-full">
-             <div class="md:hidden absolute bg-zinc-800 bg-opacity-40 h-full w-full translate-y-[-100%]"></div>
+            <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
+            <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+              w-full h-full z-[5]"></div>
+             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
             </div>
-             <div class=" absolute hidden md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
+             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
                   <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
                   <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
                   <label class="text-start flex justify-start items-start" for="">
@@ -176,16 +176,22 @@ window.scrollTo({top:0})
                <button class="bg-c2 p-[2%] rounded">view movie</button>
                </div>
             </div>
-            <div class=" absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
-               <label class="text-[115%] mb-[5%]" for="">Spider man into ...</label>
-               <label class="text-start flex justify-start items-start" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class=" w-[50%] bg-c2 p-[2%] mt-[5%] text-white  inline-block text-start">view</button>   
+            <div class=" z-[10]  absolute md:hidden translate-y-[-100%] w-full h-full flex flex-row justify-end items-end pb-[2%] px-[3%]">
+               <div class="flex h-full w-[80%] justify-end flex-col">
+                  <label class="text-[110%] w-[90%] mb-[5%]" for="">Spider man into the spider verse</label>
+                  <label class="text-start flex justify-start items-start text-[120%]" for="">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                        <ion-icon name="star-outline"></ion-icon>
+                     </label>
+               </div>   
+
+               <div class="flex flex-row justify-end w-[20%] items-end flex-grow">
+                  <button class="  text-[110%] w-[110%] h-[20%] rounded-md text-center bg-c2 p-[2%] mt-[5%] text-white  inline-block ">view</button>
+               </div>
+                  
             </div>
 
 

@@ -2,6 +2,7 @@
 
 import {ref} from 'vue'
 import flic from '../components/home/top_slider_sm.vue'
+import flic2 from '../components/home/top_slider_sm2.vue'
 import flicl from '../components/home/top_slider_sml.vue'
 
 
@@ -102,7 +103,7 @@ window.scrollTo({top:0})
 
 <template>
 
-<div class="md:hidden">
+<div class="md:hidden pt-[2%]">
 <flic/>
 </div>
 
@@ -161,7 +162,7 @@ window.scrollTo({top:0})
      <label class="text-[150%]" for="">recommended</label>
 </div>
 
-<div class="grid grid-cols-2  md:grid-cols-3 px-[5%] md:px-[12%] pb-[15%]">
+<div class=" hidden md:grid grid-cols-3 px-[5%] md:px-[12%] pb-[15%]">
 
         <div class="mr-[2%] md:mr-[0%] md:px-[10%]">
               <div class="  relative  pb-[150%] mt-[15%] " v-for="m in rec_grid[0]">
@@ -200,5 +201,10 @@ window.scrollTo({top:0})
         
 </div>
 
+<div class="md:hidden pb-[20%]">
+
+   <flic2/>
+
+</div>
 
 </template>

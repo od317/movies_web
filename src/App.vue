@@ -161,7 +161,7 @@ watch(page,()=>{
 
   <!-- sm nav_bar -->
   
-   <div v-if="page!=='movie'" class=" md:hidden  pt-[.5rem] text-[1.5rem] w-full flex items-center justify-center">
+   <div v-if="page!=='movie'" :class="` md:hidden ${page=='series'? ' absolute z-[50]':'pt-[.5rem] pb-[2%]'}   text-[110%] w-full flex items-center justify-center`">
       <label  for="">Laith</label>
    </div>
 
@@ -220,6 +220,11 @@ watch(page,()=>{
 
 *{
    outline: none;
+}
+
+body{
+   margin: 0;
+   padding: 0;
 }
 
 </style>

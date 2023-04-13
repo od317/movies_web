@@ -13,7 +13,12 @@ module.exports = {
   theme: {
     extend: {
       transitionProperty: {
-        'width': 'width'
+        'width': 'width',
+
+      },
+      screens: {
+        'sm1': '410px',
+        'sm2': '600px',
       },
       colors:{
         c1:'#432C7A',

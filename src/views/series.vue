@@ -144,19 +144,25 @@ window.scrollTo({top:0})
 
    <!-- sm header --> 
 
-   <div class="flex flex-row justify-between mt-[10%]">
-          <div class="pb-[50%] w-[35%] pl-[5%] relative ">
-                    <img class=" absolute h-full w-[100%] opacity-[100%] z-[10] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"   src="https://cdn.europosters.eu/image/750/posters/vikings-key-art-i24091.jpg" alt="">
-                    <img class=" absolute h-[90%] w-[100%]  z-[9] rotate-[10deg] translate-x-[12%] translate-y-[-5%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="https://image.tmdb.org/t/p/original/ggFHVNu6YYI5L9pCfOacjizRGt.jpg" alt="">
-                    <img class=" absolute h-[80%] w-[100%]  z-[8] rotate-[20deg] translate-x-[15%] translate-y-[-8%] shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]" src="https://i.pinimg.com/originals/d4/65/2d/d4652d0351fd059977785a8f7a14e400.jpg" alt="">
+   <div class=" md:hidden flex flex-row pb-[80%] sm1:pb-[50%] w-[100%] relative justify-between ">
+          <div class=" absolute bg-[url('https://images7.alphacoders.com/679/679600.jpg')] bg-cover bg-center h-full w-full "></div>
+          <div class=" absolute bg-neutral-800 bg-opacity-60 bg-cover bg-center h-full w-full "></div>
+          <div class=" absolute w-full pt-[20%] pb-[20%] h-full flex justify-evenly">
 
           </div>
-          <div class=" relative pb-[50%] w-[40%] pr-[5%]">
-            
-            <img class=" absolute h-full w-[85%] opacity-[100%] z-[10] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"   src="https://m.media-amazon.com/images/I/71Qv1c1zFXL._AC_UF894,1000_QL80_.jpg" alt="">
-
+          <div class=" absolute w-full h-full flex flex-col justify-end pb-[2%] pl-[5%] ">
+                <label class="w-[70%] mb-[1%] text-[100%] sm2:text-[150%]" for="">it's always sunny in philadelphia </label>
+                <label class="text-start flex justify-start items-start text-[80%] sm2:text-[95%] mb-[2%]" for="">
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                  </label>
+                <label class="text-[60%] sm2:text-[90%] w-[98%]" for="">Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.
+                   The gang, five raging alcoholic narcissists, run a failing dive bar in South Philadelphia</label>
+                 <button class="w-[30%] mt-[2%] text-[90%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
           </div>
-
    </div>
    
 
@@ -181,12 +187,12 @@ window.scrollTo({top:0})
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
             <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
-            <div class=" relative">
-            <img src="https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg" class="rounded-sm bg-cover bg-center bg-no-repeat  p-0
-             bg-[url('')]  h-full">
-             <div class="md:hidden absolute bg-zinc-800 bg-opacity-40 h-full w-full translate-y-[-100%]"></div>
+            <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
+            <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+              w-full h-full z-[5]"></div>
+             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
             </div>
-             <div class=" absolute hidden md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
+             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
                   <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
                   <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
                   <label class="text-start flex justify-start items-start" for="">
@@ -199,20 +205,21 @@ window.scrollTo({top:0})
                <button class="bg-c2 p-[2%] rounded">view movie</button>
                </div>
             </div>
-            <div class=" absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
-               <label class="text-[115%] mb-[5%]" for="">Spider man into ...</label>
-               <label class="text-start flex justify-start items-start" for="">
+            <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
+               <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>
+               <label class="text-start flex justify-start items-start text-[120%]" for="">
                      <ion-icon name="star-outline"></ion-icon>
                      <ion-icon name="star-outline"></ion-icon>
                      <ion-icon name="star-outline"></ion-icon>
                      <ion-icon name="star-outline"></ion-icon>
                      <ion-icon name="star-outline"></ion-icon>
                   </label>
-               <button class=" w-[50%] bg-c2 p-[2%] mt-[5%] text-white  inline-block text-start">view</button>   
+               <button class=" w-[20%] text-[110%] text-center bg-c2 p-[2%] mt-[5%] text-white  inline-block ">view</button>   
             </div>
 
 
             </div>
+
 
 
 
