@@ -1,5 +1,5 @@
 <template>
-    <Carousel class=""  :items-to-show="1.5" :wrap-around="true" ref="myCarousel">
+    <Carousel class=""  :items-to-show="1.6" :wrap-around="true" ref="myCarousel">
       <Slide  :class="` `" v-for="slide in 5" :key="slide">
         <div  class="carousel__item w-full rounded-md">
             <div class="w-full pb-[120%] relative flex  justify-center ">
@@ -44,8 +44,7 @@
   
   <style scoped>
   .carousel__slide {
-  }
-  .carousel__slide div div img {
+         opacity: 1;
   }
   .carousel__slide--sliding {
   transition: 0.5s;
@@ -53,11 +52,6 @@
 
 .carousel__slide--prev {
   opacity: 1;
-
-}
-.carousel__slide--prev div div img{
-  rotate: -10deg;
-  transform: translateY(5%);
 
 }
 .carousel__slide--next {

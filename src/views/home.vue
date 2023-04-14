@@ -4,6 +4,7 @@ import {ref} from 'vue'
 import flic from '../components/home/top_slider_sm.vue'
 import flic2 from '../components/home/top_slider_sm2.vue'
 import flicl from '../components/home/top_slider_sml.vue'
+import flicl2 from '../components/home/top_slider_sml2.vue'
 
 
 
@@ -113,7 +114,7 @@ window.scrollTo({top:0})
 
 </div>
 
-<div class='px-[10%] mt-[10%]'>
+<div class=' px-[5%] md:px-[10%] mt-[10%]'>
 
   <label class="flex items-center md:text-[120%]" for=""><ion-icon class="text-[180%] md:text-[280%] text-c2 mr-[2%]" name="videocam-outline"></ion-icon>Spot Light This Month</label>
 
@@ -140,66 +141,66 @@ window.scrollTo({top:0})
 </div>
 
 
-<label class="px-[10%] mt-[3rem]  text-[110%]" for="">recommended seris</label>
+<label class="px-[5%] md:px-[10%] mt-[3rem] mb-[5%] md:mb-[2%] text-[110%]" for="">new releases</label>
+ 
+ <div class="grid grid-cols-2 md:grid-cols-4 gap-[5%] px-[5%] md:px-[10%] mb-[10%]">
+          
+   <div class="col-span-2 row-span-2 hidden md:flex flex-col justify-center  rounded-md"> 
+            <div class=" relative pb-[60%] h-[80%]  ">
+               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
+            </div>
+            <label for="">movie</label>
+            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+         </div>
+    
+         <div>
+            <div class=" relative pb-[60%] rounded-md ">
+               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
+            </div>
+            <label for="">movie</label>
+            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+         </div>
 
-<div class="grid grid-rows-1 file:md:grid-rows-0 md:grid-cols-2 px-[10%] mt-[1rem] pb-[5%]">
+         <div>
+            <div class=" relative pb-[60%] rounded-md ">
+               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
+            </div>
+            <label for="">movie</label>
+            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+         </div>
 
-       <div class="  h-full">
-         <img src="https://images.hdqwalls.com/wallpapers/vikings-2021-6l.jpg " class="shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md" alt="">
-       </div>
-       <div class="hidden h-full md:grid grid-rows-3 gap-[10%] md:pl-[5%] ">
-         
-             <div class=" row-span-2 bg-[url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Desktop-HD-Vikings-Images.jpg')] bg-top bg-cover shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
-             <div class=" bg-[url('https://www.scranton.edu/alumni/AlumniEvents/virtual-game-night/office-zoom.png')] bg-cover bg-center shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] rounded-md"></div>
+         <div>
+            <div class=" relative pb-[60%] rounded-md ">
+               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
+            </div>
+            <label for="">movie</label>
+            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+         </div>
+
+         <div>
+            <div class=" relative pb-[60%] rounded-md ">
+               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
+            </div>
+            <label for="">movie</label>
+            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+         </div>
+       
+ </div>
 
 
-       </div>
 
-</div>
-
-
-<div class="flex w-full justify-center pb-[5%]">
+<div class="flex w-full justify-center  pb-[2%]">
      <label class="text-[150%]" for="">recommended</label>
 </div>
-
-<div class=" hidden md:grid grid-cols-3 px-[5%] md:px-[12%] pb-[15%]">
-
-        <div class="mr-[2%] md:mr-[0%] md:px-[10%]">
-              <div class="  relative  pb-[150%] mt-[15%] " v-for="m in rec_grid[0]">
-                   <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-                   <div class=" absolute z-[10] translate-y-[-100%] flex flex-col" for="">
-                     <label for="">{{ m.title }}</label>
-                     <label class="text-[75%] hidden md:inline-block" for="">Action,Adventure, drama</label>
-                  </div>   
-                   <img class="absolute    md:h-full " :src="m.img" alt="">
-              </div>
-        </div>
-        
-      
-        <div class="mr-[2%] md:mr-[0%] pt-[50%] md:pt-[20%] md:px-[10%]">
-              <div class=" relative pb-[150%] mt-[15%] " v-for="m in rec_grid[0]">
-                   <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-                   <div class=" absolute z-[10] translate-y-[-100%] flex flex-col" for="">
-                     <label for="">{{ m.title }}</label>
-                     <label class="text-[75%] hidden md:inline-block" for="">Action,Adventure, drama</label>
-                  </div>   
-                   <img class="absolute  z-[5]  md:h-full " :src="m.img" alt="">                   
-               </div>
-        </div>
-
-        
-        <div class=" hidden md:inline-block mr-[2%] md:mr-[0%] md:px-[10%]">
-              <div class=" relative pb-[150%] mt-[15%]" v-for="m in rec_grid[0]">
-                   <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-                   <div class=" absolute z-[10] translate-y-[-100%] flex flex-col" for="">
-                     <label for="">{{ m.title }}</label>
-                     <label class="text-[75%] hidden md:inline-block" for="">Action,Adventure, drama</label>
-                  </div>   
-                   <img class="md:absolute    md:h-full " :src="m.img" alt="">
-              </div>
-        </div>
-        
+<div class="pb-[5%] hidden md:inline-block">
+<flicl2/>
 </div>
+
 
 <div class="md:hidden pb-[20%]">
 

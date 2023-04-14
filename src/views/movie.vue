@@ -129,8 +129,9 @@ let go = (title)=>{
                     <label class="mb-[5%]" for="">smillar movies:</label>
                     
                      <div class="grid grid-cols-2 gap-[2%]">
-                                 <div v-for="m in similars" class=" relative ">
-                                     <img :src="m.image" alt="">
+                                 <div v-for="m in similars" class=" relative pb-[150%] ">
+                                    <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
+                                     <img @click="go(m.id)" :src="m.image" class=" absolute h-full w-full" alt="">
                                  </div>
                                  <div v-if="!similars.length" class=" relative pb-[150%] mb-[2%] w-[100%] animate-pulse mr-[3%]   bg-slate-700"></div>
                                  <div v-if="!similars.length" class=" relative pb-[150%] mb-[2%] w-[100%] animate-pulse mr-[3%]   bg-slate-700"></div>
@@ -228,7 +229,7 @@ let go = (title)=>{
                                  <div v-for="m in similars" class=" relative pb-[150%]">
                                     <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
                                      <img @click="go(m.id)" class=" cursor-pointer absolute w-full h-full hover:scale-[1.05] transform-all duration-200 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px]" :src="m.image" alt="">
-                                 </div>
+                                    </div>
                                  <div v-if="!similars.length" class=" relative pb-[140%] mb-[2%] w-[100%] animate-pulse mr-[3%]   bg-slate-700"></div>
                                  <div v-if="!similars.length" class=" relative pb-[140%] mb-[2%] w-[100%] animate-pulse mr-[3%]   bg-slate-700"></div>
                                  <div v-if="!similars.length" class=" relative pb-[140%] mb-[2%] w-[100%] animate-pulse mr-[3%]   bg-slate-700"></div>
