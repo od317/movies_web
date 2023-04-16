@@ -5,7 +5,7 @@ import flic from '../components/home/top_slider_sm.vue'
 import flic2 from '../components/home/top_slider_sm2.vue'
 import flicl from '../components/home/top_slider_sml.vue'
 import flicl2 from '../components/home/top_slider_sml2.vue'
-
+import newr from '../components/home/new_r.vue'
 
 
 let films_grid = [
@@ -92,10 +92,11 @@ let rec_grid = ref([
 
 
 
-
+let over = ref(false)
 
 window.scrollTo({top:0})
 
+let l = ref(0)
 
 
 </script>
@@ -108,7 +109,7 @@ window.scrollTo({top:0})
 <flic/>
 </div>
 
-<div class="hidden md:block ">
+<div class="hidden md:block pt-[6%]">
   
       <flicl/>
 
@@ -140,72 +141,34 @@ window.scrollTo({top:0})
 </div>
 </div>
 
+<newr/>
 
-<label class="px-[5%] md:px-[10%] mt-[3rem] mb-[5%] md:mb-[2%] text-[110%]" for="">new releases</label>
- 
- <div class="grid grid-cols-2 md:grid-cols-4 gap-[5%] px-[5%] md:px-[10%] mb-[10%]">
-          
-   <div class="col-span-2 row-span-2 hidden md:flex flex-col justify-center  rounded-md"> 
-            <div class=" relative pb-[60%] h-[80%]  ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
-            </div>
-            <label for="">movie</label>
-            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
-    
-         <div>
-            <div class=" relative pb-[60%] rounded-md ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
-            </div>
-            <label for="">movie</label>
-            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
 
-         <div>
-            <div class=" relative pb-[60%] rounded-md ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
-            </div>
-            <label for="">movie</label>
-            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
-
-         <div>
-            <div class=" relative pb-[60%] rounded-md ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
-            </div>
-            <label for="">movie</label>
-            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
-
-         <div>
-            <div class=" relative pb-[60%] rounded-md ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div class=" absolute w-full h-full rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center"></div>
-            </div>
-            <label for="">movie</label>
-            <div class="flex flex-row w-full"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
-       
- </div>
 
 
 
 <div class="flex w-full justify-center  pb-[2%]">
      <label class="text-[150%]" for="">recommended</label>
 </div>
-<div class="pb-[5%] hidden md:inline-block">
+
+<div class="hidden md:block">
 <flicl2/>
 </div>
-
-
 <div class="md:hidden pb-[20%]">
-
    <flic2/>
-
 </div>
+
+
+<div class="flex w-full justify-center pb-[20%] mt-[50%] items-center">
+       <div @mouseleave="over=true" @mouseover="over=false" :class="` ${over? 'bg-blue-600':'bg-red-600' } transition-all duration-[2000ms] w-[70%] pb-[30%]  relative overflow-hidden group`">
+              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[-99.5%] w-full  translate-y-[-96%] group-hover:translate-y-[0%] transition-all duration-[500ms] "></div>
+              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[-95%] w-full  translate-y-[-99.5%] group-hover:translate-x-[0%] transition-all duration-[700ms] "></div>
+
+              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[95%] w-full  translate-y-[42.5%] group-hover:translate-x-[0%] transition-all duration-[700ms] "></div>
+              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[99.5%] w-full  translate-y-[38%] group-hover:translate-y-[0%] transition-all duration-[500ms] "></div>
+
+       </div>
+</div>
+
 
 </template>

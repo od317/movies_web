@@ -12,6 +12,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        t: 't 5s ease-in-out infinite',
+      },
+      keyframes: {
+        t: {
+          '0%, 100%': { transform: 'translateX(-100%)' }
+        }
+      },
       transitionProperty: {
         'width': 'width',
 

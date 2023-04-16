@@ -100,46 +100,49 @@ window.scrollTo({top:0})
 
 <template>
 
-                <div  class="  md:bg-neutral-900  md:pt-[7%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
+      <div  class="  md:bg-neutral-900  md:pt-[7%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
                          <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
                          rounded-sm bg-center  bg-cover  transition-all duration-500
                             ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} 
                             h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
                            <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                            <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div>
                             <img class="opacity-0" src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="">
 
                         </div>
                          <div :class="`relative group bg-[url('https://m.media-amazon.com/images/M/MV5BZWY3ODE1NDctMGE3OS00ODQxLWFjNDktMGViMTA3YTExYmI3XkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_.jpg')] rounded-sm bg-center bg-cover h-[150%] md:translate-y-[5%] md:transition-all md:duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">  <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                           <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div></div>
                          <div :class=" `relative group bg-[url('https://filmfare.wwmindia.com/content/2022/jul/thorloveandthunder51657084424.jpg')] rounded-sm bg-center h-[150%] bg-cover md:translate-y-[9%] md:transition-all md:duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] `">  <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                           <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div></div>
                          <div :class="`relative group hidden md:inline-block bg-[url('https://m.media-amazon.com/images/M/MV5BMjEwMzMxODIzOV5BMl5BanBnXkFtZTgwNzg3OTAzMDI@._V1_FMjpg_UX1000_.jpg')] rounded-sm bg-center  bg-cover h-[150%] translate-y-[2%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] `">
                             <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                              <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div>
                             <img class="opacity-0" src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="">
                          </div>
                          <div :class="`hidden group relative md:inline-block bg-[url('https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg')] rounded-sm bg-center bg-cover h-[150%] translate-y-[10%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">
                             <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                              <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div></div>
                          <div :class="`hidden group relative lg:inline-block bg-[url('https://wallpaperaccess.com/full/6381170.jpg')] rounded-sm bg-center  bg-cover h-[150%] transition-all duration-500 ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} h-[150%] shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`">
                             <div class="hidden absolute md:flex items-center justify-center w-[100%] h-[100%] ">
-                            <div class="  w-[100%] h-[0%] group-hover:h-[100%] transition-all duration-500 bg-black opacity-50 absolute"></div>
+                              <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
                             </div></div>
                 
-                        </div>
+      </div>
                
+
+      <movie_of/>
+
 
       <div class="    md:px-[10%] ">
 
@@ -212,28 +215,69 @@ window.scrollTo({top:0})
             <div class="  mt-[9%] md:pb-[2%]  md:pt-[1%]">
             
                <label class=" ml-[1rem] md:ml-[0%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
-            
-             <div v-motion-slide-visible-once-bottom class=" relative md:inline-block flex flex-row pb-[5%] md:pb-[50%] lg:pb-[40%] md:w-[95%]">
-                 <div class=" md:absolute lg:h-full md:translate-x-[-5%]  md:h-full  h-[16rem]  rounded-md cursor-pointer bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] w-[100%] md:w-[40%] c3">
-                       <div class="w-full group  text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30 ">
-                                <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 md:opacity-[0%] " for="">batman</label>
-                       </div>
-                 </div>
-                 <div class=" md:absolute lg:h-full md:translate-x-[80%] md:h-full h-[16rem] rounded-md cursor-pointer bg-cover bg-center bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')] w-[100%] md:w-[40%] c3">
-                       <div class="w-full group text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30">
-                                <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 md:opacity-[0%] " for="">batman</label>
-                       </div>
-                 </div>
-                 <div class=" absolute lg:h-full md:translate-x-[165%] md:h-full rounded-md cursor-pointer bg-cover bg-center bg-[url('https://www.themarysue.com/wp-content/uploads/2022/04/Everything-Everywhere-All-At-Once-Michelle-Yeoh-New-Movie-Daniels.jpg?fit=1920%2C1080')] hidden md:inline-block md:w-[40%] c3">
-                       <div class="w-full group text-white flex items-center justify-center h-full bg-zinc-800 bg-opacity-30">
-                                <label class="text-[150%] font-bold group-hover:opacity-[100%] transition-all duration-200 opacity-[0%] " for="">batman</label>
-                       </div>
-                 </div>
+            <div class="flex w-full justify-center items-center">
+             <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
+               
+               <div class=" cursor-pointer rounded-sm group overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
+                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')]"></div>
+                     <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
+                     <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">BATMAN</div>
+
+               
+                     <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+
+                  </div>
+
+               <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]  bg-cover bg-center">
+                  <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')]"></div>
+                  <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
+                     <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MADMAX</div>
+               
+                     <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+               </div>
+         
+               <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]   bg-cover bg-center">
+                  <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center bg-[url('https://www.themarysue.com/wp-content/uploads/2022/04/Everything-Everywhere-All-At-Once-Michelle-Yeoh-New-Movie-Daniels.jpg?fit=1920%2C1080')]"></div>
+                  <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
+                     <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MOVIE</div>
+               
+                     <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+
+                     <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
+                     <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+               </div>
 
              </div>
 
             </div>
-
+         </div>
             
            <div class="flex flex-col mt-[5%] w-full px-[2%] md:px-[0%]">
                <label class="mb-[5%] text-[150%]" for="">New Trailiers</label>
