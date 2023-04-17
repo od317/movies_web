@@ -13,13 +13,49 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        t: 't 5s ease-in-out infinite',
-      },
+        'gradient-x':'gradient-x 5s ease infinite',
+        'trans-x1':'trans-x1 12s linear infinite',
+        'trans-x2':'trans-x2 10s linear infinite',
+        'trans-x3':'trans-x3 10s  linear infinite',
+
+    },
       keyframes: {
-        t: {
-          '0%, 100%': { transform: 'translateX(-100%)' }
-        }
+        'gradient-x': {
+            '0%': {
+                'background-size':'200% 200%',
+                'background-position': 'left center'
+            },
+            '50%': {
+                'background-size':'200% 200%',
+                'background-position': 'right center'
+            },'100%': {
+              'background-size':'200% 200%',
+              'background-position': 'left center'
+          },
+        },
+        'trans-x1': {
+            '0%': {
+                'transform':'translateX(330%)',
+            },
+            '100%': {
+              'transform':'translateX(-130%)',
+          },
+        },'trans-x2': {
+          '0%': {
+              'transform':'translateX(430%)',
+          },
+          '100%': {
+            'transform':'translateX(-160%)',
+        },
+      },'trans-x3': {
+        '0%': {
+            'transform':'translateX(460%)',
+        },
+        '100%': {
+          'transform':'translateX(-130%)',
       },
+    }
+    },
       transitionProperty: {
         'width': 'width',
 

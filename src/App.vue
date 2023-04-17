@@ -105,7 +105,7 @@ watch(page,()=>{
     
   
   <!-- lg nav_bar -->
-  <div :class="`flex-col hidden md:flex z-[100]  ${page=='movie'|| page=='series' || page=='movies' ? ' absolute z-[100] w-full' : 'absolute z-[100] w-full' } lg:px-[12%] pt-[1%]`">
+  <div :class="`flex-col hidden md:flex z-[100]  ${page=='movie'|| page=='series' || page=='movies' ? ' absolute z-[100] w-full' : 'absolute z-[100] w-full' } lg:px-[10%] pt-[1%]`">
          <div :class="` flex flex-row ${page=='search'? ' transition-all duration-300' : '' } text-[1.5rem] w-full  items-center justify-between `">
             
             <div :class="`${page=='search'? '   ':''}  w-[40%] py-[1%] flex items-center justify-center`">

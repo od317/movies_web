@@ -4,7 +4,7 @@
 </script>
 <template>
 
-<div class=" translate-x-[0%]">osama</div>
+<div class=" translate-x-[0%] animate-trans-x1" >osama</div>
 <div class=" translate-x-[-100%]">osama</div>
 <div class=" translate-x-[-200%]">osama</div>
 <div class=" translate-x-[-300%]">osama</div>
@@ -27,6 +27,11 @@
 <div class=" translate-x-[-279%]">osama</div>
 <div class=" translate-x-[-379%]">osama</div>
 
-
+<div class=" translate-x-[-0%]">osama</div>
+<div class=" translate-x-[-152%]">osama</div>
+<div class=" translate-x-[-252%]">osama</div>
+<div class=" translate-x-[-352%]">osama</div>
+<div class=" translate-x-[-452%]">osama</div>
+<div class=" translate-x-[-552%]">osama</div>
 
 </template>

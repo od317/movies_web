@@ -36,7 +36,7 @@ let trans = ref(150)
 let du = ref(true)
 let slide_val = ref(150)
 
-//let slide = setInterval(backward,3000)
+let slide = setInterval(backward,3000)
 
 
 function forward  (){
