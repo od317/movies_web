@@ -101,11 +101,12 @@ window.scrollTo({top:0})
 <template>
 
    <!-- large header --> 
-         <div class=" hidden md:flex flex-row   w-full">
+         
+   <div class=" hidden md:flex flex-row   w-full">
  
                <div class="w-[100%] relative  lg:pb-[44%] md:pb-[50%]  bg-neutral-900 ">
                       <div class="w-[62%] h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   z-[10] bg-cover absolute c4 
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -119,7 +120,7 @@ window.scrollTo({top:0})
                       <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[74.6%] md:translate-y-[91.8%] translate-x-[382%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%]   z-[4] c5
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -131,7 +132,7 @@ window.scrollTo({top:0})
                       <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%]   z-[4] c5 
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -141,7 +142,7 @@ window.scrollTo({top:0})
                       <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[441.7%]    animate-pulse z-[4] c5 
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -151,7 +152,7 @@ window.scrollTo({top:0})
                       <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[322.5%]  z-[4] c5 
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -160,7 +161,7 @@ window.scrollTo({top:0})
                       <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[441.7%]     z-[4] c5 
-                      animate-gradient-xy
+                      animate-gradient-x
                       bg-gradient-to-r 
                       from-blue-400 
                       to-orange-500 
@@ -175,7 +176,7 @@ window.scrollTo({top:0})
 
    <!-- sm header --> 
 
-   <div class=" md:hidden flex flex-row pb-[80%] sm1:pb-[50%] w-[100%] relative justify-between ">
+   <div class=" md:hidden flex flex-row pb-[65%] sm1:pb-[50%] w-[100%] relative justify-between ">
           <div class=" absolute bg-[url('https://images7.alphacoders.com/679/679600.jpg')] bg-cover bg-center h-full w-full "></div>
           <div class=" absolute bg-neutral-800 bg-opacity-60 bg-cover bg-center h-full w-full "></div>
           <div class=" absolute w-full pt-[20%] pb-[20%] h-full flex justify-evenly">
@@ -265,7 +266,7 @@ window.scrollTo({top:0})
 
             <div class="  mt-[9%] md:pb-[2%]  md:pt-[1%]">
                <label class=" ml-[1rem] md:ml-[0%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
-               <div class="flex w-full justify-center items-center">
+               <div class="hidden md:flex w-full justify-center items-center">
                <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
                   
                   <div class=" cursor-pointer rounded-sm group overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
@@ -327,6 +328,25 @@ window.scrollTo({top:0})
                </div>
 
                </div>
+
+               <div class=" md:hidden px-[5%] w-full justify-center items-center">
+                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   ">
+                     
+                           <div class=" relative w-[45%]  pb-[80%]">
+                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
+
+                              </div>
+
+                           <div class=" relative w-[45%]  pb-[80%]">
+                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
+                        
+                              </div>
+
+                  </div>
+
+                  </div>
             </div>
 
             

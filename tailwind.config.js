@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'gradient-x':'gradient-x 5s ease infinite',
+        'gradient-x':'gradient-x 5s linear infinite',
         'trans-x1':'trans-x1 12s linear infinite',
         'trans-x2':'trans-x2 10s linear infinite',
         'trans-x3':'trans-x3 10s  linear infinite',
