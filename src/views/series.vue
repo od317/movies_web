@@ -185,7 +185,7 @@ window.scrollTo({top:0})
 
           </div>
           <div class=" absolute w-full h-full flex flex-col justify-end pb-[2%] pl-[5%] ">
-                <label class="w-[70%] mb-[1%] text-[100%] sm2:text-[150%]" for="">it's always sunny in philadelphia </label>
+                <label class="w-[60%] mb-[1%] text-[100%] sm2:text-[150%]" for="">it's always sunny in philadelphia </label>
                 <label class="text-start flex justify-start items-start text-[80%] sm2:text-[95%] mb-[2%]" for="">
                      <ion-icon name="star-outline"></ion-icon>
                      <ion-icon name="star-outline"></ion-icon>
@@ -195,7 +195,7 @@ window.scrollTo({top:0})
                   </label>
                 <label class="text-[60%] sm2:text-[90%] w-[98%]" for="">Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.
                    The gang, five raging alcoholic narcissists, run a failing dive bar in South Philadelphia</label>
-                 <button class="w-[30%] mt-[2%] text-[90%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
+                 <button class="w-[30%] mt-[2%] text-[90%] py-[2%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
           </div>
    </div>
    
