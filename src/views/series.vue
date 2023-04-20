@@ -224,14 +224,49 @@ window.scrollTo({top:0})
             <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
             <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
               w-full h-full z-[5]"></div>
-             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>
-             <div class=" z-[4] absolute bg-zinc-800 animate-pulse  h-full w-full "></div>             
+             <div class=" z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>
+             <div class="   z-[4] absolute bg-zinc-800 animate-pulse  h-full w-full "></div>             
             </div>
 
 
-             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   bg-gradient-to-r from-neutral-800 to-transparent translate-y-[-100%] h-[40%] w-[60%]  text-[100%] ">
+             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md    from-neutral-800/30  translate-y-[-100%] h-[100%] w-[100%]  text-[100%] ">
+            </div>
+
+            <div class=" absolute  hidden z-[10]  md:flex flex-row items-end justify-center   to-transparent translate-y-[-100%] h-[100%] w-[100%]  text-[100%] ">
+            
+                 <div class="w-[30%] h-full pr-[1%] flex flex-row justify-end items-center ">
+                          <div class=" rounded-sm w-[80%] h-[80%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://cdn.marvel.com/content/2x/GwenPoster.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                 </div>
+                 
+                 <div class="w-[70%] pl-[5%]  flex flex-col justify-center items-center h-full ">
+                           <div class="w-full h-[80%] ">
+                                    <label class="sm3:text-[150%] text-[110%] sm3:w-[30%] w-[50%]" for="">Spider Man Into The Spider Verse</label>   
+                                    
+                                    <div class="">
+                                       <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
+                                           <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                       </div>
+                                    </div>
+
+                                    <div class="mt-[5%] w-[90%] hidden sm3:inline-block">
+                                       Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider-Man. When he meets Peter Parker, he soon realizes 
+                                       that there are many others who share his special, high-flying talents. Miles must now use his newfound skills 
+                                       to battle the evil Kingpin, a hulking madman who can open portals to other 
+                                       universes and pull different versions of Spider-Man into our world.
+                                    </div>
+
+                                    <div class="mt-[5%] w-[90%] h-[30%]  overflow-hidden sm3:hidden inline-block">
+                                       Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider... 
+                                    </div>
+
+                                    <button class=" bg-c2 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
+                                    
+                           </div>
+                 </div>
 
             </div>
+
+
             <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
                <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>
                <label class="text-start flex justify-start items-start text-[120%]" for="">
@@ -264,23 +299,24 @@ window.scrollTo({top:0})
                <div class="hidden md:flex w-full justify-center items-center">
                <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
                   
-                  <div class=" cursor-pointer rounded-sm group overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
+                  
+                  <div class=" cursor-pointer rounded-sm group  overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
                         <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')]"></div>
                         <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                         <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">BATMAN</div>
 
                   
-                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-98%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[98%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[98.4%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-98.4%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
 
                      </div>
 
@@ -289,36 +325,38 @@ window.scrollTo({top:0})
                      <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                         <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MADMAX</div>
                   
-                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-98%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[98%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[98.4%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
-                  </div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-98.4%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
+
+                     </div>
             
                   <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]   bg-cover bg-center">
                      <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://www.themarysue.com/wp-content/uploads/2022/04/Everything-Everywhere-All-At-Once-Michelle-Yeoh-New-Movie-Daniels.jpg?fit=1920%2C1080')]"></div>
                      <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                         <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MOVIE</div>
                   
-                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-98%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-90%] transition-all duration-[700ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[98%] group-hover:translate-x-[90%] transition-all duration-[700ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[98.7%] translate-y-[98.4%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
 
-                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
-                  </div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[90.4%] transition-all duration-[500ms] w-full h-full "></div>
+                        <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-98.4%] group-hover:translate-y-[-90.4%] transition-all duration-[500ms] w-full h-full "></div>
+
+                     </div>
 
                </div>
 
@@ -345,20 +383,24 @@ window.scrollTo({top:0})
             </div>
 
             
-           <div class="flex flex-col mt-[5%] w-full px-[2%] md:px-[0%]">
+
+            <div class="flex flex-col mt-[5%] w-full   px-[5%] md:px-[0%]">
                <label class="mb-[5%] text-[150%]" for="">New Trailiers</label>
-               <div v-motion-slide-visible-once-left class=" group relative md:w-[60%] self-start md:pb-[35%] w-[100%] pb-[50%]  mb-[5%] rounded-md">
-                  <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
-                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/LdOM0x0XDMo`"></iframe>
-                  <img v-if="!tr1" class=" absolute w-full h-full cursor-pointer rounded-md" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
-                  <div v-if="!tr1" @click="tr1=true" class=" absolute cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full ">
+             
+               <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
+                  <div class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
+                                <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
+                  </div>
+                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="``"></iframe>
+                  <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
+                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
                           <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                                <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
                         </div>
                </div>
 
-               <div v-motion-slide-visible-once-right class=" group relative md:w-[60%] self-end md:pb-[35%] w-[100%] pb-[50%]  mb-[5%] rounded-md">
+               <div  class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
                   <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
                   <iframe v-if="tr2" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/LdOM0x0XDMo`"></iframe>
                   <img v-if="!tr2" class=" absolute w-full h-full cursor-pointer rounded-md" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">

@@ -27,6 +27,8 @@
 <div class=" translate-x-[-25%]">osama</div>
 <div class=" translate-x-[-75%]">osama</div>
 <div class=" translate-x-[-25%]">osama</div>
+<div class=" translate-x-[-125%]">osama</div>
+
 
 
 
