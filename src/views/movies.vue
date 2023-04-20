@@ -159,7 +159,40 @@ window.scrollTo({top:0})
 
 
 
+            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched movie:</label>
+            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
+            <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
+            <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+              w-full h-full z-[5]"></div>
+             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
+            </div>
+             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
+                  <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
+                  <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
+                  <label class="text-start flex justify-start items-start" for="">
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                  </label>
+               <button class="bg-c2 p-[2%] rounded">view movie</button>
+               </div>
+            </div>
+            <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
+               <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>
+               <label class="text-start flex justify-start items-start text-[120%]" for="">
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                     <ion-icon name="star-outline"></ion-icon>
+                  </label>
+               <button class=" w-[20%] text-[110%] text-center bg-c2 p-[2%] mt-[5%] text-white  inline-block ">view</button>   
+            </div>
 
+
+            </div>
 
        <div  class="  md:bg-neutral-900 hidden md:pt-[7%] lg:pt-[6%] md:grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
                          <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
@@ -300,20 +333,23 @@ window.scrollTo({top:0})
          
          
 
-           <div class="flex flex-col mt-[5%] w-full px-[2%] md:px-[0%]">
+           <div class="flex flex-col mt-[5%] w-full   px-[5%] md:px-[0%]">
                <label class="mb-[5%] text-[150%]" for="">New Trailiers</label>
-               <div v-motion-slide-visible-once-left class=" group relative md:w-[60%] self-start md:pb-[35%] w-[100%] pb-[50%]  mb-[5%] rounded-md">
-                  <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
-                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/LdOM0x0XDMo`"></iframe>
-                  <img v-if="!tr1" class=" absolute w-full h-full cursor-pointer rounded-md" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
-                  <div v-if="!tr1" @click="tr1=true" class=" absolute cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full ">
+             
+               <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
+                  <div class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
+                                <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
+                  </div>
+                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="``"></iframe>
+                  <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
+                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
                           <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                                <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
                         </div>
                </div>
 
-               <div v-motion-slide-visible-once-right class=" group relative md:w-[60%] self-end md:pb-[35%] w-[100%] pb-[50%]  mb-[5%] rounded-md">
+               <div  class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
                   <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
                   <iframe v-if="tr2" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/LdOM0x0XDMo`"></iframe>
                   <img v-if="!tr2" class=" absolute w-full h-full cursor-pointer rounded-md" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">

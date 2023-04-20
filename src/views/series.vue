@@ -111,7 +111,9 @@ window.scrollTo({top:0})
                       from-blue-400 
                       to-orange-500 
                       via-purple-500"></div>
+                      
                       <div class="w-[61%] h-full bg-[url('https://variety.com/wp-content/uploads/2016/12/always-sunny.jpg?w=1000')] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] z-[10] bg-cover absolute c4 "></div>
+                      
                       <div class="w-[61%] h-full bg-slate-700   animate-pulse absolute c4 z-[5]"></div>
                       <div class="w-[61%] h-full bg-zinc-900 bg-opacity-50 bg-cover absolute flex items-center justify-start z-[10] c4">
                            <label class="ml-[10%] lg:text-[300%] md:text-[190%] font-bold" for=""> Collection Of Best Series</label>
@@ -222,20 +224,13 @@ window.scrollTo({top:0})
             <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
             <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
               w-full h-full z-[5]"></div>
-             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
+             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>
+             <div class=" z-[4] absolute bg-zinc-800 animate-pulse  h-full w-full "></div>             
             </div>
-             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
-                  <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
-                  <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
-                  <label class="text-start flex justify-start items-start" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class="bg-c2 p-[2%] rounded">view movie</button>
-               </div>
+
+
+             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   bg-gradient-to-r from-neutral-800 to-transparent translate-y-[-100%] h-[40%] w-[60%]  text-[100%] ">
+
             </div>
             <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
                <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>

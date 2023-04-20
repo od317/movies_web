@@ -6,6 +6,20 @@ let router = useRouter()
     let uri = window.location.search.substring(1) 
     let params = new URLSearchParams(uri)
     let title = params.get("title") || ''
+    let gen = ref(params.get("gen")) || ref('all')
+    let type = ref(params.get("type")) || ref('all')
+    let sort = ref(params.get("sort")) || ref('any')
+
+
+    if(!(gen.value)||!(gen.value.length>0))
+         gen.value = 'all'
+    
+    if(!(type.value)||!(type.value.length>0))
+         type.value = 'all'
+
+    if(!(sort.value)||!(sort.value.length>0))
+         sort.value = 'all'     
+
     let start = ref(false)
     let s = setTimeout(()=>{
         start.value=true
@@ -13,14 +27,37 @@ let router = useRouter()
 
 let movies = ref([])
 
+let gens = ref([
+  'all',
+  'Action',
+  'Drama',
+  'Horror',
+  'Adventure',
+  'Comedy',
+])
+
+let sorts = ref([
+  'new to old',
+  'rating',
+  'alphabetcal',
+
+])
+
+
+
 async function fetchapi() {
 //k_bb3vvmqp k_unodv9vg k_zdj1as3m
-let resp  = await fetch(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=feature,tv_series`)
+let  t = type.value === 'all' ? "feature,tv_series":(type.value==='movie'?'feature':'tv_series')
+let g  = gen.value ==='all'? '':gen.value.toLowerCase()
+console.log(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=${t}&genres=${g}`)
+let resp  = await fetch(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=${t}&genres=${g}`)
 movies.value =  await resp.json()
 movies.value =  movies.value.results
 movies.value = movies.value.filter(e=>{
     return e.image !=='https://imdb-api.com/images/original/nopicture.jpg' && e.image !== ''
 })
+
+
 }
 
 fetchapi()
@@ -31,6 +68,38 @@ let movie_push = (title)=>{
 
 }
 
+
+let set_gen = (g)=>{
+  
+    gen.value = g
+   
+    router.push({ path: '/search', query: { title:title,gen:gen.value,type:type.value}})
+
+    let s = setTimeout(()=>{
+      if(window.location.toString().split('/')[3].substring(0,6)=='search'){
+      window.location.reload()
+      }
+      insearch.value=true  
+   },3)
+
+}
+
+
+let set_type = (t)=>{
+  type.value = t
+ 
+  router.push({ path: '/search', query: { title:title,gen:gen.value,type:type.value}})
+
+  let s = setTimeout(()=>{
+    if(window.location.toString().split('/')[3].substring(0,6)=='search'){
+    window.location.reload()
+    }
+    insearch.value=true  
+ },3)
+
+}
+
+
 </script>
 
 <template>
@@ -40,13 +109,14 @@ let movie_push = (title)=>{
 
 
 
-<div class="md:mt-[5%] md:px-[6%] mb-[1rem] flex flex-row md:justify-start justify-evenly ">
-    <div class="group inline-block md:mr-[2%]  text-white z-20">
+<div class=" md:px-[6%] mb-[1rem] flex flex-row md:justify-start justify-evenly md:pt-[10%] ">
+  
+   <div class="group relative inline-block md:mr-[2%]  text-white z-20">
  
   <button
-    class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
+    class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-t-sm flex items-center min-w-32"
   >
-    <span class="pr-1 font-semibold flex-1">Type : all</span>
+    <span class="pr-1 font-semibold flex-1">Genere: {{ gen }}</span>
     <span>
       <svg
         class="fill-current h-4 w-4 transform group-hover:-rotate-180
@@ -62,21 +132,20 @@ let movie_push = (title)=>{
   </button>
 
   <ul
-    :class="` bg-c2 rounded-sm transform scale-0 group-hover:scale-100 absolute 
+    :class="` bg-c2 rounded-b-sm transform w-full scale-0 group-hover:scale-100 absolute 
   transition duration-150 ease-in-out origin-top min-w-32`"
   >
-    <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Programming</li>
-    <li class="rounded-sm px-3 py-1 hover:bg-gray-100">DevOps</li>
-    <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Testing</li>
+    <li v-for="g in gens" @click="set_gen(g)" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${gen===g?'text-blue-500':''} `">{{ g }}</li>
+
   </ul>
     </div>
 
-    <div class="group inline-block md:mr-[2%] text-white z-20">
+    <div class="group relative inline-block md:mr-[2%]  text-white z-20">
  
  <button
-   class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
+   class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-t-sm flex items-center min-w-32"
  >
-   <span class="pr-1 font-semibold flex-1">Type : all</span>
+   <span class="pr-1 font-semibold flex-1">type: {{ type }}</span>
    <span>
      <svg
        class="fill-current h-4 w-4 transform group-hover:-rotate-180
@@ -92,45 +161,19 @@ let movie_push = (title)=>{
  </button>
 
  <ul
-   :class="` bg-c2 rounded-sm transform scale-0 group-hover:scale-100 absolute 
+   :class="` bg-c2 rounded-b-sm transform w-full scale-0 group-hover:scale-100 absolute 
  transition duration-150 ease-in-out origin-top min-w-32`"
  >
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Programming</li>
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">DevOps</li>
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Testing</li>
+   <li  @click="set_type('all')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='all'?'text-blue-500':''} `">all</li>
+   <li  @click="set_type('movie')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='movie'?'text-blue-500':''} `">movie</li>
+   <li  @click="set_type('series')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='series'?'text-blue-500':''} `">series</li>
+
  </ul>
    </div>
+   
 
 
-   <div class="group inline-block md:mr-[2%] text-white z-20 ">
- 
- <button
-   class="outline-none focus:outline-none  px-3 py-1 bg-c2 rounded-sm flex items-center min-w-32"
- >
-   <span class="pr-1 font-semibold flex-1">Type : all</span>
-   <span>
-     <svg
-       class="fill-current h-4 w-4 transform group-hover:-rotate-180
-       transition duration-150 ease-in-out"
-       xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 20 20"
-     >
-       <path
-         d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-       />
-     </svg>
-   </span>
- </button>
 
- <ul
-   :class="` bg-c2 rounded-sm transform scale-0 group-hover:scale-100 absolute 
- transition duration-150 ease-in-out origin-top min-w-32`"
- >
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Programming</li>
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">DevOps</li>
-   <li class="rounded-sm px-3 py-1 hover:bg-gray-100">Testing</li>
- </ul>
-   </div>
 
    <label for="" class="hidden items-center justify-end   md:flex flex-grow">showing {{ movies.length }} results</label>
 

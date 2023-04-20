@@ -142,12 +142,17 @@ watch(page,()=>{
 
 
             <div  :class="`w-[40%]  py-[1%] text-[1.2rem] flex items-center text-center ${page=='search'?'':''} justify-center`">
-            <div  class=" ">
-               <form class="group" @submit="search()" @submit.prevent="onSubmit" action="">
+            <div  class="group flex flex-row justify-center items-center">
+             
+               <form class="" @submit="search()" @submit.prevent="onSubmit" action="">
                <button  :class="``"  type="submit"><ion-icon :class="`${page=='search'?'':''} `" name="search-outline"></ion-icon></button>
                   <input  v-model="search_q" :class="`${search_q.length!==0 ? 'w-[70%]':'w-[0%]'} text-white   lg:group-hover:w-[80%] ml-[4%] md:group-hover:w-[70%] md:group-hover:px-1 transition-all duration-300  outline-none border-b-[.1rem] bg-transparent  text-[1.2rem]`" type="text">
                </form>
-               </div> 
+               
+
+             
+
+                  </div> 
          </div>
 
          </div>

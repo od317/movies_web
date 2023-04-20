@@ -32,15 +32,15 @@ let films = ref([
  }
 ])
 
-let trans = ref(150)
+let trans = ref(75)
 let du = ref(true)
-let slide_val = ref(150)
+let slide_val = ref(75)
 
-let slide = setInterval(backward,3000)
+//let slide = setInterval(backward,3000)
 
 
 function forward  (){
-    trans.value-=100
+    trans.value-=50
     let s = setTimeout(()=>{
       du.value=false
       let f = films.value.pop()
@@ -59,7 +59,7 @@ function forward  (){
 }
 
 function backward (){
-  trans.value+=100
+  trans.value+=50
   let s = setTimeout(()=>{
       du.value=false
       let f = films.value[0]
@@ -91,11 +91,11 @@ let view = (title)=>{
   <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50" @click="forward()"></button>
   <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100] mb-10" @click="backward()"></button>
 
-      <div class=" whitespace-nowrap  ">
+      <div :class="` whitespace-nowrap translate-x-[-${trans}%] ${du ? 'transition-all duration-[500ms]':''} `">
 
 
-        <div :class="`w-[50%]  px-[2.3%] inline-block mt-[2%]  ${du ? 'transition-all duration-[500ms]':''}
-          translate-x-[-${trans}%] ${f.num===1 ? ' -skew-y-6':(f.num===3? ' skew-y-6':'')}`" 
+        <div :class="`w-[50%]  px-[2.3%] inline-block mt-[2%]  
+           ${f.num===1 ? ' -skew-y-6':(f.num===3? ' skew-y-6':'')} ${du ? 'transition-all duration-[500ms]':''}`" 
           v-for="f in films">
                   <div class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] px-[5%] flex flex-row  rounded-md bg-c2">
                     

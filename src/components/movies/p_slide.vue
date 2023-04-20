@@ -126,7 +126,7 @@ let click = (num)=>{
 
 <template>
 
- <div class=" ">
+ <div class=" mb-[5%] ">
       <div class="w-full relative overflow-hidden md:pb-[60%] lg:pb-[44%] hidden md:flex flex-col   bg-cover bg-center ">
             
             <div :class="` ${cur===1? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://rare-gallery.com/uploads/posts/979135-Interstellar-movie-movies-astronaut-sea.jpg')] bg-cover bg-center`"></div>
@@ -169,35 +169,35 @@ let click = (num)=>{
 
                </div>
                    
-               <div :class="`relative translate-x-[${trans}%]   ${t?'transition-all duration-[500ms]':''}    h-[40%] w-full  bg-tranparent`">
+                   <div :class="`relative translate-x-[${trans}%]   ${t?'transition-all duration-[500ms]':''}    h-[40%] w-full  bg-tranparent`">
                
-                   <div @click="click(0)" :class="`  ${cur===movies[0].num ? ' p-[0%] ':'p-[.5%]'} ${click_on? 'transition-all duration-200':''}    overflow-hidden absolute w-[15%] translate-x-[-100%] h-full  ${n0?' opacity-[100%] transition-all duration-[500ms] ':' opacity-[0%] '}`">
-                        <img class="w-full" :src="movies[0].img" alt="">
+                   <div @click="click(0)" :class="`  ${cur===movies[0].num ? ' p-[0%] ':'p-[.7%]'} ${click_on? 'transition-all duration-200':''}     overflow-hidden absolute w-[15%] translate-x-[-100%] h-full  ${n0?' opacity-[100%] transition-all duration-[500ms] ':' opacity-[0%] '}`">
+                        <img :class="` w-full  ${cur===movies[0].num ? ' border-2 border-white':''} `" :src="movies[0].img" alt="">
                   </div>
 
 
-                    <div @click="click(1)"  :class="`  ${cur===movies[1].num ? '  p-[0%]':'p-[.5%]'} ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%]   translate-x-[27.333%] h-full  ${n1?' opacity-[100%]  ':' opacity-[0%] transition-all duration-[500ms]'}`">
-                        <img :class="`w-full`" :src="movies[1].img" alt="">
+                    <div @click="click(1)"  :class="`  ${cur===movies[1].num ? '  p-[0%]':'p-[.7%]'} ${click_on? 'transition-all duration-200':''}  overflow-hidden absolute w-[15%]   translate-x-[27.333%] h-full  ${n1?' opacity-[100%]  ':' opacity-[0%] transition-all duration-[500ms]'}`">
+                        <img :class="`w-full  ${cur===movies[1].num ? ' border-2 border-white':''}  `" :src="movies[1].img" alt="">
                     </div>
                     
-                    <div @click="click(2)" :class="` ${cur===movies[2].num ? ' p-[0%] ':'p-[.5%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[154.666%] h-full  `">
-                          <img class="w-full" :src="movies[2].img" alt="">
+                    <div @click="click(2)" :class="` ${cur===movies[2].num ? ' p-[0%] ':'p-[.7%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[154.666%] h-full  `">
+                          <img :class="`w-full  ${cur===movies[2].num ? ' border-2 border-white':''}`" :src="movies[2].img" alt="">
                     </div>
                     
-                    <div @click="click(3)" :class="` ${cur===movies[3].num ? 'p-[0%] ':'p-[.5%]'} ${click_on? 'transition-all duration-200':''}    overflow-hidden absolute w-[15%] translate-x-[281.999%] h-full `">
-                        <img class="w-full" :src="movies[3].img" alt="">
+                    <div @click="click(3)" :class="` ${cur===movies[3].num ? 'p-[0%] ':'p-[.7%]'} ${click_on? 'transition-all duration-200':''}    overflow-hidden absolute w-[15%] translate-x-[281.999%] h-full `">
+                        <img :class="`w-full  ${cur===movies[3].num ? ' border-2 border-white':''} `" :src="movies[3].img" alt="">
                     </div>
                     
-                    <div @click="click(4)" :class="` ${cur===movies[4].num ? ' p-[0%]':'p-[.5%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[409.332%] h-full `">
-                        <img class="w-full" :src="movies[4].img" alt="">
+                    <div @click="click(4)" :class="` ${cur===movies[4].num ? ' p-[0%]':'p-[.7%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[409.332%] h-full `">
+                        <img :class="`w-full  ${cur===movies[4].num ? ' border-2 border-white':''} `" :src="movies[4].img" alt="">
                     </div>
 
-                    <div @click="click(5)" :class="` ${cur===movies[5].num ? ' p-[0%] ':'p-[.5%]'}  ${click_on? 'transition-all duration-200':''}  overflow-hidden absolute w-[15%] translate-x-[536.665%] h-full ${n6?' opacity-[100%]  ':' opacity-[0%] transition-all duration-[500ms]'}`">
-                        <img class="w-full" :src="movies[5].img" alt="">
+                    <div @click="click(5)" :class="` ${cur===movies[5].num ? ' p-[0%] ':'p-[.7%]'}  ${click_on? 'transition-all duration-200':''}  overflow-hidden absolute w-[15%] translate-x-[536.665%] h-full ${n6?' opacity-[100%]  ':' opacity-[0%] transition-all duration-[500ms]'}`">
+                        <img :class="`w-full  ${cur===movies[5].num ? ' border-2 border-white':''} `" :src="movies[5].img" alt="">
                     </div>
 
-                    <div @click="click(6)" :class="` ${cur===movies[6].num ? ' p-[0%]':'p-[.5%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[663.956%]  h-full ${n7?' opacity-[100%] transition-all duration-[500ms] ':' opacity-[0%] '}`">
-                        <img class="w-full" :src="movies[6].img" alt="">
+                    <div @click="click(6)" :class="` ${cur===movies[6].num ? ' p-[0%]':'p-[.7%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[663.956%]  h-full ${n7?' opacity-[100%] transition-all duration-[500ms] ':' opacity-[0%] '}`">
+                        <img :class="`w-full  ${cur===movies[6].num ? ' border-2 border-white':''} `" :src="movies[6].img" alt="">
                     </div>
 
 
@@ -205,17 +205,17 @@ let click = (num)=>{
                    
                    <div class=" absolute w-[4%]   z-[5] pb-[7%] pl-[.5%] h-full flex flex-row justify-between items-end">
                        
-                        <button :disabled="t"   class=" relative shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] disabled:cursor-pointer bg-c2 w-[70%]  pb-[70%] rounded-full" @click="back()">
+                        <button :disabled="t"   class=" relative shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] disabled:cursor-pointer bg-neutral-800 bg-opacity-40 w-[70%]  pb-[70%] rounded-full" @click="back()">
                           <div class=" absolute w-full h-full flex justify-center items-center">
                               <ion-icon class="" name="chevron-back-outline"></ion-icon>
                           </div>    
                         </button>
                                      
-                  </div>
+                   </div>
 
                   <div class=" absolute w-[4%] translate-x-[2400%]   z-[5] pb-[7%] pl-[.5%] h-full flex flex-row justify-between items-end">
                        
-                       <button :disabled="t"   class=" relative shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] disabled:cursor-pointer bg-c2 w-[70%]  pb-[70%] rounded-full" @click="forw()">
+                       <button :disabled="t"   class=" relative shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] disabled:cursor-pointer bg-neutral-800 bg-opacity-40 w-[70%]  pb-[70%] rounded-full" @click="forw()">
                          <div class=" absolute w-full h-full flex justify-center items-center">
                               <ion-icon name="chevron-forward-outline"></ion-icon>
                          </div>    
@@ -231,11 +231,7 @@ let click = (num)=>{
       </div>
  </div>
  
- <button :disabled="t"   class=" relative shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] disabled:cursor-pointer bg-c2 w-[2.5%] pb-[2.5%] rounded-full" @click="forw()">
-                          <div class=" absolute w-full h-full flex justify-center items-center">
-                              <ion-icon name="chevron-forward-outline"></ion-icon>
-                          </div>    
-                        </button>        
+       
 
 </template>
 
