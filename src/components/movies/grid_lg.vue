@@ -1,30 +1,83 @@
 <script setup>
 
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+let router = useRouter()
 
 const props = defineProps({
-      grid : Array
+      grid : Array,
+      title : String
 });
+
+let title = props.title
+
+let view = (title)=>{
+  router.push(`/movie/${title}`)
+}
+
+let view2 = (title)=>{
+  router.push(`/search?gen=Action&type=movie`)
+}
+
 
 let films =  props.grid
 
+let p = (r)=>{
+  r = r.split('.')
 
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]+r[1]))/2.0))
+  
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):0
+
+  return [res,rem]
+}
 
 </script>
 <template>
 
-   <div class="w-full mb-[1rem] text-[120%]" for="">
-     Top New Movies
+   <div class="w-full mb-[1rem] capitalize text-[120%]" for="">
+     {{ title }} 
    </div>
    <div class="bg-gradient-to-r from-c2 to-c1 h-[.5rem] w-full mb-[1rem]"></div>
-   <div class="grid grid-cols-4  lg:grid-cols-6 gap-y-[5%] gap-x-[3%] mb-[5%]">
-               <div v-for="f in films" :class="`${f.class ? f.class:'block'} flex flex-col`">
-                   <img class=" rounded-md" :src="f.img" alt="">  
-                   <label for="">{{ f.title }}</label>
-                   <label for="">2022/1/1</label>
+   <div class="grid grid-cols-4  lg:grid-cols-6 gap-y-[5%] gap-x-[3%] mb-[3%]">
+               <div v-for="f in films" :class="`${f.class ? f.class:'block'} flex flex-col break-words` ">
+                <RouterLink :to="`/movie/${f.id}`" class=" relative w-[100%] pb-[150%]">
+                    <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>  
+                    <img  class=" absolute w-full cursor-pointer rounded-md h-full" :src="f.img" alt="">
+                  </RouterLink>
+                   <label class="break-words truncate capitalize" for="">{{ f.title }}</label>
+                   <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p(f.rate)[0]"  class=" star  w-[12%] pb-[12%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p(f.rate)[1]!==0"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+                   </div>
 
                </div>     
    </div>
-   <div class="flex items-center justify-end pr-[1%] ">view more</div>
-
+   
+   <div  class="flex items-center  justify-end lg:mt-[5%] mt-[15%]   pr-[1%] mb-[5%] ">
+         <button @click="view2()" class="w-[5%] cursor-pointer  text-end" >view</button>
+   </div>
 </template>
+
+<style scoped>
+
+.star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+</style>

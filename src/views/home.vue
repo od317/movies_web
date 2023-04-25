@@ -162,22 +162,6 @@ let l = ref(0)
 
 
 
-<div class="flex w-full justify-center pb-[20%] mt-[50%] items-center">
-       <div @mouseleave="over=true" @mouseover="over=false" :class="` ${over? 'bg-blue-600':'bg-red-600' } transition-all duration-[2000ms] w-[70%] pb-[30%]  relative overflow-hidden group
-                     animate-trans-x
-                     bg-gradient-to-r 
-                     from-blue-400 
-                     to-orange-500 
-                     via-purple-500`">
-              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[-99.5%] w-full  translate-y-[-96%] group-hover:translate-y-[0%] transition-all duration-[500ms] "></div>
-              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[-95%] w-full  translate-y-[-99.5%] group-hover:translate-x-[0%] transition-all duration-[700ms] "></div>
-
-              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[95%] w-full  translate-y-[42.5%] group-hover:translate-x-[0%] transition-all duration-[700ms] "></div>
-              <div class=" absolute  pb-[100%] bg-white bg-opacity-75 translate-x-[99.5%] w-full  translate-y-[38%] group-hover:translate-y-[0%] transition-all duration-[500ms] "></div>
-
-       </div>
-</div>
-
 
 
 

@@ -64,6 +64,8 @@ let go = (title)=>{
       },2)
 }
 
+window.scrollTo({top:0})
+
 
 </script>
 
@@ -148,8 +150,8 @@ let go = (title)=>{
    
 <!-- large screen -->
 
-<div class=" relative hidden md:block text-[100%]">
-       <div :class="`relative ${ backdrops[0]? '':'pb-[27%]'}`">
+<div class=" relative hidden md:block text-[100%] ">
+       <div :class="`relative shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] ${ backdrops[0]? '':'pb-[27%]'}`">
             <div v-if="!backdrops[0]" class="absolute w-full h-full bg-zinc-900 bg-opacity-40"></div>
             <div v-if="backdrops[0]" class="flex flex-row  pb-[28%]">
                   <div class="w-full h-full bg-zinc-900 absolute bg-opacity-50 z-[10] "></div>
@@ -158,9 +160,14 @@ let go = (title)=>{
             </div>
 
        </div>
-       <div class=" animate-pulse   z-[10] bg-slate-700   w-[20%] absolute translate-y-[-60%] left-[10%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] pb-[29.5%]"></div>
-      <img  class="w-[20%] absolute translate-y-[-60%] z-[11] left-[10%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" :src="img" alt="">
-             <div class=" absolute left-[35%] z-[10] md:translate-y-[-120%] lg:translate-y-[-150%]  w-[60%]  ">
+         <div class="w-[20%] absolute z-[11] translate-y-[-60%] left-[10%] ">
+            <div class=" relative z-[11]">
+                  <img  class=" z-[11] w-full opacity-[100%] absolute     shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" :src="img" alt="">
+                  <div class=" animate-pulse absolute   z-[10] bg-slate-700   w-full h-full    shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] "></div>
+                  <img  class=" z-[11] w-full opacity-0     shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" :src="img" alt="">
+            </div>
+         </div>   
+       <div class=" absolute left-[35%] z-[10] md:translate-y-[-120%] lg:translate-y-[-150%]  w-[60%]  ">
                    <div v-if="!name.length" class=" relative pb-[2%] mb-[1%] w-[30%] animate-pulse    bg-slate-700"></div>
                    <div v-if="name.length" class="  text-[200%]" for="">{{ name }}</div>
                    <div v-if="rate.length" class="mb-[1%]"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>

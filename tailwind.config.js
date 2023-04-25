@@ -17,6 +17,12 @@ module.exports = {
         'trans-x1':'trans-x1 12s linear infinite',
         'trans-x2':'trans-x2 10s linear infinite',
         'trans-x3':'trans-x3 10s  linear infinite',
+        's1':'s2 .5s  linear ',
+        's2':'s1 .5s  linear ',
+        's3':'s3 .5s  linear ',
+        's4':'s4 .5s  linear ',
+
+
 
     },
       keyframes: {
@@ -40,21 +46,70 @@ module.exports = {
             '100%': {
               'transform':'translateX(-130%)',
           },
-        },'trans-x2': {
+        },
+        'trans-x2': {
           '0%': {
               'transform':'translateX(430%)',
           },
           '100%': {
             'transform':'translateX(-160%)',
         },
-      },'trans-x3': {
+      },
+      'trans-x3': {
         '0%': {
             'transform':'translateX(460%)',
         },
         '100%': {
           'transform':'translateX(-130%)',
       },
-    }
+      },
+    
+      's1':{
+        '0%': {
+          'transform':'translateY(0%)',
+          'opacity':'1',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateY(100%)',
+          'opacity':'0',
+          'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
+      's2':{
+        '0%': {
+          'transform':'translateX(0%)',
+          'opacity':'1',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateX(-100%)',
+          'opacity':'0',
+           'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
+      's3':{
+        '0%': {
+          'transform':'translateY(0%)',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateY(-100%)',
+           'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
+      's4':{
+        '0%': {
+          'transform':'translateX(0%)',
+          'opacity':'1',
+          'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
+        },
+        '100%': {
+          'transform':'translateX(100%)',
+          'opacity':'0',
+          'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
+        },
+      },
     },
       transitionProperty: {
         'width': 'width',

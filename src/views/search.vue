@@ -100,6 +100,8 @@ let set_type = (t)=>{
 }
 
 
+window.scrollTo({top:0,behavior:'auto'})
+
 </script>
 
 <template>

@@ -49,14 +49,16 @@ let s2 = setTimeout(()=>{
 </div>
 
 
-<div class="md:hidden px-[5%] ">
+<div class="md:hidden mb-[5%] px-[5%] border-none outline-none ">
 
   <label class="text-[180%] mb-[2%] " for="">Movie of the week:</label>
-  <div class="flex flex-col justify-center relative items-center py-[5%] bg-[url('https://images3.alphacoders.com/551/551456.jpg')] bg-cover bg-center">
+  <div class="flex flex-col justify-center relative items-center border-none outline-none py-[5%] bg-[url('https://images3.alphacoders.com/551/551456.jpg')] bg-cover bg-center">
+    
     <div class=" absolute w-full h-full bg-neutral-800 bg-opacity-40"></div>
+    
     <div class=" absolute w-full h-full bg-gradient-to-t from-c1 "></div>
    
-    <div class=" relative  pb-[50%] w-[30%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
+    <div class=" relative  pb-[50%] border-none outline-none w-[30%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
     <button class=" relative   w-[30%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
  
   </div>

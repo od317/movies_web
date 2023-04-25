@@ -99,9 +99,11 @@ let view = (title)=>{
           v-for="f in films">
                   <div class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] px-[5%] flex flex-row  rounded-md bg-c2">
                     
-                         <div class="w-[50%]   relative">
-                          <div class="animate-pulse absolute bg-slate-700 w-[100%] h-full z-[20]  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md"></div>
-                          <img :src="f.img" class=" z-[30] h-full absolute w-full shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md" alt="">
+                         <div class="w-[50%]  pb-[50%]  relative">
+                           <div class="animate-pulse absolute bg-slate-700 w-[100%] h-full z-[20]  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md"></div>
+                           <div class="z-[30] overflow-hidden h-full absolute w-full shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md">
+                                <img :src="f.img" class=" z-[30] min-h-full  w-full  rounded-md" alt="">
+                           </div>
                         </div>
 
                          <div class="p-[5%] w-[50%] whitespace-normal flex flex-col">
@@ -127,11 +129,11 @@ let view = (title)=>{
 
                                 <label class="mt-[5%] hidden lg:block" for="">Cast:</label>
                                  <div class="flex-row flex-grow mt-2 gap-[.5rem] hidden lg:flex">
-                                        <div class="w-[20%] h-[40px] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
-                                        <div class="w-[20%] h-[40px] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
-                                        <div class="w-[20%] h-[40px] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
-                                        <div class="w-[20%] h-[40px] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
-                                        <div class="w-[20%] h-[40px] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
+                                        <div class="w-[20%] pb-[20%] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
+                                        <div class="w-[20%] pb-[20%] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
+                                        <div class="w-[20%] pb-[20%] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
+                                        <div class="w-[20%] pb-[20%] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
+                                        <div class="w-[20%] pb-[20%] rounded-full bg-[url('https://m.media-amazon.com/images/M/MV5BNGJmMWEzOGQtMWZkNS00MGNiLTk5NGEtYzg1YzAyZTgzZTZmXkEyXkFqcGdeQXVyMTE1MTYxNDAw._V1_.jpg')] bg-center bg-cover"  ></div>
                                  </div>
 
                                  <button @click="view(f.id)" class=" self-start place-self-end bg-c1 p-1 mt-[5%] lg:text-[1rem] lg:mt-[10%] rounded-md">View Movie</button>

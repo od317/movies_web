@@ -4,13 +4,16 @@ import {ref} from 'vue'
 import slide_sm from '../components/movies/movies_slide_sm.vue'
 import slide_sm2 from '../components/movies/movies_slide_sm2.vue'
 import grid_lg from '../components/movies/grid_lg.vue'
+import { useRouter } from 'vue-router';
+
+let router = useRouter()
 
 let started = ref(false)
 let sss = setTimeout(()=>{
    started.value=true
 },500)
 
-let t1 = 'populer on laith'
+let t1 = 'Drama series'
 let f1 = [{
     img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtVRdpi5itYx8uUSTttB789qYmVeAABEpMA&usqp=CAU',
   },{
@@ -35,74 +38,177 @@ let f1 = [{
     img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
   }]
 
-let g1 = [
+  let g1 = [
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BODgzYmFkZjAtYjhmNC00NDdkLTk4NGYtNDdiODVlNmE3ODkyXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX1000_.jpg',
+       title:'the night agent',
+       rate:'7.6',
+       id:'tt13918776'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BMTdmZjBjZjQtY2JiNS00Y2ZlLTg2NzgtMjUzMGY2OTVmOWJiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6757_AL_.jpg',
+       title:'Ted Lasso',
+       rate:'8.8',
+       id:'tt10986410'  
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_Ratio0.6757_AL_.jpg',
+       title:'The Last of Us',
+       rate:'8.9',
+       id:'tt3581920',   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.7297_AL_.jpg',
+       title:'Game of Thrones',
+       rate:'9.2',
+       id:'tt0944947'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BMmRlYmE0Y2UtNDk2Yi00NzczLWEwZTEtZmE2OTcyYzcxYmU5XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_Ratio0.7297_AL_.jpg',
+       title:'True Detective',
+       rate:'8.9',
+       id:'tt2356777'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BZDA4YmE0OTYtMmRmNS00Mzk2LTlhM2MtNjk4NzBjZGE1MmIyXkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6757_AL_.jpg',
+       title:'Better Call Saul',
+       rate:'8.9',
+       id:'ttt3032476'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_Ratio0.6757_AL_.jpg',
+       title:'Breaking Bad',
+       rate:'9.5',
+       id:'tt0903747'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie'   
+       img:'https://m.media-amazon.com/images/M/MV5BOTY5OWFmMzAtZTIxYi00NGM4LTk3YWMtY2MyYzMwOWVhZWM0XkEyXkFqcGdeQXVyMzAzNTY3MDM@._V1_Ratio0.8108_AL_.jpg',
+       title:'The Rookie',
+       rate:'8',
+       id:'tt7587890'   
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie',
-       class:'hidden lg:block'   
+       img:'https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_Ratio0.6757_AL_.jpg',
+       title:'The Walking Dead',
+       rate:'8.1',
+       id:'tt1520211'
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie',
-       class:'hidden lg:block'   
+       img:'https://m.media-amazon.com/images/M/MV5BYWJhYWQ4NzUtMjEyYy00NGYxLTgyNzctMTRhMTQ4YTVlNTBjXkEyXkFqcGdeQXVyMTMwMzY2NDAx._V1_Ratio0.6757_AL_.jpg',
+       title:'Rabbit Hole',
+       rate:'7.6',
+       id:'tt5822112'
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie',
-       class:'hidden lg:block'   
+       img:'https://m.media-amazon.com/images/M/MV5BMTU1OTdjYTUtMzA2MS00Njg4LWI1NTctMWUzYzNkNmQ5YWY3XkEyXkFqcGdeQXVyMTUwMzM5ODkz._V1_Ratio0.6757_AL_.jpg',
+       title:'The Blacklist',
+       rate:'8',
+       id:'tt2741602'
     },
     {
-       img:'https://s.yimg.com/ny/api/res/1.2/0ZXuB.N3qPpSGyFcuEXdcA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEwMzU7aD0xNTAw/https://media.zenfs.com/en/homerun/feed_manager_auto_publish_494/d05a3f087fa57f6d41b865d53a42a5f5',
-       title:'movie',
-       class:'hidden lg:block'   
+       img:'https://m.media-amazon.com/images/M/MV5BOTEyNDJhMDAtY2U5ZS00OTMzLTkwODktMjU3MjFkZWVlMGYyXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_Ratio0.8108_AL_.jpg',
+       title:'The Boys',
+       rate:'8.7',
+       id:'tt1190634'
     },
 ]
+
+
+let g2 = [
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BNDFjYTIxMjctYTQ2ZC00OGQ4LWE3OGYtNDdiMzNiNDZlMDAwXkEyXkFqcGdeQXVyNzI3NjY3NjQ@._V1_Ratio0.7568_AL_.jpg',
+       title:'Shingeki no Kyojin',
+       rate:'9.0',
+       id:'tt2560140'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BYmRhZjkyMjEtNjRkMS00MDQ0LTg2NGMtMTQ3ZjE0NjJmMjM2L2ltYWdlXkEyXkFqcGdeQXVyNTY0MTkxMTg@._V1_Ratio0.6757_AL_.jpg',
+       title:'13 Reasons Why',
+       rate:'7.5',
+       id:'tt1837492'  
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BNjRiYTIzZmUtMTFkNS00ZTM0LWE4ODAtMDliMGE4NzM5ZjVlXkEyXkFqcGdeQXVyNDQ0MTYzMDA@._V1_Ratio0.8108_AL_.jpg',
+       title:'The 100',
+       rate:'7.6',
+       id:'tt2661044',   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BODk4ZjU0NDUtYjdlOS00OTljLTgwZTUtYjkyZjk1NzExZGIzXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_Ratio0.6757_AL_.jpg',
+       title:'Vikings',
+       rate:'8.5',
+       id:'tt2306299'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BMWEzNTFlMTQtMzhjOS00MzQ1LWJjNjgtY2RhMjFhYjQwYjIzXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_Ratio0.6757_AL_.jpg',
+       title:'Sherlock',
+       rate:'9.1',
+       id:'tt1475582'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BMTg3NTkwNzAxOF5BMl5BanBnXkFtZTcwMjM1NjI5MQ@@._V1_Ratio0.6757_AL_.jpg',
+       title:'Prison Break',
+       rate:'8.3',
+       id:'tt0455275'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BYjJhMjcwNjAtODc0ZC00Yjg5LWExYzEtMzc5OWJhNjI1NTQ4XkEyXkFqcGdeQXVyNTA3MTU2MjE@._V1_Ratio0.6757_AL_.jpg',
+       title:'Daredevil',
+       rate:'8.6',
+       id:'tt3322312'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BM2QyNDIzOGMtNThhNS00NmUwLWI0ZjUtZjdkN2I1OTRjZWQ3XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.7027_AL_.jpg',
+       title:'Mr. Robot',
+       rate:'8.5',
+       id:'tt4158110'   
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_Ratio0.6757_AL_.jpg',
+       title:'Rick and Morty',
+       rate:'9.1',
+       id:'tt2861424'
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_Ratio0.6757_AL_.jpg',
+       title:'Dark',
+       rate:'8.7',
+       id:'tt5753856'
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BZjYzZDgzMmYtYjY5Zi00YTk1LThhMDYtNjFlNzM4MTZhYzgyXkEyXkFqcGdeQXVyMTE5NDQ1MzQ3._V1_Ratio0.8108_AL_.jpg',
+       title:'Peaky Blinders',
+       rate:'8.8',
+       id:'tt2442560'
+    },
+    {
+       img:'https://m.media-amazon.com/images/M/MV5BYTIxNjk3YjItYmYzMC00ZTdmLTk0NGUtZmNlZTA0NWFkZDMwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_Ratio0.6757_AL_.jpg',
+       title:'Demon Slayer: Kimetsu no Yaiba',
+       rate:'8.7',
+       id:'tt9335498'
+    },
+]
+
 
 let tr1 = ref(false)
 let tr2 = ref(false)
 
 
-window.scrollTo({top:0})
+let view = (title)=>{
+  router.push(`/movie/${title}`)
+}
 
+let stars = document.getElementById('stars')
+
+console.log(stars)
+let c1 = ref(`width:${0.75*100}%`)
 </script>
 
 <template>
 
    <!-- large header --> 
          
-   <div class=" hidden md:flex flex-row   w-full">
+   <div class=" hidden md:flex flex-row mb-[5%] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px]  w-full">
  
                <div class="w-[100%] relative  lg:pb-[44%] md:pb-[50%]  bg-neutral-900 ">
                       <div class="w-[62%] h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   z-[10] bg-cover absolute c4 
@@ -119,7 +225,7 @@ window.scrollTo({top:0})
                            <label class="ml-[10%] lg:text-[300%] md:text-[190%] font-bold" for=""> Collection Of Best Series</label>
                       </div>
                 
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div @click="view('tt4574334')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2222,w_1500/https%3A%2F%2Fnetflixlife.com%2Ffiles%2F2022%2F02%2FEN_ST4_Teaser_Russia_Vertical_27x40_RGB.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[74.6%] md:translate-y-[91.8%] translate-x-[382%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%]   z-[4] c5
                       animate-gradient-x
@@ -131,7 +237,7 @@ window.scrollTo({top:0})
 
 
                     
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://tv-fanatic-res.cloudinary.com/iu/s--ZCvgnNPQ--/f_auto,q_auto/v1371070346/the-office-poster')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%]   z-[4] c5 
                       animate-gradient-x
@@ -141,7 +247,7 @@ window.scrollTo({top:0})
                       via-purple-500"></div>
                     
                       
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://sportshub.cbsistatic.com/i/2022/07/25/b87bfa41-24d7-4041-8bbe-e219c41aba52/the-sandman-netflix-poster.jpg?auto=webp&width=1500&height=2222&crop=0.675:1,smart')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[441.7%]    animate-pulse z-[4] c5 
                       animate-gradient-x
@@ -151,7 +257,7 @@ window.scrollTo({top:0})
                       via-purple-500"></div>
 
                     
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bb48ffc1-bf25-486b-a056-63c3bfce1223/dezxpmc-3c5f9b10-d54c-4810-9e20-dac8b46a7769.jpg/v1/fill/w_1280,h_1921,q_75,strp/moon_knight__2022__poster_by_bakikayaa_dezxpmc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcL2JiNDhmZmMxLWJmMjUtNDg2Yi1hMDU2LTYzYzNiZmNlMTIyM1wvZGV6eHBtYy0zYzVmOWIxMC1kNTRjLTQ4MTAtOWUyMC1kYWM4YjQ2YTc3NjkuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.W1JcQogodBJQJrBONWqTD_4M7cy6-p6yszxi5xKD4PE')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[322.5%]  z-[4] c5 
                       animate-gradient-x
@@ -160,7 +266,7 @@ window.scrollTo({top:0})
                       to-orange-500 
                       via-purple-500"></div>
                     
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://wallpaperaccess.com/full/1112742.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://m.media-amazon.com/images/I/71xd2Jh8U1L._AC_UF894,1000_QL80_.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[441.7%]     z-[4] c5 
                       animate-gradient-x
@@ -212,7 +318,7 @@ window.scrollTo({top:0})
             </div>
 
             <div  class="hidden md:block">
-                <grid_lg :grid="g1"/>
+                <grid_lg :title="t1" :grid="g1"/>
             </div>
 
 
@@ -258,9 +364,10 @@ window.scrollTo({top:0})
                                     <div class="mt-[5%] w-[90%] h-[30%]  overflow-hidden sm3:hidden inline-block">
                                        Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider... 
                                     </div>
-
-                                    <button class=" bg-c2 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
                                     
+                                    <RouterLink :to="`/movie/tt4633694`" class="hover:text-white">
+                                     <button class=" bg-c2 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
+                                    </RouterLink>
                            </div>
                  </div>
 
@@ -286,12 +393,12 @@ window.scrollTo({top:0})
 
 
             <div  class="hidden md:block mt-[10%] ">
-                <grid_lg :grid="g1"/>
+                <grid_lg :grid="g2"/>
             </div>
 
                     
             <div class="md:hidden ">
-                <slide_sm2  :type="t1" :films="g1"/>
+                <slide_sm2  :title="t1" :films="g2"/>
             </div>
 
             <div class="  mt-[9%] md:pb-[2%]  md:pt-[1%]">
@@ -385,14 +492,14 @@ window.scrollTo({top:0})
             
 
             <div class="flex flex-col mt-[5%] w-full   px-[5%] md:px-[0%]">
-               <label class="mb-[5%] text-[150%]" for="">New Trailiers</label>
+               <label class="mb-[5%] text-[150%]" for="">New Trailers</label>
              
                <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
-                  <div class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
+                  <div v-if="tr1" class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
-                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="``"></iframe>
-                  <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
+                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
+                  <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
                   <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
                           <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                                <ion-icon class="" name="play-outline"></ion-icon>
@@ -400,24 +507,35 @@ window.scrollTo({top:0})
                         </div>
                </div>
 
-               <div  class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
-                  <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
-                  <iframe v-if="tr2" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/LdOM0x0XDMo`"></iframe>
-                  <img v-if="!tr2" class=" absolute w-full h-full cursor-pointer rounded-md" src="https://image.tmdb.org/t/p/original/i8dshLvq4LE3s0v8PrkDdUyb1ae.jpg" alt="">
-                  <div v-if="!tr2" @click="tr2=true" class=" absolute cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full ">
+         
+
+               <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
+                  <div v-if="tr2" class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
+                                <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
+                  </div>
+                  <iframe v-if="tr2" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/3bhBYJYuabg`"></iframe>
+                  <img  :class="` absolute ${!tr2?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg" alt="">
+                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
                           <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                                <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
                         </div>
                </div>
+
+
+
             </div>
 
      </div>
      
+
 </template>
 
 <style scoped>
 
+.star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
 .c{
    clip-path:polygon(80% 0,100% 100%, 0 80%,0 0);
 }
