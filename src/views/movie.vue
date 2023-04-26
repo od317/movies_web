@@ -27,6 +27,7 @@ let date = ref('')
 let genre = ref([])
 let similars = ref([
      ])
+let runtime = ref('')     
 async function fetchapi() {
 
   let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
@@ -45,6 +46,7 @@ async function fetchapi() {
     genre.value = data.genreList
     rate.value = data.imDbRating
     date.value = data.releaseDate
+    runtime.value = data.runtimeStr
 }
 
 
@@ -152,22 +154,98 @@ window.scrollTo({top:0})
 
 <div class=" relative hidden md:block text-[100%] ">
        <div :class="`relative shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] ${ backdrops[0]? '':'pb-[27%]'}`">
-            <div v-if="!backdrops[0]" class="absolute w-full h-full bg-zinc-900 bg-opacity-40"></div>
-            <div v-if="backdrops[0]" class="flex flex-row  pb-[28%]">
-                  <div class="w-full h-full bg-zinc-900 absolute bg-opacity-50 z-[10] "></div>
-                  <img v-if="backdrops[0]" class=" absolute  h-full w-[50%] " :src="backdrops[0].link" alt="">
-                  <img v-if="backdrops[1]" class=" absolute translate-x-[100%]  h-full w-[50%]" :src="backdrops[1].link" alt="">
+            <div v-if="!backdrops[0]" class="absolute w-full h-full bg-zinc-900  bg-opacity-40"></div>
+            <div v-if="backdrops[0]" class="flex flex-col justify-end  h-screen">
+                  <div class="w-full h-[60%] z-[5] bg-gradient-to-t from-zinc-900 from-1% to-transparent  to-99%  absolute bg-opacity-30  "></div>
+                  <div  class="   h-screen w-[100%] absolute bg-cover bg-center flex flex-col justify-end z-[4] " :style="` background-image:url(${backdrops[0].link})`" alt="">
+                  </div>
+                  <div class="  h-screen w-[100%] z-[6] pb-[4%] pl-[10%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
+    
+                      
+                        <div class="w-[47%]">     
+                                    <label class="text-[200%]" for="">{{name}}</label>
+                                    <div class="flex flex-row gap-[10%] w-[100%]">
+                                    
+                                          <div class="flex flex-row justify-center items-center">
+                                                <ion-icon class=" text-orange-500 translate-y-[-2%]" name="star"></ion-icon>{{ rate }}
+                                          </div>
+
+                                          <div class="">
+                                                {{ runtime }}
+                                          </div>
+
+                                          <div class="flex flex-row gap-[10%]">
+                                                <label  for="">
+                                                      {{ genre[0].key }}
+                                                </label>
+
+                                                <label  for="">
+                                                      {{ genre[1].key }}
+                                                </label>
+
+                                                <label  for="">
+                                                      {{ genre[2].key }}
+                                                </label>
+                                          </div>
+            
+                                          <div class="">
+                                                {{ date }}
+                                          </div>
+
+                                    </div>
+
+                                    <div class="w-[100%] mt-[2%]">{{ plot }}</div>
+
+                                    <div class=" flex flex-row mt-[10%] w-[50%] gap-[2%] mb-[2%]">
+
+                                          <button class="bg-blue-500 px-[5%]">view</button>
+                                          <button class="bg-blue-500 px-[5%]">view</button>
+
+                                    </div>
+                         </div> 
+
+                    
+                         <div class="w-[42%] flex flex-col ">     
+                              
+                              <div class="flex flex-col">
+                                       <label for="">Posters</label>
+                              </div>
+                          
+                              <div class="flex flex-col mt-[10%] mb-[1%]">
+                                       <label class="mb-[1%]" for="">Actors</label>
+                                       
+                                       <div class="flex flex-row">
+                                             <div v-for="i in 5" class="w-[10%] flex flex-col items-center  mr-[2%] ">
+                                                <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
+                                                      <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
+                                                      <div class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>
+                                                </div> 
+                                                <label class="text-[50%] text-center" for="">{{ cast[i-1].name }}</label>
+                                             </div>  
+
+                                             <button class=" bg-neutral-800 ">see full</button>
+
+                                       </div>
+
+                              </div>
+
+
+                         </div> 
+
+
+
+                  </div>
             </div>
 
        </div>
-         <div class="w-[20%] absolute z-[11] translate-y-[-60%] left-[10%] ">
+         <div class="w-[20%] absolute z-[11] hidden translate-y-[-60%] left-[10%] ">
             <div class=" relative z-[11]">
                   <img  class=" z-[11] w-full opacity-[100%] absolute     shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" :src="img" alt="">
                   <div class=" animate-pulse absolute   z-[10] bg-slate-700   w-full h-full    shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] "></div>
                   <img  class=" z-[11] w-full opacity-0     shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]" :src="img" alt="">
             </div>
          </div>   
-       <div class=" absolute left-[35%] z-[10] md:translate-y-[-120%] lg:translate-y-[-150%]  w-[60%]  ">
+       <div class=" absolute left-[35%] hidden z-[10] md:translate-y-[-120%] lg:translate-y-[-150%]  w-[60%]  ">
                    <div v-if="!name.length" class=" relative pb-[2%] mb-[1%] w-[30%] animate-pulse    bg-slate-700"></div>
                    <div v-if="name.length" class="  text-[200%]" for="">{{ name }}</div>
                    <div v-if="rate.length" class="mb-[1%]"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
@@ -176,7 +254,7 @@ window.scrollTo({top:0})
                    <div v-if="!date.length" class=" relative pb-[2%] mb-[1%] w-[20%] animate-pulse    bg-slate-700"></div>
                    <div v-if="date.length" for="">{{ date }}</div>
             </div>
-            <div class=" absolute left-[35%] ">
+            <div class=" absolute hidden left-[35%] ">
                   <label class="mb-[1%] text-[110%] mt-[1%]" for="">storyline:</label>
                   <label class="text-[100%] md:pr-[20%] lg:pr-[30%]" for="">{{ plot }}</label>
                   <div v-if="!plot.length" class=" relative pb-[50%] mb-[5%] w-[520%] animate-pulse    bg-slate-700"></div>
@@ -200,7 +278,9 @@ window.scrollTo({top:0})
                     <div class="flex flex-row justify-between " v-if="cast.length>0" >
                         <div v-for="i in 5" class="w-[19%] relative h-auto pb-[30%]">
                               <div class=" absolute w-full h-full animate-pulse mr-[3%]   bg-slate-700"></div>
-                              <img class="rounded-sm h-full absolute " :src="cast[i-1].image" alt="">
+
+                              <div class="rounded-sm h-full absolute w-full bg-center bg-cover" :style="` background-image:url(${cast[i-1].image})`"  alt=""></div>
+
                               <label class="text-center w-full absolute h-full flex pt-[145%] justify-center translate-y-[10%]" for="">{{ cast[i-1].name }}</label>
                         </div>
                        </div>

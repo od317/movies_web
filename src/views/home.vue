@@ -10,43 +10,51 @@ import movie_of from '../components/home/movie_of.vue'
 
 let films_grid = [
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'The Mandalorian',
+   rate:'8.7',
+   img:'https://external-preview.redd.it/the-mandalorian-season-3-ep-1-35-minutes-16-seconds-v0-zAsAQZFS9wDTTwRa42NWRjEZdqVEp12ptrI1ZPk48XY.jpg?width=640&crop=smart&auto=webp&s=f6e244a74485ddd93d8108d1281da6582f4a8771',
    c:'hidden lg:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'Beef',
+   rate:'8.3',
+   img:'https://m.media-amazon.com/images/M/MV5BOTNjOGVkYTctYjE1ZS00MTBhLTlkOTAtMGUzODZlNjAxMGM3XkEyXkFqcGdeQXVyNDk3MzMwMTI@._V1_FMjpg_UX1000_.jpg',
    c:'hidden lg:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'Succession',
+   rate:'8.8',
+   img:'https://m.media-amazon.com/images/M/MV5BZTY0YjU0NTUtMGRmNS00NDMyLWI2MzYtNjM2MmM1M2FkMjkyXkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_FMjpg_UX1000_.jpg',
    c:'hidden md:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'The Super Mario Bros. Movie',
+   rate:'7.3',
+   img:'https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_FMjpg_UX1000_.jpg',
    c:'hidden md:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'The Night Agent',
+   rate:'7.6',
+   img:'https://m.media-amazon.com/images/M/MV5BODgzYmFkZjAtYjhmNC00NDdkLTk4NGYtNDdiODVlNmE3ODkyXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_FMjpg_UX1000_.jpg',
    c:'sm:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:' The Last Kingdom: Seven Kings',
+   rate:'7',
+   img:'https://m.media-amazon.com/images/M/MV5BOTlmNGE0ZGMtMzdkMC00MjQyLWI1ZjgtZTIxODAyNWJlZDFlXkEyXkFqcGdeQXVyNTQ4ODM2NjM@._V1_FMjpg_UX1000_.jpg',
    c:'sm:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'Ted Lasso',
+   rate:'8.8',
+   img:'https://m.media-amazon.com/images/M/MV5BMTdmZjBjZjQtY2JiNS00Y2ZlLTg2NzgtMjUzMGY2OTVmOWJiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg',
    c:'sm:inline-block'
 },
 {
-   title:'movie',
-   img:'https://images.ottplay.com/images/Interstellar_2014_movie_photo_16.jpg',
+   title:'Everything Everywhere All at Once',
+   rate:'7.9',
+   img:'https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg',
    c:'sm:inline-block'
 },]
 
@@ -99,6 +107,18 @@ window.scrollTo({top:0})
 let l = ref(0)
 
 
+
+let p = (r)=>{
+  r = r.split('.')
+
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
+  
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+
+  return [res,rem]
+}
+
+
 </script>
 
 
@@ -126,14 +146,25 @@ let l = ref(0)
                         <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
                             <img   @click="console.log('ok')" class="md:transition-all  ease-in-out md:duration-300 rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  md:hover:shadow-none md:hover:p-1 absolute h-full w-[100%]" :src="f.img"  alt="">
                         </div>
-     <label class="text-[110%]" for="">{{f.title}}</label>
-     <div>
-     <label for=""><ion-icon name="star"></ion-icon></label>
-     <label for=""><ion-icon name="star"></ion-icon></label>
-     <label for=""><ion-icon name="star"></ion-icon></label>
-     <label for=""><ion-icon name="star"></ion-icon></label>
-     <label for=""><ion-icon name="star"></ion-icon></label> 
-    </div>
+     <label class="text-[110%] truncate w-[90%]" for="">{{f.title}}</label>
+                <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p(f.rate)[0]"  class=" star  w-[8%] pb-[8%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p(f.rate)[1]!==0"   class=" star w-[8%] bg-white   pb-[8%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+                   </div>
   </div>
 
 
@@ -166,3 +197,11 @@ let l = ref(0)
 
 
 </template>
+
+<style scoped>
+
+.star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+</style>
