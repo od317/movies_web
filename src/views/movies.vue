@@ -710,8 +710,8 @@ window.scrollTo({top:0})
                   <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/32RAq6JzY-w`"></iframe>
                   <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2023/03/Fast-X.jpg?fit=1392%2C696&ssl=1" alt="">
                   <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
-                          <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
-                               <ion-icon class="" name="play-outline"></ion-icon>
+                          <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
+                              <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
                         </div>
                </div>

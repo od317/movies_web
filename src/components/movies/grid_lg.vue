@@ -34,9 +34,9 @@ let films =  props.grid
 let p = (r)=>{
   r = r.split('.')
 
-  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]+r[1]))/2.0))
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
   
-  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):0
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
 
   return [res,rem]
 }

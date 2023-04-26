@@ -53,35 +53,43 @@ let movies2 = ref([
 {num:0,
 img:'https://api.time.com/wp-content/uploads/2019/12/1917.jpg',
 name:'1917',
-gen:['Action','Action','Action']},
+gen:['Action','Drama','War'],
+rate:'8.8'},
 {num:1,
 img:'https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg',
 name:'Intersteller',
-gen:['Action','Action','Action']},
+gen:['Mystery','Sci fi','Drama'],
+rate:'8.6'},
 {num:2,
 img:'https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg',
 name:'John Wick Chapter 4',
-gen:['Action','Action','Action']},
+gen:['Action','Crime','Thriller'],
+rate:'8.2'},
 {num:3,
 img:'https://m.media-amazon.com/images/M/MV5BMjJmYTNkNmItYjYyZC00MGUxLWJhNWMtZDY4Nzc1MDAwMzU5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
 name:'knives out',
-gen:['Action','Action','Action']},
+gen:['Dark comedy','Crime','Drama'],
+rate:'7.9'},
 {num:4,
 img:'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg',
-name:'jurassic park',
-gen:['Action','Action','Action']},
+name:'Jurassic World 2',
+gen:['Action','Action','Action'],
+rate:'6.1'},
 {num:5,
 img:'https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_FMjpg_UX1000_.jpg',
-name:'demon slayer',
-gen:['Action','Action','Action']},
+name:'Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train',
+gen:['Anime','Action','Fantasy'],
+rate:'8.2'},
 {num:6,
 img:'https://m.media-amazon.com/images/I/91i-DXsIHeL._AC_SY606_.jpg',
-name:'bird man',
-gen:['Action','Action','Action']},
+name:'birdman',
+gen:['Comedy','Satire','Drama'],
+rate:'7.7'},
 {num:7,
 img:'https://deadline.com/wp-content/uploads/2019/08/the-rise-of-skywalker-poster.jpg',
 name:'star wars the rise of skywalker',
-gen:['Action','Action','Action']}
+gen:['Action','Adventure','Sci Fi'],
+rate:'6.5'}
 
 ])
 
@@ -133,6 +141,17 @@ let click = (num)=>{
 }
 
 
+let p = (r)=>{
+  r = r.split('.')
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
+  
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+  
+
+  return [res,rem]
+}
+
+
 </script>
 
 
@@ -163,14 +182,24 @@ let click = (num)=>{
                         <div v-for="i in length-1" :class="` absolute w-full h-full flex flex-col ${cur===movies2[i].num? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms`">
                               <label class="text-[150%] mb-[1%] capitalize" for="">{{ movies2[i].name }}</label>
                               
-                              <div class="flex flex-row text-[150%] mb-[2%]">
-                                    <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
-                              </div>
+                                    <div class="flex flex-row stars text-[50%] mb-[2%]" id="stars">
+                                                <div v-for="i in p(movies2[i].rate)[0]"  class=" star  w-[2%] pb-[2%] relative ">
+                                                                  <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                                                  </div>
+                                                </div>
+                                                <div v-if="p(movies2[i].rate)[1]!==0"   class=" star w-[2%] bg-transparent    pb-[2%] relative ">
+                                           
+                                                      <div   :class="` star bg-transparent h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%]   absolute `">
+                                                      </div>             
+                                                      <div  :style="`width:${p(movies2[i].rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">      
+                                                      </div>
+                                                </div>
+                                    </div>
                             
-                              <div class="lg:w-[20%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
+                              <div class="lg:w-[17%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
                                     <label for="">{{ movies2[i].gen[0] }}</label>
-                                    <label for="">{{ movies2[i].gen[0] }}</label>
-                                    <label for="">{{ movies2[i].gen[0] }}</label>
+                                    <label for="">{{ movies2[i].gen[1] }}</label>
+                                    <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
 
                               <button class="lg:w-[10%] md:w-[20%] mb-[2%] py-[.8%] rounded-md bg-c2 text-center">View movie</button>
@@ -185,14 +214,28 @@ let click = (num)=>{
                         <div :class="` absolute w-full h-full flex flex-col ${cur===movies2[0].num? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms`">
                               <label class="text-[150%] mb-[1%] capitalize" for="">{{ movies2[0].name }}</label>
                               
-                              <div class="flex flex-row text-[150%] mb-[2%]">
-                                    <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
-                              </div>
+                              <div class="flex flex-row stars text-[50%] mb-[2%]" id="stars">
+                                                <div v-for="i in p(movies2[0].rate)[0]"  class=" star  w-[2%] pb-[2%] relative ">
+                                                                  <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                                                  </div>
+                                                </div>
+                                                <div v-if="p(movies2[0].rate)[1]!==0"   class=" star w-[2%]    pb-[2%] relative ">
+                                               
+
+
+                                                      <div   :class="` star bg-transparent h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%]   absolute `">
+                                                      </div>    
+                                                               
+                                                      <div  :style="`width:${p(movies2[0].rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">      
+                                                      </div>
+
+                                                </div>
+                                    </div>
                             
-                              <div class="lg:w-[20%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
+                              <div class="lg:w-[17%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
                                     <label for="">{{ movies2[0].gen[0] }}</label>
-                                    <label for="">{{ movies2[0].gen[0] }}</label>
-                                    <label for="">{{ movies2[0].gen[0] }}</label>
+                                    <label for="">{{ movies2[0].gen[1] }}</label>
+                                    <label for="">{{ movies2[0].gen[2] }}</label>
                               </div>
 
                               <button class="lg:w-[10%] md:w-[20%] mb-[2%] py-[.8%] rounded-md bg-c2 text-center">View movie</button>
@@ -278,5 +321,8 @@ let click = (num)=>{
 
 <style scoped>
 
+.star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
 
 </style>
