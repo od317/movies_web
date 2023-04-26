@@ -1,7 +1,11 @@
 <script setup>
 
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
+import VLazyImage from "v-lazy-image"
+
+
+
 
 let router = useRouter()
 
@@ -52,7 +56,7 @@ let p = (r)=>{
                <div v-for="f in films" :class="`${f.class ? f.class:'block'} flex flex-col break-words` ">
                 <RouterLink :to="`/movie/${f.id}`" class=" relative w-[100%] pb-[150%]">
                     <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>  
-                    <img  class=" absolute w-full cursor-pointer rounded-md h-full" :src="f.img" alt="">
+                    <VLazyImage   class=" absolute w-full cursor-pointer rounded-md h-full lazy" :src="f.img" alt=""/>
                   </RouterLink>
                    <label class="break-words truncate capitalize" for="">{{ f.title }}</label>
                    <div class="flex flex-row stars" id="stars">

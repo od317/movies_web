@@ -18,7 +18,7 @@ let films_grid = [
 {
    title:'Beef',
    rate:'8.3',
-   img:'https://m.media-amazon.com/images/M/MV5BOTNjOGVkYTctYjE1ZS00MTBhLTlkOTAtMGUzODZlNjAxMGM3XkEyXkFqcGdeQXVyNDk3MzMwMTI@._V1_FMjpg_UX1000_.jpg',
+   img:'https://i.redd.it/e5vp77ku6lqa1.jpg',
    c:'hidden lg:inline-block'
 },
 {
@@ -125,7 +125,7 @@ let p = (r)=>{
 
 <template>
 
-<div class="md:hidden pt-[2%]">
+<div class="md:hidden pt-[5%]">
 <flic/>
 </div>
 

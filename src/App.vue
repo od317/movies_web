@@ -167,7 +167,7 @@ watch(page,()=>{
 
   <!-- sm nav_bar -->
   
-   <div v-if="page!=='movie'" :class="` md:hidden ${page=='series'? ' absolute z-[50]':'pt-[.5rem] pb-[2%]'}   text-[110%] w-full flex items-center justify-center`">
+   <div v-if="page!=='movie'" :class="` md:hidden ${true? ' absolute z-[50]':'pt-[.5rem] pb-[2%]'}  pt-[2%]  text-[150%] w-full flex items-center justify-center`">
       <label  for="">Laith</label>
    </div>
 

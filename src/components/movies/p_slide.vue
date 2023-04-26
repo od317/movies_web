@@ -157,7 +157,7 @@ let p = (r)=>{
 
 <template>
 
- <div class=" mb-[5%] ">
+ <div class=" mb-[5%] hidden md:block ">
       <div class="w-full relative overflow-hidden md:pb-[60%] lg:pb-[44%] hidden md:flex flex-col   bg-cover bg-center ">
 
             <div :class="` ${cur===0? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://api.time.com/wp-content/uploads/2019/12/1917.jpg')] bg-cover bg-center`"></div>            

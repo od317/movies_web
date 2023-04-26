@@ -1,19 +1,22 @@
 <template>
     <div class="flex flex-row mt-[20%]">
-      <label  class="px-[1.5%] mb-[3%] text-[100%]" for="">{{ title }} :
+      <label  class="px-[1.5%] mb-[3%] text-[150%]" for="">{{ title }} :
       </label>
     </div>
       <Carousel  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
         <Slide class="px-[1%] w-[70%]" v-for="f in films" :key="f">
           <div class="carousel__item w-full">
-              <div class=" pb-[150%] w-full bg-red-500 relative">
-                  <img :src="f.img" class=" absolute w-full h-full" alt="">
+              <div class=" pb-[150%] w-full  relative">
+                <div class="w-full h-full absolute animate-pulse bg-neutral-800"></div>
+                <img :src="f.img" class=" absolute w-full h-full" alt="">
               </div>
           </div>
         </Slide>
   
       </Carousel>
-      <div class="flex items-center justify-end px-[1.5%] mb-[3%] text-[100%] flex-grow pr-[2%]" for="">view more </div>
+      <div class="flex items-center justify-start  px-[1.5%] mb-[3%] mt-[2%] text-[130%] flex-grow pr-[2%]" for="">
+          <button class="inline-block ">view more</button>
+      </div>
 
     </template>
     

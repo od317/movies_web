@@ -249,7 +249,7 @@ window.scrollTo({top:0})
 
     
        <p_slide/>
-       <div  class="   md:bg-neutral-900 md:hidden md:pt-[7%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
+       <div  class="   md:bg-neutral-900 md:hidden pt-[10%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
                          <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
                          rounded-sm bg-center  bg-cover  transition-all duration-500
                             ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} 

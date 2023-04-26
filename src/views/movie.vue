@@ -51,6 +51,7 @@ async function fetchapi() {
 
 
 async function fetchvideo(){
+      console.log(`https://imdb-api.com/en/API/YouTubeTrailer/k_zdj1as3m/${title}`)
       let resp  = await fetch(`https://imdb-api.com/en/API/YouTubeTrailer/k_zdj1as3m/${title}`)
       let data =  await resp.json()
       video.value = data.videoId;

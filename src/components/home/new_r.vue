@@ -10,6 +10,40 @@ let view = (title)=>{
   router.push(`/movie/${title}`)
 }
 
+
+let p = (r)=>{
+  r = r.split('.')
+
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
+  
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+
+  return [res,rem]
+}
+
+let movies = ref([
+   {
+      name:'inception',
+      rate:'8.8',
+      img:'https://www.shortlist.com/media/images/2020/05/tenet-inception-1590160214-1Mpm-column-width-inline.jpg',  
+   },
+   {
+      name:'dunkirk',
+      rate:'7.8',
+      img:'https://a.ltrbxd.com/resized/sm/upload/l9/2l/7p/rz/dunkirk-2017-1200-1200-675-675-crop-000000.jpg?v=53e6d125e1',  
+   },
+   {
+      name:'the dark knight rises',
+      rate:'8.4',
+      img:'https://wallpapercave.com/wp/2n6i1fH.jpg',  
+   },
+   {
+      name:'captain marvel',
+      rate:'6.8',
+      img:'https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2020%2F12%2FCaptainMarvel-1600x900.jpg',  
+   },
+])
+
 </script>
 
 
@@ -20,7 +54,7 @@ let view = (title)=>{
  <div class=" hidden md:grid  md:grid-cols-4 gap-[5%] px-[5%] md:px-[10%] mb-[10%]">
           
    <div class="col-span-2 row-span-2  hidden md:flex flex-col justify-center text-white  rounded-sm"> 
-            <div @mouseover="l=1" @mouseleave="l=0" class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%]  overflow-hidden group  ">
+            <div @mouseover="l=1" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%]  overflow-hidden group  ">
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
                
                <div  :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center ${l==0||l==1? 'opacity-100':'opacity-0'} transition-all duration-200 `"></div>
@@ -42,27 +76,122 @@ let view = (title)=>{
             
                      </div>
             <label :class="`${l==0||l==1?'opacity-100':'opacity-0 hidden'} transition-all duration-200 capitalize`" for="">Tenet</label>
-            <div :class="` ${l==0||l==1?'opacity-100':'opacity-0 hidden'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==0||l==1?'opacity-100':'opacity-0 hidden'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('7.3')[0]"  class=" star  w-[4%] pb-[4%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('7.3')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('7.3')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          
             <label :class="`${l==2?'opacity-100':'opacity-0 hidden'} transition-all duration-200 capitalize `" for="">inception</label>
-            <div :class="` ${l==2?'opacity-100':'opacity-0 hidden'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==2?'opacity-100':'opacity-0 hidden'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('8.8')[0]"  class=" star  w-[4%] pb-[4%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.8')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.8')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          
          
             <label :class="`${l==3?'opacity-100':'opacity-0 hidden'} transition-all duration-200 capitalize `" for="">dunkirk</label>
-            <div :class="` ${l==3?'opacity-100':'opacity-0 hidden'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==3?'opacity-100':'opacity-0 hidden'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('7.8')[0]"  class=" star  w-[4%] pb-[4%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('7.8')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('7.8')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
         
             <label :class="`${l==4?'opacity-100':'opacity-0 hidden'} transition-all duration-200 capitalize `" for="">the dark knight rises </label>
-            <div :class="` ${l==4?'opacity-100':'opacity-0 hidden'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==4?'opacity-100':'opacity-0 hidden'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('8.4')[0]"  class=" star  w-[4%] pb-[4%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.4')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.4')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>            
+            </div>
       
             <label :class="`${l==5?'opacity-100':'opacity-0 hidden'} transition-all duration-200 capitalize `" for="">captain marvel</label>
-            <div :class="` ${l==5?'opacity-100':'opacity-0 hidden'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==5?'opacity-100':'opacity-0 hidden'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('6.8')[0]"  class=" star  w-[4%] pb-[4%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.4')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.4')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          
          
 
          </div>
     
          <div>
-            <div @mouseover="l=2" @mouseleave="l=0" class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden group relative pb-[60%] rounded-sm ">
+            <div @mouseover="l=2" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden group relative pb-[60%] rounded-sm ">
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
                
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://www.shortlist.com/media/images/2020/05/tenet-inception-1590160214-1Mpm-column-width-inline.jpg')] ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
@@ -82,11 +211,30 @@ let view = (title)=>{
 
             </div>
             <label :class="`${l==0?'opacity-100':'opacity-0'} transition-all duration-200`" for="">inception</label>
-            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('8.8')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.8')[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.8')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          </div>
 
          <div>
-            <div @mouseover="l=3" @mouseleave="l=0" class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative pb-[60%] rounded-sm overflow-hidden group ">
+            <div @mouseover="l=3" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative pb-[60%] rounded-sm overflow-hidden group ">
                
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BMTQ1ZmIzOTAtNDcwZi00NDVkLWE4NWItYWNhZGY1MmVlZGU0XkEyXkFqcGdeQWRvb2xpbmhk._V1_QL75_UY281_CR0,0,500,281_.jpg')] ${l==2?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
@@ -108,11 +256,30 @@ let view = (title)=>{
 
             </div>
             <label :class="`${l==0?'opacity-100':'opacity-0'} transition-all duration-200`" for="">dunkirk</label>
-            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('7.8')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('7.8')[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('7.8')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          </div>
 
          <div>
-            <div @mouseover="l=4" @mouseleave="l=0" class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%] rounded-sm overflow-hidden group ">
+            <div @mouseover="l=4" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%] rounded-sm overflow-hidden group ">
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
       
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://occ-0-3212-1556.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTQceVXkUtOVq09hGZKukC2eTTjKWR0D4fARc75i3nQFrXuqaTaCSy-2sAMuWssoJyo2UbOT8sR-VV3Kd-ksn-todO7WvYMR7hdc.jpg?r=d8c')] ${l==2?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
@@ -133,11 +300,30 @@ let view = (title)=>{
         
             </div>
             <label :class="`${l==0?'opacity-100':'opacity-0'} transition-all duration-200 truncate`" for="">the dark knight rises</label>
-            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('8.4')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.4')[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.4')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>             
+            </div>
          </div>
 
          <div>
-            <div @mouseover="l=5" @mouseleave="l=0" class=" shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%] rounded-sm overflow-hidden group ">
+            <div @mouseover="l=5" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] relative pb-[60%] rounded-sm overflow-hidden group ">
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
         
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2020%2F12%2FCaptainMarvel-1600x900.jpg')] ${l==5||l==0?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
@@ -160,7 +346,26 @@ let view = (title)=>{
 
             </div>
             <label :class="`${l==0?'opacity-100':'opacity-0'} transition-all duration-200`" for="">captain marvel</label>
-            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <div :class="` ${l==0?'opacity-100':'opacity-0'} transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('6.8')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('8.4')[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('8.4')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
          </div>
        
  </div>
@@ -176,75 +381,79 @@ let view = (title)=>{
                <div  :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center  transition-all duration-200 `"></div>
                
                      </div>
-            <label :class="` transition-all duration-200`" for="">movie</label>
-            <div :class="`  transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
+            <label :class="` transition-all duration-200 capitalize `" for="">Tenet</label>
+            <div :class="`  transition-all duration-200`">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p('7.3')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
+
+                            </div>
+                            <div v-if="p('7.3')[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p('7.3')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+               </div>
+            </div>
 
          
 
          </div>
     
-         <div>
+
+
+         <div v-for="i in movies">
             <div class=" overflow-hidden group relative pb-[60%] rounded-sm ">
                <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
                
-               <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://www.shortlist.com/media/images/2020/05/tenet-inception-1590160214-1Mpm-column-width-inline.jpg')]  transition-all duration-200 bg-cover bg-center`"></div>
+               <div :style="` background-image:url(${i.img})`" :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   transition-all duration-200 bg-cover bg-center`"></div>
 
 
   
 
 
             </div>
-            <label :class="` transition-all duration-200`" for="">movie</label>
-            <div :class="`  transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
+            <label :class="` transition-all duration-200 capitalize`" for="">{{i.name}}</label>
+            <div :class="`  transition-all duration-200 `">
+               <div class="flex flex-row stars" id="stars">
+                            <div v-for="i in p(i.rate)[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                              
+                                            </div>
+                                            
 
-         <div>
-            <div  class=" relative pb-[60%] rounded-sm overflow-hidden group ">
-               
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://w0.peakpx.com/wallpaper/388/847/HD-wallpaper-nobody-movie.jpg')]  transition-all duration-200 bg-cover bg-center`"></div>
+                            </div>
+                            <div v-if="p(i.rate)[1]!==0"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:${p(i.rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
 
-               
-
-
-
-
+                            </div>
+               </div>
             </div>
-            <label :class="` transition-all duration-200`" for="">movie</label>
-            <div :class="`  transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
          </div>
 
-         <div>
-            <div  class=" relative pb-[60%] rounded-sm overflow-hidden group ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-      
-               <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://cdn.mos.cms.futurecdn.net/LSnvRUxYe64Lg7qrMzCGQd.jpg')]  transition-all duration-200 bg-cover bg-center`"></div>
 
-
-   
-
-        
-            </div>
-            <label :class="` transition-all duration-200`" for="">movie</label>
-            <div :class="`  transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
-
-         <div>
-            <div  class=" relative pb-[60%] rounded-sm overflow-hidden group ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-        
-               <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://images.tntdrama.com/tnt/$dyna_params/https%3A%2F%2Fi.cdn.tntdrama.com%2Fassets%2Fimages%2F2020%2F12%2FCaptainMarvel-1600x900.jpg')]  transition-all duration-200 bg-cover bg-center`"></div>
-
-
-                   
-
-
-            </div>
-            <label :class="` transition-all duration-200`" for="">movie</label>
-            <div :class="`  transition-all duration-200 flex flex-row w-full`"><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon></div>
-         </div>
 
  </div>
 
     
 </template>
+
+<style scoped>
+
+.star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+</style>
