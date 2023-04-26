@@ -110,7 +110,18 @@ let view = (title)=>{
                         <img  :src="f.img" class=" absolute w-full h-full rounded-md  bg-cover bg-center"/>
                         
                         <div  class=" absolute w-full h-full rounded-md bg-neutral-800 bg-opacity-50  bg-cover bg-center"></div>
-                    
+                        
+                        <div class=" absolute w-full pl-[2%] pb-[2%] h-full flex flex-col justify-end ">
+                            
+                                
+                               <label class="w-[60%] break-words whitespace-normal" for="">
+                                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quam mollitia obcaecati eum iste eaque cum, minus repellat commodi, 
+                                  similique qui illo? Dolorum, dignissimos reiciendis facere asperiores perspiciatis harum eveniet.
+                                </label>
+
+
+
+                        </div>
                       
 
                   </div>

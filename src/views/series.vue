@@ -13,6 +13,8 @@ let sss = setTimeout(()=>{
    started.value=true
 },500)
 
+let type = "series"
+
 let t1 = 'Drama series'
 let f1 = [{
     img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtVRdpi5itYx8uUSTttB789qYmVeAABEpMA&usqp=CAU',
@@ -314,11 +316,11 @@ let c1 = ref(`width:${0.75*100}%`)
 
         
             <div  class="md:hidden">
-                <slide_sm2  :type="t1" :films="g1"/>
+                <slide_sm2 :type="type" :filt="`gen=Drama`"  :title="t1" :films="g1"/>
             </div>
 
             <div  class="hidden md:block">
-                <grid_lg :title="t1" :grid="g1"/>
+                <grid_lg :type="type" :filt="`gen=Drama`" :title="t1" :grid="g1"/>
             </div>
 
 
@@ -326,7 +328,7 @@ let c1 = ref(`width:${0.75*100}%`)
 
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
-            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
+            <div  class=" relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
             <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
             <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
               w-full h-full z-[5]"></div>
@@ -393,12 +395,12 @@ let c1 = ref(`width:${0.75*100}%`)
 
 
             <div  class="hidden md:block mt-[10%] ">
-                <grid_lg :grid="g2"/>
+                <grid_lg :type="type" title="recommended series" filt="" :grid="g2"/>
             </div>
 
                     
             <div class="md:hidden ">
-                <slide_sm2  :title="t1" :films="g2"/>
+                <slide_sm2 :type="type" title="recommended series " filt=""  :title="t1" :films="g2"/>
             </div>
 
             <div class="  mt-[9%] md:pb-[2%]  md:pt-[1%]">

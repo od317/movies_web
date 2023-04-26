@@ -49,7 +49,7 @@ async function fetchapi() {
 //k_bb3vvmqp k_unodv9vg k_zdj1as3m
 let  t = type.value === 'all' ? "feature,tv_series":(type.value==='movie'?'feature':'tv_series')
 let g  = gen.value ==='all'? '':gen.value.toLowerCase()
-console.log(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=${t}&genres=${g}`)
+let groups =  ''
 let resp  = await fetch(`https://imdb-api.com/API/AdvancedSearch/k_zdj1as3m?title=${title}&title_type=${t}&genres=${g}`)
 movies.value =  await resp.json()
 movies.value =  movies.value.results

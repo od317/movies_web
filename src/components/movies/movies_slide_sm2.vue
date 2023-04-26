@@ -1,19 +1,20 @@
 <template>
     <div class="flex flex-row mt-[20%]">
-      <label  class="px-[1.5%] mb-[3%] text-[100%]" for="">{{ type }} :
+      <label  class="px-[1.5%] mb-[3%] text-[100%]" for="">{{ title }} :
       </label>
-      <div class="flex items-center justify-end px-[1.5%] mb-[3%] text-[100%] flex-grow pr-[2%]" for="">view more </div>
     </div>
       <Carousel  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
         <Slide class="px-[1%] w-[70%]" v-for="f in films" :key="f">
-          <div class="carousel__item">
-              <div class="">
-                  <img :src="f.img" alt="">
+          <div class="carousel__item w-full">
+              <div class=" pb-[150%] w-full bg-red-500 relative">
+                  <img :src="f.img" class=" absolute w-full h-full" alt="">
               </div>
           </div>
         </Slide>
   
       </Carousel>
+      <div class="flex items-center justify-end px-[1.5%] mb-[3%] text-[100%] flex-grow pr-[2%]" for="">view more </div>
+
     </template>
     
     <script setup>
@@ -22,7 +23,7 @@
     import 'vue3-carousel/dist/carousel.css'
     
     let props = defineProps({
-        type:String,
+        title:String,
         films:Array
     })
   
@@ -44,5 +45,5 @@
       }
   
     let films = props.films
-    let type = props.type
+    let type = props.title
     </script>

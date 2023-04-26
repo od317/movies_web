@@ -13,6 +13,7 @@ let sss = setTimeout(()=>{
 
 let t1 = 'Action Movies'
 let t2 = 'Drama Movies'
+let type = 'movie'
 let f1 = [{
     img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtVRdpi5itYx8uUSTttB789qYmVeAABEpMA&usqp=CAU',
   },{
@@ -295,11 +296,11 @@ window.scrollTo({top:0})
 
         
             <div  class="md:hidden">
-                <slide_sm2  :title="t1" :films="g1"/>
+                <slide_sm2  :title="t1" :filt="`gen=Action`" :films="g1" :type="type"/>
             </div>
 
             <div  class="hidden md:block">
-                <grid_lg :grid="g1" :title="t1" />
+                <grid_lg :grid="g1" :title="t1" :filt="`gen=Action`" :type="type" />
             </div>
 
 
@@ -601,12 +602,12 @@ window.scrollTo({top:0})
 
 
             <div  class="hidden md:block mt-[10%] ">
-                <grid_lg :grid="g2" :title="t2"/>
+                <grid_lg :grid="g2" :title="t2" :filt="`gen=Drama`" :type="type"/>
             </div>
 
                     
             <div class="md:hidden ">
-                <slide_sm2  :type="t1" :films="g2"/>
+                <slide_sm2  :title="t2" :films="g2" :filt="`gen=Drama`" :type="type"/>
             </div>
 
 
