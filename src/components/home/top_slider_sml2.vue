@@ -5,8 +5,8 @@ import { useRouter } from 'vue-router';
 let router = useRouter()
 let films = ref([
 {
-  img:'https://d.newsweek.com/en/full/1629265/tenet-streaming-release-date.jpg',
-  title:'Avengers ',
+  img:'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dde1236d-1889-483a-88c3-3bc3e6dc9a51/d904wm4-03718aee-742b-475a-b467-2e3ff3e3b5c0.jpg/v1/fill/w_1024,h_576,q_75,strp/breaking_bad_background_pc_by_doublempics_d904wm4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvZGRlMTIzNmQtMTg4OS00ODNhLTg4YzMtM2JjM2U2ZGM5YTUxXC9kOTA0d200LTAzNzE4YWVlLTc0MmItNDc1YS1iNDY3LTJlM2ZmM2UzYjVjMC5qcGciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ykcwt1hqj2GEmYsbtRfJ2MivGaKyDtFKxAhnMT3pOuU',
+  title:'Breaking Bad',
   num:6
  },
  {  
@@ -15,18 +15,18 @@ let films = ref([
   num:1
  },
  {
-  img:'https://images.hdqwalls.com/download/vikings-season-5-qu-2048x1152.jpg',
+  img:'https://images.alphacoders.com/106/1069116.jpg',
   title:'John Wick 4',
   id:'tt10366206',
   num:2
  },
  {
-  img:'https://images.hdqwalls.com/download/vikings-season-5-qu-2048x1152.jpg',
+  img:'https://www.cnet.com/a/img/resize/eb053deb92b07b0496fbd22ce6ab16fc5c0a5a76/hub/2019/12/13/b921910f-7218-43dc-a4bf-487d04da3d4c/thewitcher-101-unit-06900-rt-fk3ph4dhp.jpg?auto=webp&width=1200',
   title:'The Dark Knight ',
   num:3
  },
  {
-  img:'https://images.hdqwalls.com/download/vikings-season-5-qu-2048x1152.jpg',
+  img:'https://wallpaperaccess.com/full/782447.jpg',
   title:'Interstellar',
   num:5
  }
@@ -99,7 +99,7 @@ let view = (title)=>{
 <template>
 
  
-      <div :class="`whitespace-nowrap translate-x-[${trans*-1}%]   ${du ? 'transition-all duration-[500ms]':''} w-[70%] `">
+      <div :style="`transform:translateX(${trans*-1}%)`" :class="`whitespace-nowrap    ${du ? 'transition-all duration-[500ms]':''} w-[70%] `">
 
 
         <div  :class="`w-[100%]   px-[2.3%]  relative inline-block mt-[2%] bg-transparent  ${du ? 'transition-all duration-[500ms]':''}
