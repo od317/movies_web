@@ -119,6 +119,7 @@ module.exports = {
         'sm1': '410px',
         'sm2': '600px',
         'sm3':'1150px',
+        'md2':'890px'
       },
       colors:{
         c1:'#432C7A',

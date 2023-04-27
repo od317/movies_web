@@ -172,10 +172,10 @@ window.scrollTo({top:0})
                   </div>
                   <div class="  h-screen w-[100%] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-[6] pb-[4%] pl-[7%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
     
-                  <div class="flex flex-row w-full  ">  
-                        <div class="w-[55%] pr-[1%] flex flex-col pb-[1%]">     
+                  <div class="flex flex-col  md2:flex-row w-full  ">  
+                        <div class="md2:w-[55%] w-full pr-[1%] flex flex-col pb-[1%]">     
                                     <label class="text-[200%]" for="">{{name}}</label>
-                                    <div class="flex flex-row gap-[10%] w-[100%]">
+                                    <div class="flex flex-row  gap-[7%] w-[100%]">
                                     
                                           <div class="flex flex-row justify-center items-center">
                                                 <ion-icon class=" text-orange-500 translate-y-[-2%]" name="star"></ion-icon>{{ rate }}
@@ -185,7 +185,7 @@ window.scrollTo({top:0})
                                                 {{ runtime }}
                                           </div>
 
-                                          <div class="flex flex-row gap-[10%]">
+                                          <div class="flex flex-row gap-[7%]">
                                                 <label  for="">
                                                       {{ genre[0].key }}
                                                 </label>
@@ -216,20 +216,20 @@ window.scrollTo({top:0})
                          </div> 
 
                     
-                         <div class="w-[45%]  flex flex-col ">     
+                         <div class="w-[47%] hidden md2:flex flex-col ">     
                               
-                              <div class="flex flex-col">
+                              <div class="flex w-[50%] md2:w-[100%] flex-col">
 
 
                                        <h_posters v-if="gallery.length>0" :items="gallery" />
 
                               </div>
                           
-                              <div class="flex flex-col mt-[2%] mb-[1%]">
+                              <div class="flex flex-col w-[50%] md2:w-[100%]  mt-[2%] mb-[1%]">
                                        <label class=" text-[130%] mb-[1%]" for="">Actors</label>
                                        
                                        <div class="flex flex-row">
-                                             <div v-for="i in 5" class="w-[13%] flex flex-col items-center  mr-[2%] ">
+                                             <div v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
                                                 <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
                                                       <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
                                                       <div class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>
@@ -252,6 +252,44 @@ window.scrollTo({top:0})
 
 
                          </div> 
+
+                         <div class="w-[100%]  md2:hidden flex flex-row-reverse ">     
+                              
+                              <div class="flex w-[50%] md2:w-[100%] flex-col">
+
+
+                                       <h_posters v-if="gallery.length>0" :items="gallery" />
+
+                              </div>
+                          
+                              <div class="flex flex-col w-[50%] md2:w-[100%]  mt-[2%] mb-[1%]">
+                                       <label class=" text-[130%] mb-[1%]" for="">Actors</label>
+                                       
+                                       <div class="flex flex-row">
+                                             <div v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
+                                                <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
+                                                      <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
+                                                      <div class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>
+                                                </div> 
+                                                <label class="text-[50%] text-center" for="">{{ cast[i-1].name }}</label>
+                                             </div>  
+
+                                             <div  class="w-[13%] flex flex-col items-center  mr-[2%] ">
+                                                <div @click="b()" class="  w-full pb-[100%] relative cursor-pointer    rounded-full  bg-center bg-cover"  >
+                                                      <div  class="  absolute w-full h-full lg:text-[90%] text-[65%] text-center px-[2%] pt-[20%] bg-neutral-800  rounded-full">
+                                                            see full cast
+                                                      </div>   
+                                                      <div class="w-full h-full absolute rounded-full bg-cover bg-center " ></div>
+                                                </div> 
+                                             </div>  
+
+                                       </div>
+
+                              </div>
+
+
+                         </div> 
+
                   </div>
 
 

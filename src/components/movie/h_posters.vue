@@ -10,8 +10,8 @@
   });
 
   let items = ref(props.items)
-  items.value = items.value.slice(0,4)
-  let trans = ref('-51')
+  items.value = items.value.slice(0,5)
+  let trans = ref('-41')
   let on_trans = ref(false)
   let t = ref(false)
 
@@ -24,13 +24,13 @@
             items.value = [m1].concat(items.value)
             on_trans.value=false
             t.value=false
-            trans.value='-51'
+            trans.value='-41'
     },210)
 
   }
 
   let forw = ()=>{
-    trans.value = '-102'
+    trans.value = '-82'
     t.value = true
     on_trans.value=true
     let s = setTimeout(()=>{
@@ -39,7 +39,7 @@
             items.value.push(m1)
             on_trans.value=false
             t.value=false
-            trans.value='-51'
+            trans.value='-41'
     },210)
   }
 
@@ -70,7 +70,7 @@
 </div>
 <div class=" overflow-hidden">
     <div :style="`transform:translateX(${trans}%)`" :class="`w-full   p-[0%] m-[0%]  whitespace-nowrap relative ${t?' transition-all duration-200':''}`">  
-        <div :style="` background-image:url(${i.link})`" class="  w-[50%]  pb-[25%] mr-[1%] inline-block bg-center bg-cover    " v-for="i in items">
+        <div :style="` background-image:url(${i.link})`" class="  w-[40%]  pb-[20%] mr-[1%] inline-block bg-center bg-cover    " v-for="i in items">
           
 
         </div>
