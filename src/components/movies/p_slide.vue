@@ -202,7 +202,7 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
 
-                              <button class="lg:w-[10%] md:w-[20%] mb-[2%] py-[.8%] rounded-md bg-c2 text-center">View movie</button>
+                              <button class="lg:w-[8%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.
@@ -238,7 +238,7 @@ let p = (r)=>{
                                     <label for="">{{ movies2[0].gen[2] }}</label>
                               </div>
 
-                              <button class="lg:w-[10%] md:w-[20%] mb-[2%] py-[.8%] rounded-md bg-c2 text-center">View movie</button>
+                              <button class="lg:w-[8%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.

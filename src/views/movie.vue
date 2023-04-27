@@ -4,6 +4,7 @@ import { ref } from 'vue';
 import sldier from '../components/movie/top_slider_sm.vue'
 import sldier2 from '../components/movie/top_slider2_sm.vue'
 import { useRouter } from 'vue-router';
+import  h_posters  from '../components/movie/h_posters.vue';
 
 let router = useRouter()
 
@@ -33,7 +34,6 @@ async function fetchapi() {
   let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
   
     let data =  await resp.json()
-    console.log(data)
     img.value = data.image
     posters.value  = data.posters
     backdrops.value = posters.value.backdrops
@@ -51,7 +51,6 @@ async function fetchapi() {
 
 
 async function fetchvideo(){
-      console.log(`https://imdb-api.com/en/API/YouTubeTrailer/k_zdj1as3m/${title}`)
       let resp  = await fetch(`https://imdb-api.com/en/API/YouTubeTrailer/k_zdj1as3m/${title}`)
       let data =  await resp.json()
       video.value = data.videoId;
@@ -66,6 +65,17 @@ let go = (title)=>{
             window.location.reload()
       },2)
 }
+
+
+let b = ()=>{
+      
+      const el = document.getElementById('cast');
+      if (el) {
+        el.scrollIntoView();
+      }
+      
+  }
+
 
 window.scrollTo({top:0})
 
@@ -154,16 +164,16 @@ window.scrollTo({top:0})
 <!-- large screen -->
 
 <div class=" relative hidden md:block text-[100%] ">
-       <div :class="`relative shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] ${ backdrops[0]? '':'pb-[27%]'}`">
-            <div v-if="!backdrops[0]" class="absolute w-full h-full bg-zinc-900  bg-opacity-40"></div>
+       <div :class="`relative  ${ backdrops[0]? '':'pb-[27%]'}`">
+            <div v-if="!backdrops[0]" class="absolute w-full h-screen bg-zinc-900  bg-opacity-40"></div>
             <div v-if="backdrops[0]" class="flex flex-col justify-end  h-screen">
                   <div class="w-full h-[60%] z-[5] bg-gradient-to-t from-zinc-900 from-1% to-transparent  to-99%  absolute bg-opacity-30  "></div>
                   <div  class="   h-screen w-[100%] absolute bg-cover bg-center flex flex-col justify-end z-[4] " :style="` background-image:url(${backdrops[0].link})`" alt="">
                   </div>
-                  <div class="  h-screen w-[100%] z-[6] pb-[4%] pl-[10%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
+                  <div class="  h-screen w-[100%] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-[6] pb-[4%] pl-[7%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
     
-                      
-                        <div class="w-[47%]">     
+                  <div class="flex flex-row w-full  ">  
+                        <div class="w-[55%] pr-[1%] flex flex-col pb-[1%]">     
                                     <label class="text-[200%]" for="">{{name}}</label>
                                     <div class="flex flex-row gap-[10%] w-[100%]">
                                     
@@ -195,28 +205,31 @@ window.scrollTo({top:0})
 
                                     </div>
 
-                                    <div class="w-[100%] mt-[2%]">{{ plot }}</div>
+                                    <div class="w-[80%] mt-[5%] flex-grow">{{ plot }}</div>
 
-                                    <div class=" flex flex-row mt-[10%] w-[50%] gap-[2%] mb-[2%]">
+                                    <div class=" flex flex-row justify-self-end    w-[50%] gap-[2%] ">
 
-                                          <button class="bg-blue-500 px-[5%]">view</button>
-                                          <button class="bg-blue-500 px-[5%]">view</button>
+                                          <button class="bg-blue-500 px-[5%] text-[120%]">view</button>
+                                          <button class="bg-blue-500 px-[5%] text-[120%]">view</button>
 
                                     </div>
                          </div> 
 
                     
-                         <div class="w-[42%] flex flex-col ">     
+                         <div class="w-[45%]  flex flex-col ">     
                               
                               <div class="flex flex-col">
-                                       <label for="">Posters</label>
+
+
+                                       <h_posters v-if="gallery.length>0" :items="gallery" />
+
                               </div>
                           
-                              <div class="flex flex-col mt-[10%] mb-[1%]">
-                                       <label class="mb-[1%]" for="">Actors</label>
+                              <div class="flex flex-col mt-[2%] mb-[1%]">
+                                       <label class=" text-[130%] mb-[1%]" for="">Actors</label>
                                        
                                        <div class="flex flex-row">
-                                             <div v-for="i in 5" class="w-[10%] flex flex-col items-center  mr-[2%] ">
+                                             <div v-for="i in 5" class="w-[13%] flex flex-col items-center  mr-[2%] ">
                                                 <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
                                                       <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
                                                       <div class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>
@@ -224,7 +237,14 @@ window.scrollTo({top:0})
                                                 <label class="text-[50%] text-center" for="">{{ cast[i-1].name }}</label>
                                              </div>  
 
-                                             <button class=" bg-neutral-800 ">see full</button>
+                                             <div  class="w-[13%] flex flex-col items-center  mr-[2%] ">
+                                                <div @click="b()" class="  w-full pb-[100%] relative cursor-pointer    rounded-full  bg-center bg-cover"  >
+                                                      <div  class="  absolute w-full h-full lg:text-[90%] text-[65%] text-center px-[2%] pt-[20%] bg-neutral-800  rounded-full">
+                                                            see full cast
+                                                      </div>   
+                                                      <div class="w-full h-full absolute rounded-full bg-cover bg-center " ></div>
+                                                </div> 
+                                             </div>  
 
                                        </div>
 
@@ -232,7 +252,7 @@ window.scrollTo({top:0})
 
 
                          </div> 
-
+                  </div>
 
 
                   </div>
@@ -274,7 +294,7 @@ window.scrollTo({top:0})
             </div>
             
             
-            <div class="mt-[5%] flex flex-col">
+            <div id="cast" class="mt-[5%] flex flex-col">
                     <label class="mb-[2%] text-[150%]" for="">cast:</label>
                     <div class="flex flex-row justify-between " v-if="cast.length>0" >
                         <div v-for="i in 5" class="w-[19%] relative h-auto pb-[30%]">

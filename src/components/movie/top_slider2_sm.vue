@@ -23,7 +23,7 @@
   });
 
   let items = props.items
-  console.log(items)
+  
 
   </script>
   
