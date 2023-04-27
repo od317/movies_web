@@ -198,12 +198,15 @@ let s = ref([false,false,false,false,false,false])
 
 let s2 =  ref([false,false,false,false,false,false])
 
+let un = ref(true)
 
 
 
 
 let s_a = (i)=>{
 
+   if(!un.value)
+      return
 
    for(let i of s.value)
        if(i)
@@ -230,6 +233,7 @@ let s_a = (i)=>{
 let s_a2 = ()=>{
 
    on_s.value=false
+   un.value=false
 
    let ons = setTimeout(()=>{
 
@@ -238,7 +242,9 @@ let s_a2 = ()=>{
        }
 
     },500)
-
+    let ons2 = setTimeout(()=>{
+        un.value=true
+    },1250)
 }
 
 window.scrollTo({top:0})
@@ -249,7 +255,7 @@ window.scrollTo({top:0})
 
     
        <p_slide/>
-       <div  class="   md:bg-neutral-900 md:hidden pt-[10%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
+       <div  class="   md:bg-neutral-900 md:hidden pt-[12%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto pb-[15%] lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
                          <div  :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
                          rounded-sm bg-center  bg-cover  transition-all duration-500
                             ${started ? 'md:opacity-100 md:hover:translate-y-[-3%] cursor-pointer':'md:opacity-0'} 
@@ -544,7 +550,7 @@ window.scrollTo({top:0})
 
                         </div>  
 
-                        <div  @click="s_a(0)" :class="`  ${s[0]? 'animate-s1 translate-x-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[0])&&on_s? '' : ''} transition-all duration-1000      relative  px-[5%]   rounded-sm    h-[150%]  group`">
+                        <div  @click="s_a(0)" :class="`   ${s[0]? 'animate-s1 translate-x-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[0])&&on_s? '' : ''} transition-all duration-1000      relative  px-[5%]   rounded-sm    h-[150%]  group`">
                            <div :class="`hidden  absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[0]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                             <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
@@ -678,15 +684,15 @@ window.scrollTo({top:0})
                   </div>
           
                   <div class=" md:hidden px-[5%] w-full justify-center items-center">
-                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   ">
+                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
                      
-                           <div class=" relative w-[45%]  pb-[80%]">
+                           <div class=" relative w-[100%] mb-[5%]  pb-[50%]">
                                 <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
                                 <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
 
                               </div>
 
-                           <div class=" relative w-[45%]  pb-[80%]">
+                           <div class=" relative w-[100%]  pb-[50%]">
                                 <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
                                 <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
                         

@@ -7,8 +7,9 @@
     <Carousel  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
       <Slide class=" px-[2%] " v-for="f in films" :key="f">
         <div class="carousel__item ">
-            <div class="">
+            <div class="relative ">
                 <img :src="f.img" class="" alt="">
+                <div class=" absolute w-full h-full bg-neutral-800 animate-pulse"></div>
             </div>
         </div>
       </Slide>

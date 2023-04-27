@@ -125,7 +125,7 @@ let p = (r)=>{
 
 <template>
 
-<div class="md:hidden pt-[5%]">
+<div class="md:hidden pt-[7%]">
 <flic/>
 </div>
 
@@ -186,7 +186,7 @@ let p = (r)=>{
 <flicl2/>
 </div>
 <div class="md:hidden pb-[20%]">
-   <flic2/>
+<flic2/>
 </div>
 
 
