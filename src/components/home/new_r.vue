@@ -17,8 +17,13 @@ let p = (r)=>{
   let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
   
   let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+  
+  let rem2 = 5-res
 
-  return [res,rem]
+  rem2 = rem>0 ? rem2-1:rem2
+
+
+  return [res,rem,rem2]
 }
 
 let movies = ref([
@@ -67,11 +72,11 @@ let movies = ref([
 
 
 
-                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-99.5%] w-full  translate-y-[-96%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms] `"></div>
-                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-95%] w-full  translate-y-[-99.5%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50    translate-x-[-99.5%] w-full   translate-y-[-96%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-95%] w-full  translate-y-[-99.5%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
 
-                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[99.5%] translate-y-[55.45%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms]`"></div>
-                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full h-full bg-white translate-x-[95%] translate-y-[59.3%]  ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[99.5%] translate-y-[55.45%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==1?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full h-full bg-gray-50 translate-x-[95%] translate-y-[59.3%]  ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
 
             
                      </div>
@@ -94,6 +99,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('7.3')[2]"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          
@@ -116,6 +130,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('8.8')[2]"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          
@@ -139,6 +162,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('7.8')[2]"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
         
@@ -161,6 +193,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('8.4')[2]"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>            
             </div>
       
@@ -174,7 +215,7 @@ let movies = ref([
                                             
 
                             </div>
-                            <div v-if="p('8.4')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                            <div v-if="p('6.8')[1]!==0"   class=" star w-[4%] bg-white   pb-[4%] relative ">
                               <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                      
                               </div>             
@@ -183,6 +224,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('6.8')[2]"   class=" star w-[4%] bg-white   pb-[4%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          
@@ -201,11 +251,11 @@ let movies = ref([
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://d1nslcd7m2225b.cloudfront.net/Pictures/1024x536/4/9/7/1156497_dark-knight-rises.jpg')] ${l==4?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
 
 
-                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-99%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms] `"></div>
-                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-99%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
 
-                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[99%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms]`"></div>
-                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[99%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
 
 
 
@@ -229,6 +279,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('8.8')[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          </div>
@@ -245,11 +304,11 @@ let movies = ref([
 
                
           
-                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-98.5%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms] `"></div>
-                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-98.5%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
 
-                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[98.5%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms]`"></div>
-                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[98.5%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==3?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
 
 
 
@@ -274,6 +333,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('7.8')[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          </div>
@@ -289,11 +357,11 @@ let movies = ref([
                <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapercave.com/wp/2n6i1fH.jpg')] ${l==4||l==0?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
 
 
-                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-99%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms] `"></div>
-                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-99%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
 
-                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[99%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms]`"></div>
-                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[91%] translate-y-[58.85%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[99%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==4?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[91%] translate-y-[58.85%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
 
 
 
@@ -318,6 +386,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('8.4')[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>             
             </div>
          </div>
@@ -335,11 +412,11 @@ let movies = ref([
 
 
 
-                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-98.5%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms] `"></div>
-                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-white  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-98.5%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
+                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-90.5%] w-full  translate-y-[-98.5%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
 
-                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[98.5%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%]':''} transition-all duration-[500ms]`"></div>
-                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-white translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%]':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[98.5%] translate-y-[51.45%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
+                        <div :class="` ${l==0||l==5?'opacity-100':'opacity-0'} transition-all duration-200 absolute pb-[100%] w-full bg-gray-50 translate-x-[91%] translate-y-[58.45%] ${ !bo? 'group-hover:translate-x-[0%] group-hover:bg-c3':''} transition-all duration-[500ms]`"></div>
 
 
 
@@ -359,11 +436,20 @@ let movies = ref([
                               <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                      
                               </div>             
-                              <div  :style="`width:${p('8.4')[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                              <div  :style="`width:${p('6.8')[1]*10}%`"  :class="` bg-white  h-full absolute `">
                                               
                               </div>
 
                             </div>
+                            <div v-for="i in p('6.8')[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
          </div>
@@ -400,6 +486,15 @@ let movies = ref([
                               </div>
 
                             </div>
+                            <div v-for="i in p('7.3')[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>  
                </div>
             </div>
 
@@ -439,6 +534,16 @@ let movies = ref([
                               </div>
 
                             </div>
+
+                            <div v-for="i in p(i.rate)[2]"   class=" star w-[5%] bg-white   pb-[5%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>                               
                </div>
             </div>
          </div>

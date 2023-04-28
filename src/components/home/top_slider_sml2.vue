@@ -132,8 +132,8 @@ let view = (title)=>{
       </div>
      <div class="flex flex-row w-full justify-center">
       <div  class="w-[41%] flex flex-row justify-center gap-[2%] pt-[1%]">
-        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50 " @click="forward()"><ion-icon name="chevron-back-outline"></ion-icon></button>
-        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100]" @click="backward()"><ion-icon name="chevron-forward-outline"></ion-icon></button>
+        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-50 transition-all duration-200 hover:text-c3" @click="forward()"><ion-icon name="chevron-back-outline"></ion-icon></button>
+        <button :disabled="trans!==slide_val" class=" disabled:cursor-pointer z-[100] transition-all duration-200 hover:text-c3" @click="backward()"><ion-icon name="chevron-forward-outline"></ion-icon></button>
       </div>
     </div>
 

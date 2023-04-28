@@ -295,7 +295,6 @@ window.scrollTo({top:0})
                 
        </div>
 
-      <movie_of/>
 
 
       <div class="    md:px-[10%] ">
@@ -550,7 +549,7 @@ window.scrollTo({top:0})
 
                         </div>  
 
-                        <div  @click="s_a(0)" :class="`   ${s[0]? 'animate-s1 translate-x-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[0])&&on_s? '' : ''} transition-all duration-1000      relative  px-[5%]   rounded-sm    h-[150%]  group`">
+                        <div  @click="s_a(0)" :class="`    ${s[0]? 'animate-s1 translate-x-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[0])&&on_s? '' : ''} transition-all duration-1000      relative  px-[5%]   rounded-sm    h-[150%]  group`">
                            <div :class="`hidden  absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[0]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                             <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
@@ -629,36 +628,36 @@ window.scrollTo({top:0})
                            <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">BATMAN</div>
 
                      
-                           <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:bg-c3 group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] group-hover:translate-x-[-198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] translate-x-[198%] group-hover:bg-c3 group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] group-hover:translate-y-[-198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] translate-y-[198.4%] group-hover:bg-c3 group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] group-hover:translate-y-[198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] translate-y-[-198.4%] group-hover:bg-c3 group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
 
                         </div>
 
                      <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]  bg-cover bg-center">
                         <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')]"></div>
                         <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
-                           <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MADMAX</div>
+                           <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]   transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MADMAX</div>
                      
-                           <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:bg-c3 group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] group-hover:translate-x-[-198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] translate-x-[198%]  group-hover:bg-c3 group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] group-hover:translate-y-[-198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] translate-y-[198.4%] group-hover:bg-c3 group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] group-hover:translate-y-[198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
                      </div>
                
                      <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]   bg-cover bg-center">
@@ -666,17 +665,17 @@ window.scrollTo({top:0})
                         <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                            <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">MOVIE</div>
                      
-                           <div class=" absolute bg-white translate-y-[99.4%] group-hover:translate-x-[198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-y-[-99.4%] group-hover:translate-x-[-198%] transition-all duration-[700ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-y-[-99.4%] translate-x-[198%] group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] group-hover:translate-x-[-198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-y-[-99.4%] translate-x-[198%] group-hover:bg-c3 group-hover:translate-x-[0%] transition-all duration-[700ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[98.7%] group-hover:translate-y-[-198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[98.7%] translate-y-[198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] group-hover:translate-y-[-198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[98.7%] translate-y-[198.4%] group-hover:bg-c3 group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
 
-                           <div class=" absolute bg-white translate-x-[-98.7%] group-hover:translate-y-[198.4%] transition-all duration-[800ms] w-full h-full "></div>
-                           <div class=" absolute bg-white translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] group-hover:translate-y-[198.4%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
+                           <div class=" absolute bg-gray-50 translate-x-[-98.7%] translate-y-[-198.4%] group-hover:translate-y-[0%] group-hover:bg-c3 transition-all duration-[800ms] w-full h-full "></div>
                      </div>
 
                   </div>

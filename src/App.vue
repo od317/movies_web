@@ -118,16 +118,16 @@ watch(page,()=>{
                                           <routerLink @click="()=>{
                                              page='home'
                                              insearch=false
-                                          }" :class="`  z-[100] ${page=='home' ? '  text-c2 ':'text-white'} cursor-pointer hover:text-c2 transition-all duration-200 `" to="/">
-                                                      <label class="cursor-pointer hover:text-c2 transition-all duration-200" for="">Home</label>
+                                          }" :class="`  z-[100] ${page=='home' ? '  text-c2 hover:text-c2':' hover:text-c3'} cursor-pointer  transition-all duration-100 `" to="/">
+                                                      <label class="cursor-pointer  transition-all duration-200" for="">Home</label>
                                           </routerLink>
                                     
 
                                        <routerLink @click="()=>{
                                              page='movies'
                                              insearch=false
-                                          }" :class="`  z-[100] ${ page=='movies' ? '  text-c2 ':'text-white'} cursor-pointer hover:text-c2 transition-all duration-200 `" to="/movies">
-                                          <label class="cursor-pointer hover:text-c2 transition-all duration-200" for="">Movies</label>
+                                          }" :class="`  z-[100] ${ page=='movies' ? '  text-c2 hover:text-c2':' hover:text-c3'} cursor-pointer  transition-all duration-100 `" to="/movies">
+                                          <label class="cursor-pointer  transition-all duration-200" for="">Movies</label>
                                        </routerLink>
                                     
 
@@ -135,8 +135,8 @@ watch(page,()=>{
                                        <routerLink @click="()=>{
                                              page='series'
                                              insearch=false
-                                          }" :class="`  z-[100] ${page=='series' ?'  text-c2 ':'text-white'} cursor-pointer hover:text-c2 transition-all duration-200 `" to="/series">
-                                          <label class="cursor-pointer hover:text-c2 transition-all duration-200" for="">series</label>
+                                          }" :class="`  z-[100] ${page=='series' ?'  text-c2 hover:text-c2':' hover:text-c3'} cursor-pointer  transition-all duration-100 `" to="/series">
+                                          <label class="cursor-pointer  transition-all duration-200" for="">series</label>
                                     </routerLink>
                         </div>
             </div>
@@ -146,8 +146,8 @@ watch(page,()=>{
             <div  class="group flex flex-row justify-center items-center">
              
                <form class="" @submit="search()" @submit.prevent="onSubmit" action="">
-               <button  :class="``"  type="submit"><ion-icon :class="`${page=='search'?'':''} `" name="search-outline"></ion-icon></button>
-                  <input  v-model="search_q" :class="`${search_q.length!==0 ? 'w-[70%]':'w-[0%]'} text-white   lg:group-hover:w-[80%] ml-[4%] md:group-hover:w-[70%] md:group-hover:px-1 transition-all duration-300  outline-none border-b-[.1rem] bg-transparent  text-[1.2rem]`" type="text">
+               <button  :class="``"  type="submit"><ion-icon :class="`${page=='search'?'':''} group-hover:text-c3 transition-all duration-300 `" name="search-outline"></ion-icon></button>
+                  <input  v-model="search_q" :class="`${search_q.length!==0 ? 'w-[70%]':'w-[0%]'} group-hover:border-c3   lg:group-hover:w-[80%] ml-[4%] md:group-hover:w-[70%] md:group-hover:px-1 transition-all duration-300  outline-none border-b-[.1rem] bg-transparent  text-[1.2rem]`" type="text">
                </form>
                
 
@@ -176,7 +176,7 @@ watch(page,()=>{
                    ${ search_act ?' rounded-b-md':'rounded-md'} p-2 text-[1.6rem] backdrop-blur-md bg-white/30 transition-all duration-100`">
        
          <form @submit.prevent="onSubmit" @submit="search()" :class="` absolute backdrop-blur-none bg-c2 w-full flex flex-row justify-between py-2 
-         rounded-t-md pl-[10%] ${search_act ? 'opacity-100 translate-y-[-111%]':'opacity-0'} 
+         rounded-t-md pl-[10%] ${search_act ? 'opacity-100 translate-y-[-111%] ':'opacity-0'} 
           transition-all duration-100  z-[-100] pr-[10%]`">
          <input v-model="search_q" type="text" :class="` ${search_act ? '':''} w-[70%] bg-transparent rounded-t-md outline-none placeholder:text-white p-1`"
           :disabled="!search_act" placeholder="search">
@@ -206,7 +206,7 @@ watch(page,()=>{
         </routerLink>
         
 
-        <button @click="search_act  = !search_act" :class="` z-[100] ${search_act ?' translate-y-[-10%]  hover:text-c2':'text-white'}  transition-all duration-200 `" >
+        <button @click="search_act  = !search_act" :class="` z-[100] ${search_act ?' translate-y-[-10%]  hover:text-c3':'text-white'}  transition-all duration-200 `" >
          <ion-icon name="search-outline"></ion-icon>
         </button>
         
@@ -259,6 +259,48 @@ watch(page,()=>{
 
    </div>
 </div>
+
+
+
+<section class="red relative">
+   <h2>osama</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, fugit pariatur ad sunt velit est doloribus, neque non harum perferendis suscipit ex modi reiciendis facere culpa incidunt maxime. Porro, cum?</p>
+   <div class="wave">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+    </svg>
+</div>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Deserunt adipisci asperiores ipsam voluptatem quam? Doloremque suscipit facere reprehenderit molestias alias ducimus, velit animi illum quibusdam similique praesentium commodi quo eveniet esse officiis at quam quas unde voluptate! Debitis?</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Voluptatem suscipit, magni porro atque, iure ducimus nesciunt natus qui ipsa cumque aliquid quaerat, error est mollitia impedit! Quod ut quam dolor temporibus nulla quis libero tempora dignissimos quidem deleniti?</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Quae molestias unde cumque velit sunt? Ut error recusandae deleniti, assumenda quasi vel quibusdam, dolores, alias placeat deserunt quae necessitatibus sit. Doloribus aspernatur ipsam qui earum! Facere, possimus reiciendis! Ut.</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Nesciunt provident perferendis aperiam quaerat nobis, animi doloremque ratione dolores sed hic facere esse ullam quae labore possimus quo aliquam nam officiis consequatur? Ipsam quibusdam officiis repellendus vero doloribus quod?</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Iusto ut suscipit quisquam quod commodi sapiente nisi adipisci iure? Sit veritatis laborum nemo incidunt saepe ipsa. Aperiam esse sunt, animi repellendus asperiores ratione blanditiis voluptatibus incidunt temporibus, tenetur laboriosam!</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Officia nisi sequi iusto esse eos. Amet recusandae alias culpa deleniti et labore deserunt repudiandae! Neque harum quo laborum, repudiandae distinctio magni quaerat voluptas, labore, officia doloremque sit modi illo!</p>
+</section>
+<section>
+   <h2>osama</h2>
+   <p>Non sit consectetur, quas similique officiis, amet aut doloremque molestias dolor iure cupiditate temporibus odit natus cumque neque alias recusandae enim accusantium. Vel mollitia id non cumque praesentium numquam quibusdam?</p>
+</section>
+
+
 </template>
 
 <style>
@@ -266,10 +308,40 @@ watch(page,()=>{
 *{
    outline: none;
 }
-
+section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding-top: 100px;
+      }
 body{
    margin: 0;
    padding: 0;
+}
+
+.red {
+        background: #dd3f31;
+      }
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 194px;
+}
+
+.wave .shape-fill {
+    fill: #FFFFFF;
 }
 
 </style>

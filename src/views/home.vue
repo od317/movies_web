@@ -114,8 +114,11 @@ let p = (r)=>{
   let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
   
   let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+  let rem2 = 5-res
 
-  return [res,rem]
+  rem2 = rem>0 ? rem2-1:rem2
+
+  return [res,rem,rem2]
 }
 
 
@@ -164,6 +167,16 @@ let p = (r)=>{
                               </div>
 
                             </div>
+
+                            <div v-for="i in p(f.rate)[2]"   class=" star w-[8%] bg-white   pb-[8%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>                            
                    </div>
   </div>
 
@@ -195,7 +208,6 @@ let p = (r)=>{
 
 
 
-
 </template>
 
 <style scoped>
@@ -203,5 +215,7 @@ let p = (r)=>{
 .star{
    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
+
+
 
 </style>

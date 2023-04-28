@@ -5,6 +5,7 @@ import sldier from '../components/movie/top_slider_sm.vue'
 import sldier2 from '../components/movie/top_slider2_sm.vue'
 import { useRouter } from 'vue-router';
 import  h_posters  from '../components/movie/h_posters.vue';
+import  h_posters_tem  from '../components/movie/h_posters_tem.vue';
 
 let router = useRouter()
 
@@ -30,23 +31,26 @@ let similars = ref([
      ])
 let runtime = ref('')     
 async function fetchapi() {
-
-  let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
-  
-    let data =  await resp.json()
-    img.value = data.image
-    posters.value  = data.posters
-    backdrops.value = posters.value.backdrops
-    name.value = data.title
-    plot.value = data.plot
-    cast.value = data.actorList
-    cast.value = cast.value.slice(0,10)
-    gallery.value = posters.value.backdrops.slice(1)
-    similars.value = data.similars
-    genre.value = data.genreList
-    rate.value = data.imDbRating
-    date.value = data.releaseDate
-    runtime.value = data.runtimeStr
+    //k_zdj1as3m
+    // key: 018dc97373a6a1d76d6603c4e0396419
+    //let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
+    
+    let resp = null
+    
+    let data =  resp? await resp.json(): {}
+    img.value = data.image ? data.image : 'https://image.tmdb.org/t/p/original/jtVl3nN5bJ4t7pgakLfGJmOrqZm.jpg'
+    posters.value  = data.posters ? data.posters : []
+    backdrops.value = posters.value && posters.value.backdrops ? posters.value.backdrops : []
+    name.value = data.title ? data.title : 'movie'
+    plot.value = data.plot ? data.plot : 'this happens when imdb dont send data back. Dolor maiores dolorem, ipsum inventore harum ipsam optio dignissimos molestiae, necessitatibus beatae non impedit? Corporis modi esse est quasi. Exercitationem, distinctio ea'
+    cast.value = data.actorList ? data.actorList : []
+    cast.value = cast.value ? cast.value.slice(0,10) : []
+    gallery.value = posters.value && posters.value.backdrops ? posters.value.backdrops.slice(1): []
+    similars.value = data.similars ? data.similars : []
+    genre.value = data.genreList ? data.genreList : []
+    rate.value = data.imDbRating ? data.imDbRating : '10'
+    date.value = data.releaseDate ? data.releaseDate : ''
+    runtime.value = data.runtimeStr ? data.runtimeStr : ''
 }
 
 
@@ -57,7 +61,7 @@ async function fetchvideo(){
 }
 
 fetchapi()
-fetchvideo()
+//fetchvideo()
 
 let go = (title)=>{
       router.push('/movie/'+title)
@@ -216,7 +220,6 @@ window.scrollTo({top:0})
 
       </div>
 
-   
 <!-- large screen -->
 
 <div class=" relative hidden md:block text-[100%] ">
@@ -229,11 +232,22 @@ window.scrollTo({top:0})
                   <div class="  h-screen w-[100%] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-[6] pb-[4%] pl-[7%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
     
                   <div class="flex flex-col  md2:flex-row w-full  ">  
-                         <div class="md2:w-[55%] w-full pr-[1%] flex flex-col pb-[1%]">     
+                         <div class="md2:w-[55%] w-full pr-[1%] flex flex-col pb-[1%]">    
+                              
+
+                                    <div v-if="name.length<=0" class="w-[30%] mb-[2%] bg-neutral-800 animate-pulse pb-[5%]"></div>
+
+                                    <div v-if="rate.length<=0&&genre.length<=0&&date.length<=0" class="w-[85%] mb-[2%] bg-neutral-800 animate-pulse pb-[3%]"></div>
+
+                                    <div v-if="plot.length<0" class="w-[70%] mb-[1%] bg-neutral-800 animate-pulse pb-[2%]"></div>
+                                    <div v-if="plot.length<0" class="w-[70%] mb-[1%] bg-neutral-800 animate-pulse pb-[2%]"></div>
+                                    <div v-if="plot.length<0" class="w-[70%] mb-[1%] bg-neutral-800 animate-pulse pb-[2%]"></div>
+
+                              
                                     <label class="text-[200%]" for="">{{name}}</label>
                                     <div class="flex flex-row  gap-[7%] w-[100%]">
                                     
-                                          <div class="flex flex-row justify-center items-center">
+                                          <div v-if="rate.length>0" class="flex flex-row justify-center items-center">
                                                 <ion-icon class=" text-orange-500 translate-y-[-2%]" name="star"></ion-icon>{{ rate }}
                                           </div>
 
@@ -265,10 +279,12 @@ window.scrollTo({top:0})
 
                                     <div class=" flex flex-row justify-self-end    w-[50%] gap-[2%] ">
 
-                                          <button class="bg-c1 px-[8%] py-[1%] text-[120%]">view</button>
+                                          <button class="bg-c2 px-[8%] py-[1%] text-[120%]">view</button>
                                           <button @click="b('tr')" class=" bg-neutral-800 px-[8%] py-[1%] rounded-sm text-[120%]">Trailer</button>
 
                                     </div>
+
+
                          </div> 
 
                     
@@ -278,6 +294,9 @@ window.scrollTo({top:0})
 
 
                                        <h_posters v-if="gallery.length>0" :items="gallery" />
+                                        
+                                       <h_posters_tem v-else  />
+                                          
 
                               </div>
                           
