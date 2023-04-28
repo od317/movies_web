@@ -121,7 +121,12 @@ let p = (r)=>{
   
   let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
 
-  return [res,rem]
+  let rem2 = 5-res
+
+  rem2 = rem>0 ? rem2-1:rem2
+
+
+  return [res,rem,rem2]
 }
 
 
@@ -171,6 +176,17 @@ let p = (r)=>{
                                       </div>
 
                                     </div>
+
+                                    <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                              <div   :class="` star bg-c2 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+
                              </div>
 
                               <label class=" whitespace-normal md:text-[.7rem] md:max-h-[7.3rem] lg:text-[.9rem] lg:max-h-[8rem] mt-[5%]  overflow-hidden  " for="">

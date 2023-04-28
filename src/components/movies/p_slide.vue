@@ -147,8 +147,11 @@ let p = (r)=>{
   
   let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
   
+  let rem2 = 5-res
 
-  return [res,rem]
+  rem2 = rem>0 ? rem2-1:rem2
+
+  return [res,rem,rem2]
 }
 
 
@@ -180,7 +183,7 @@ let p = (r)=>{
                   <div class="h-full w-full relative">
                    
                         <div v-for="i in length-1" :class="` absolute w-full h-full flex flex-col ${cur===movies2[i].num? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms`">
-                              <label class="text-[150%] mb-[1%] capitalize" for="">{{ movies2[i].name }}</label>
+                              <label class="text-[150%] mb-[1%] mt-[4%] lg:mt-[0%] capitalize" for="">{{ movies2[i].name }}</label>
                               
                                     <div class="flex flex-row stars text-[50%] mb-[2%]" id="stars">
                                                 <div v-for="i in p(movies2[i].rate)[0]"  class=" star  w-[2%] pb-[2%] relative ">
@@ -202,11 +205,11 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
 
-                              <button class="lg:w-[8%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
+                              <button class="lg:w-[9%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.
-                                   <div class="opacity-[30%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad. </div>
+                                   <div class="opacity-[30%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum  </div>
                         
                               </div>
                         </div>
@@ -230,6 +233,9 @@ let p = (r)=>{
                                                       </div>
 
                                                 </div>
+
+
+
                                     </div>
                             
                               <div class="lg:w-[17%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
@@ -242,7 +248,7 @@ let p = (r)=>{
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.
-                                   <div class="opacity-[30%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad. </div>
+                                   <div class="opacity-[30%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem. </div>
                         
                               </div>
                         </div>

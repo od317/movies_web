@@ -41,8 +41,12 @@ let p = (r)=>{
   let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
   
   let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+  
+  let rem2 = 5-res
 
-  return [res,rem]
+  rem2 = rem>0 ? rem2-1:rem2
+
+  return [res,rem,rem2]
 }
 
 </script>
@@ -54,9 +58,9 @@ let p = (r)=>{
    <div class="bg-gradient-to-r from-c2 to-c1 h-[.5rem] w-full mb-[1rem]"></div>
    <div class="grid grid-cols-4  lg:grid-cols-6 gap-y-[5%] gap-x-[3%] mb-[3%]">
                <div v-for="f in films" :class="`${f.class ? f.class:'block'} flex flex-col break-words` ">
-                <RouterLink :to="`/movie/${f.id}`" class=" relative w-[100%] pb-[150%]">
-                    <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>  
-                    <VLazyImage   class=" absolute w-full cursor-pointer rounded-md h-full lazy" :src="f.img" alt=""/>
+                <RouterLink :to="`/movie/${f.id}`" class=" shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] relative w-[100%] pb-[150%]">
+                    <div class="w-full h-full absolute bg-neutral-800 rounded-md animate-pulse"></div>  
+                    <VLazyImage   class=" absolute  w-full cursor-pointer rounded-md h-full lazy" :src="f.img" alt=""/>
                   </RouterLink>
                    <label class="break-words truncate capitalize" for="">{{ f.title }}</label>
                    <div class="flex flex-row stars" id="stars">
@@ -76,6 +80,17 @@ let p = (r)=>{
                               </div>
 
                             </div>
+                            
+                            <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                                              
+                              </div>
+
+                            </div>
+
                    </div>
 
                </div>     

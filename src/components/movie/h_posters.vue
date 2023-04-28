@@ -70,10 +70,10 @@
 </div>
 <div class=" overflow-hidden">
     <div :style="`transform:translateX(${trans}%)`" :class="`w-full   p-[0%] m-[0%]  whitespace-nowrap relative ${t?' transition-all duration-200':''}`">  
-        <div :style="` background-image:url(${i.link})`" class="  w-[40%]  pb-[20%] mr-[1%] inline-block bg-center bg-cover    " v-for="i in items">
-          
-
-        </div>
+        <div  class=" relative   w-[40%]  pb-[20%] mr-[1%] inline-block bg-center bg-cover    " v-for="i in items">
+                  <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>
+                  <div :style="` background-image:url(${i.link})`" class="w-full h-full absolute bg-cover bg-center"></div>          
+                </div>
     </div>
 </div>
 
