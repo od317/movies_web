@@ -63,8 +63,8 @@ async function fetchvideo(){
       video.value = data.videoId;
 }
 
-fetchapi()
-fetchvideo()
+//fetchapi()
+//fetchvideo()
 
 let go = (title)=>{
       router.push('/movie/'+title)
@@ -84,8 +84,11 @@ let b = (name)=>{
   }
 
 
-window.scrollTo({top:0})
-
+  window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'instant',
+});
 
 </script>
 

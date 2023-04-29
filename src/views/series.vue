@@ -227,29 +227,32 @@ let c1 = ref(`width:${0.75*100}%`)
                            <label class="ml-[10%] lg:text-[300%] md:text-[190%] font-bold" for=""> Collection Of Best Series</label>
                       </div>
                 
-                      <div @click="view('tt4574334')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2222,w_1500/https%3A%2F%2Fnetflixlife.com%2Ffiles%2F2022%2F02%2FEN_ST4_Teaser_Russia_Vertical_27x40_RGB.jpg')] bg-cover bg-center c5 z-[10]"></div>
-                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[74.6%] md:translate-y-[91.8%] translate-x-[382%] bg-slate-700   animate-pulse z-[5] c5 "></div>
-                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%]   z-[4] c5
-                      animate-gradient-x
-                      bg-gradient-to-r 
-                      from-blue-400 
-                      to-orange-500 
-                      via-purple-500
-                      "></div>
+                      <RouterLink to="/movie/tt4574334">
+                           <div  class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[72.3%] md:translate-y-[88.3%] translate-x-[370%]  bg-[url('https://images2.minutemediacdn.com/image/fetch/c_fill,g_auto,f_auto,h_2222,w_1500/https%3A%2F%2Fnetflixlife.com%2Ffiles%2F2022%2F02%2FEN_ST4_Teaser_Russia_Vertical_27x40_RGB.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                           <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[74.6%] md:translate-y-[91.8%] translate-x-[382%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                           <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%]   z-[4] c5
+                           animate-gradient-x
+                           bg-gradient-to-r 
+                           from-blue-400 
+                           to-orange-500 
+                           via-purple-500
+                           "></div>
+                     </RouterLink>
 
 
+                      <RouterLink to="/movie/tt0386676">                   
+                        <div  class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://tv-fanatic-res.cloudinary.com/iu/s--ZCvgnNPQ--/f_auto,q_auto/v1371070346/the-office-poster')] bg-cover bg-center c5 z-[10]"></div>
+                        <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
+                        <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%]   z-[4] c5 
+                        animate-gradient-x
+                        bg-gradient-to-r 
+                        from-blue-400 
+                        to-orange-500 
+                        via-purple-500"></div>
+                     </RouterLink>
                     
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://tv-fanatic-res.cloudinary.com/iu/s--ZCvgnNPQ--/f_auto,q_auto/v1371070346/the-office-poster')] bg-cover bg-center c5 z-[10]"></div>
-                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
-                      <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%]   z-[4] c5 
-                      animate-gradient-x
-                      bg-gradient-to-r 
-                      from-blue-400 
-                      to-orange-500 
-                      via-purple-500"></div>
-                    
-                      
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://sportshub.cbsistatic.com/i/2022/07/25/b87bfa41-24d7-4041-8bbe-e219c41aba52/the-sandman-netflix-poster.jpg?auto=webp&width=1500&height=2222&crop=0.675:1,smart')] bg-cover bg-center c5 z-[10]"></div>
+                     <RouterLink to="/movie/tt1751634">
+                      <div  class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[428%] bg-[url('https://sportshub.cbsistatic.com/i/2022/07/25/b87bfa41-24d7-4041-8bbe-e219c41aba52/the-sandman-netflix-poster.jpg?auto=webp&width=1500&height=2222&crop=0.675:1,smart')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[441.7%]    animate-pulse z-[4] c5 
                       animate-gradient-x
@@ -257,9 +260,10 @@ let c1 = ref(`width:${0.75*100}%`)
                       from-blue-400 
                       to-orange-500 
                       via-purple-500"></div>
+                     </RouterLink>
 
-                    
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bb48ffc1-bf25-486b-a056-63c3bfce1223/dezxpmc-3c5f9b10-d54c-4810-9e20-dac8b46a7769.jpg/v1/fill/w_1280,h_1921,q_75,strp/moon_knight__2022__poster_by_bakikayaa_dezxpmc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcL2JiNDhmZmMxLWJmMjUtNDg2Yi1hMDU2LTYzYzNiZmNlMTIyM1wvZGV6eHBtYy0zYzVmOWIxMC1kNTRjLTQ4MTAtOWUyMC1kYWM4YjQ2YTc3NjkuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.W1JcQogodBJQJrBONWqTD_4M7cy6-p6yszxi5xKD4PE')] bg-cover bg-center c5 z-[10]"></div>
+                     <RouterLink to="/movie/tt10234724">                  
+                      <div  class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[312%]   bg-[url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/bb48ffc1-bf25-486b-a056-63c3bfce1223/dezxpmc-3c5f9b10-d54c-4810-9e20-dac8b46a7769.jpg/v1/fill/w_1280,h_1921,q_75,strp/moon_knight__2022__poster_by_bakikayaa_dezxpmc-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTkyMSIsInBhdGgiOiJcL2ZcL2JiNDhmZmMxLWJmMjUtNDg2Yi1hMDU2LTYzYzNiZmNlMTIyM1wvZGV6eHBtYy0zYzVmOWIxMC1kNTRjLTQ4MTAtOWUyMC1kYWM4YjQ2YTc3NjkuanBnIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.W1JcQogodBJQJrBONWqTD_4M7cy6-p6yszxi5xKD4PE')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[322.5%]  z-[4] c5 
                       animate-gradient-x
@@ -267,8 +271,10 @@ let c1 = ref(`width:${0.75*100}%`)
                       from-blue-400 
                       to-orange-500 
                       via-purple-500"></div>
-                    
-                      <div @click="console.log('ok')" class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://m.media-amazon.com/images/I/71xd2Jh8U1L._AC_UF894,1000_QL80_.jpg')] bg-cover bg-center c5 z-[10]"></div>
+                     </RouterLink>
+
+                     <RouterLink to="/movie/tt3032476">                  
+                      <div  class=" cursor-pointer absolute pb-[18%] w-[18%] lg:translate-y-[132.3%] md:translate-y-[148.3%] translate-x-[428%] bg-[url('https://m.media-amazon.com/images/I/71xd2Jh8U1L._AC_UF894,1000_QL80_.jpg')] bg-cover bg-center c5 z-[10]"></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[137.3%] md:translate-y-[153.3%] translate-x-[442%] bg-slate-700   animate-pulse z-[5] c5 "></div>
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[441.7%]     z-[4] c5 
                       animate-gradient-x
@@ -276,6 +282,7 @@ let c1 = ref(`width:${0.75*100}%`)
                       from-blue-400 
                       to-orange-500 
                       via-purple-500"></div>
+                     </RouterLink>
                     
 
                     </div>
@@ -368,8 +375,6 @@ let c1 = ref(`width:${0.75*100}%`)
                      <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
                      <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
                      w-full h-full z-[5]"></div>
-                     <div class=" z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>
-                     <div class="   z-[4] absolute bg-zinc-800 animate-pulse  h-full w-full "></div>             
                      </div>
 
 

@@ -61,7 +61,7 @@ name:'Intersteller',
 gen:['Mystery','Sci fi','Drama'],
 rate:'8.6'},
 {num:2,
-img:'https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtMDgyYi00NGIwLWJhMTEtOTdkZGFjNmZiMTEwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg',
+img:'https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/02/john-wick-4-keanu-reeves.jpg',
 name:'John Wick Chapter 4',
 gen:['Action','Crime','Thriller'],
 rate:'8.2'},
@@ -165,7 +165,7 @@ let p = (r)=>{
 
             <div :class="` ${cur===0? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://api.time.com/wp-content/uploads/2019/12/1917.jpg')] bg-cover bg-center`"></div>            
             <div :class="` ${cur===1? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://rare-gallery.com/uploads/posts/979135-Interstellar-movie-movies-astronaut-sea.jpg')] bg-cover bg-center`"></div>
-            <div :class="` ${cur===2? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://s3.amazonaws.com/static.rogerebert.com/uploads/review/primary_image/reviews/john-wick-chapter-4-movie-review-2023/john-wick-chapter-4-movie-review-2023.jpeg')] bg-cover bg-center`"></div>
+            <div :class="` ${cur===2? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/02/john-wick-4-keanu-reeves.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===3? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://cdn.theatlantic.com/thumbor/gfEC-kjBeTO3jJzafQ4WrEvTBVk=/0x256:4000x2506/1600x900/media/img/mt/2019/11/knives_out_KO_D10_04517_R_rgb/original.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===4? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://sfanytime-images-prod-http2.secure2.footprint.net/MEDIAM/86619dcb-65e4-4cf6-91db-a93000f18f7d_MEDIAM_32bda4db-124b-40f0-8143-8b2dfd987c6a.jpg?w=1125&fm=pjpg&s=63e07ea0150d5d854249fc798f6029dc')] bg-cover bg-center`"></div>
             <div :class="` ${cur===5? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://m.media-amazon.com/images/M/MV5BMzEwYjhkYjUtMGRjOS00ZTAxLWEyM2QtYWUwYmEyM2FmOWZmXkEyXkFqcGdeQXVyNzM3NDY3OTA@._V1_.jpg')] bg-cover bg-center`"></div>
@@ -204,7 +204,8 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[1] }}</label>
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
-
+                             
+                              
                               <button class="lg:w-[9%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
 
                               <div class="w-[40%] relative "> 

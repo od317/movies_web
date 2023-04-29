@@ -23,9 +23,9 @@ let s2 = setTimeout(()=>{
                 <div class=" absolute w-full h-full bg-neutral-800 bg-opacity-40"></div>      
                 <div class=" absolute w-full h-full bg-gradient-to-t from-c1  "></div>      
                 <div class=" absolute transition-all duration-150 h-[80%] w-[25%] rounded-sm translate-y-[15%] translate-x-[10%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center "></div>
-
-                <div class=" absolute w-[25%] h-[10%] translate-y-[950%] translate-x-[10%] bg-c2 text-white text-center flex items-center justify-center rounded-md">view movie</div>
-
+                <RouterLink to="/movie/tt0816692" class="hover:text-white">
+                  <div class=" cursor-pointer absolute w-[25%] h-[10%] translate-y-[950%] translate-x-[10%] bg-c2 text-white text-center flex items-center justify-center rounded-md">view movie</div>
+                </RouterLink>
                 <div class=" absolute w-[65%] translate-y-[15%]   translate-x-[50%] h-[80%] ">
                      <div class=" relative    overflow-hidden w-full whitespace-nowrap row flex flex-col     h-full">
                                 <label class=" md:text-[120%] lg:text-[150%] p-0" for="">Interstellar 2011</label>
@@ -61,8 +61,9 @@ let s2 = setTimeout(()=>{
     <div class="h-full flex justify-center items-center flex-col  mt-[5%]  w-[100%] ">
           
             <div class=" relative  pb-[50%]  border-none outline-none w-[30%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
-            <button class=" relative   w-[30%]  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
-        
+             <RouterLink to="/movie/tt0816692" class="hover:text-white">
+               <button class=" relative   w-[30%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
+            </RouterLink>
     </div>
 
 

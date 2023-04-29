@@ -161,27 +161,27 @@ let p = (r)=>{
 
                               <div class="flex flex-row stars" id="stars">
                                     <div v-for="i in p(f.rate)[0]"  class=" star  w-[12%] pb-[12%] relative ">
-                                                    <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                                    <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">
                                                       
                                                     </div>
                                                     
 
                                     </div>
-                                    <div v-if="p(f.rate)[1]!==0"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                                    <div v-if="p(f.rate)[1]!==0"   class=" star w-[12%] bg-[#FF9529]   pb-[12%] relative ">
                                       <div   :class="` star bg-c2 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                             
                                       </div>             
-                                      <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                                      <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="`  bg-[#FF9529]  h-full absolute `">
                                                       
                                       </div>
 
                                     </div>
 
-                                    <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                                    <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-[#FF9529]   pb-[12%] relative ">
                               <div   :class="` star bg-c2 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                      
                               </div>             
-                              <div  :style="`width:0%`"  :class="` bg-white  h-full absolute `">
+                              <div  :style="`width:0%`"  :class="` bg-[#FF9529]  h-full absolute `">
                                               
                               </div>
 
@@ -204,8 +204,9 @@ let p = (r)=>{
                                         </div>                                
                                       </div>
 
-                                 <button @click="view(f.id)" class=" self-start place-self-end bg-c1 p-1 mt-[5%] lg:text-[1rem] lg:mt-[10%] rounded-md">View Movie</button>
-
+                                  <RouterLink :to="`/movie/${f.id}`" class="hover:text-white">
+                                     <button  class=" self-start place-self-end bg-c1 p-1 mt-[5%] lg:text-[1rem] lg:mt-[10%] rounded-md">View Movie</button>
+                                  </RouterLink>
 
                               </div>
 
@@ -236,6 +237,5 @@ let p = (r)=>{
 .star{
    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
-
 
 </style>

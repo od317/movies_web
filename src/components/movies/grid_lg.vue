@@ -65,23 +65,23 @@ let p = (r)=>{
                    <label class="break-words truncate capitalize" for="">{{ f.title }}</label>
                    <div class="flex flex-row stars" id="stars">
                             <div v-for="i in p(f.rate)[0]"  class=" star  w-[12%] pb-[12%] relative ">
-                                            <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
+                                            <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">
                                               
                                             </div>
                                             
 
                             </div>
-                            <div v-if="p(f.rate)[1]!==0"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                            <div v-if="p(f.rate)[1]!==0"   class=" star w-[12%] bg-[#FF9529]   pb-[12%] relative ">
                               <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                      
                               </div>             
-                              <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">
+                              <div  :style="`width:${p(f.rate)[1]*10}%`"  :class="` bg-[#FF9529]  h-full absolute `">
                                               
                               </div>
 
                             </div>
                             
-                            <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-white   pb-[12%] relative ">
+                            <div v-for="i in p(f.rate)[2]"   class=" star w-[12%] bg-[#FF9529]   pb-[12%] relative ">
                               <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
                      
                               </div>             
