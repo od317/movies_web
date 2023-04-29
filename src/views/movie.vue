@@ -29,18 +29,21 @@ let date = ref('')
 let genre = ref([])
 let similars = ref([
      ])
+let img_f = ref(true)
 let runtime = ref('')     
 async function fetchapi() {
     //k_zdj1as3m
     // key: 018dc97373a6a1d76d6603c4e0396419
-    //let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
     
-    let resp = null
+    let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
+    
     
     let data =  resp? await resp.json(): {}
     img.value = data.image ? data.image : 'https://image.tmdb.org/t/p/original/jtVl3nN5bJ4t7pgakLfGJmOrqZm.jpg'
+    
     posters.value  = data.posters ? data.posters : []
     backdrops.value = posters.value && posters.value.backdrops ? posters.value.backdrops : []
+    img_f.value = posters.value && posters.value.backdrops ? true : false
     name.value = data.title ? data.title : 'movie'
     plot.value = data.plot ? data.plot : 'this happens when imdb dont send data back. Dolor maiores dolorem, ipsum inventore harum ipsam optio dignissimos molestiae, necessitatibus beatae non impedit? Corporis modi esse est quasi. Exercitationem, distinctio ea'
     cast.value = data.actorList ? data.actorList : []
@@ -61,7 +64,7 @@ async function fetchvideo(){
 }
 
 fetchapi()
-//fetchvideo()
+fetchvideo()
 
 let go = (title)=>{
       router.push('/movie/'+title)
@@ -227,7 +230,7 @@ window.scrollTo({top:0})
             <div  class="absolute w-full h-screen bg-zinc-900  bg-opacity-40"></div>
             <div  class="flex flex-col justify-end  h-screen">
                   <div class="w-full h-[60%] z-[5] bg-gradient-to-t from-zinc-900 from-1% to-transparent  to-99%  absolute bg-opacity-30  "></div>
-                  <div  class="   h-screen w-[100%] absolute bg-cover bg-center flex flex-col justify-end z-[4] " :style="` background-image:url(${backdrops[0]?backdrops[0].link:img})`" alt="">
+                  <div  :class="`   h-screen w-[100%] absolute bg-cover ${img_f ? 'bg-center':'bg-top'} flex flex-col justify-end z-[4] `" :style="` background-image:url(${backdrops[0]?backdrops[0].link:img})`" alt="">
                   </div>
                   <div class="  h-screen w-[100%] shadow-[rgba(0,_0,_0,_0.2)_0px_60px_40px_-7px] z-[6] pb-[4%] pl-[7%] justify-between absolute bg-cover bg-center flex flex-row items-end ">
     

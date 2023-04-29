@@ -195,10 +195,11 @@ let p = (r)=>{
      <label class="text-[150%]" for="">recommended</label>
 </div>
 
-<div class="hidden md:block">
+<div class="hidden md:block relative  ">
 <flicl2/>
+
 </div>
-<div class="md:hidden pb-[20%]">
+<div class="md:hidden pb-[20%] ">
 <flic2/>
 </div>
 
@@ -216,6 +217,28 @@ let p = (r)=>{
    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
+.red {
+        background: #dd3f31;
+      }
+   .wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
 
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(102% + 1.3px);
+    height: 223px;
+}
+
+.wave .shape-fill {
+    fill: rgb(23 23 23);
+}
 
 </style>

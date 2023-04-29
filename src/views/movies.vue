@@ -559,7 +559,7 @@ window.scrollTo({top:0})
 
                         </div>
                        
-                        <div @click="s_a(1)" :class="`      ${s[1]? 'animate-s2 translate-y-[100%] opacity-[0%]  ':' cursor-pointer'} ${(!s[1])&&on_s? ' translate-x-[-100%]' : ''} transition-all duration-1000 px-[5%]     relative group  rounded-sm  h-[150%]    `">  
+                        <div @click="s_a(1)" :class="`      ${s[1]? 'animate-s2 translate-y-[150%] opacity-[0%]  ':' cursor-pointer'} ${(!s[1])&&on_s? ' translate-x-[-100%]' : ''} transition-all duration-1000 px-[5%]     relative group  rounded-sm  h-[150%]    `">  
                            <div :class="`hidden absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[1]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                            <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
@@ -568,7 +568,7 @@ window.scrollTo({top:0})
 
                          </div>
                      
-                         <div @click="s_a(2)" :class=" ` ${s[2]? 'animate-s3 translate-y-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[2])&&on_s? ' translate-x-[-200%]' : ''} transition-all duration-1000   relative group bg-[url('')] rounded-sm bg-center h-[150%] bg-cover   px-[5%] `">  
+                         <div @click="s_a(2)" :class=" ` ${s[2]? 'animate-s3 translate-y-[-150%] opacity-[0%]  ':'cursor-pointer'} ${(!s[2])&&on_s? ' translate-x-[-200%]' : ''} transition-all duration-1000   relative group bg-[url('')] rounded-sm bg-center h-[150%] bg-cover   px-[5%] `">  
                            <div :class="`hidden absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[2]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                            <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
@@ -577,7 +577,7 @@ window.scrollTo({top:0})
 
                          </div>
                     
-                         <div @click="s_a(3)" :class="` ${s[3]? 'animate-s2 translate-y-[100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[3])&&on_s? ' translate-x-[-300%]' : ''} transition-all duration-1000 relative group hidden md:inline-block  rounded-sm  h-[150%]    px-[5%] `">
+                         <div @click="s_a(3)" :class="` ${s[3]? 'animate-s2 translate-y-[150%] opacity-[0%]  ':'cursor-pointer'} ${(!s[3])&&on_s? ' translate-x-[-300%]' : ''} transition-all duration-1000 relative group hidden md:inline-block  rounded-sm  h-[150%]    px-[5%] `">
                             <div :class="`hidden absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[3]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                               <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
@@ -586,7 +586,7 @@ window.scrollTo({top:0})
                             <img class="opacity-0 hidden" src="https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg" alt="">
                            </div>
                    
-                         <div @click="s_a(4)" :class="` ${s[4]? 'animate-s3 translate-y-[-100%] opacity-[0%]  ':'cursor-pointer'} ${(!s[4])&&on_s? ' translate-x-[-400%]' : ''} transition-all duration-1000 hidden group relative md:inline-block  rounded-sm px-[5%] h-[150%]   `">
+                         <div @click="s_a(4)" :class="` ${s[4]? 'animate-s3 translate-y-[-150%] opacity-[0%]  ':'cursor-pointer'} ${(!s[4])&&on_s? ' translate-x-[-400%]' : ''} transition-all duration-1000 hidden group relative md:inline-block  rounded-sm px-[5%] h-[150%]   `">
                             <div :class="`hidden absolute md:flex items-center justify-center w-[90%] h-[100%] transition-all duration-200 ${!(!on_s&&!s[4]) ? 'opacity-[0%]':' opacity-[100%]'} `">
                               <div class="  w-[100%] h-[100%] bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-500 bg-neutral-900  absolute"></div>
                             <div class=" w-[100%] h-[0%] hidden group-hover:flex items-center justify-center font-bold absolute">movie</div>
