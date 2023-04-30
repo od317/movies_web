@@ -147,7 +147,9 @@ window.scrollTo({
 
 <template>
 
-<div class="md:hidden pt-[7%]">
+<div class="md:hidden text-center pt-[3%] text-[120%]">movie</div>
+
+<div class="md:hidden pt-[3%]">
 <flic/>
 </div>
 

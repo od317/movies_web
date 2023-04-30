@@ -221,46 +221,46 @@ watch(page,()=>{
 
 
 
+   <div class="w-full relative  justify-self-end text-white bg-neutral-900 md:pt-[10%] mt-[5%] md:px-[8%] px-[5%] py-[5%] md:pb-[5%] pb-[20%]">
+
+<div class=" grid grid-cols-2 md:gap-[0%] gap-[10%]  md:flex  md:flex-row md:justify-between border-b-4 md:pb-[10%] pb-[20%]">
+                    <div class="flex flex-col text-[120%] col-span-2">
+                         <label class="text-[150%] font-bold " for="">Logo</label>
+                         <label class="" for="">movies website</label>                           
+                    </div>
+                    <div class="flex flex-col">
+                         <label class="" for="">About us</label>
+                         <label class="" for="">contact</label>                           
+                    </div>
+                    <div class="flex flex-col">
+                         <label class="" for="">movies</label>
+                         <label class="" for="">series</label>                           
+                    </div>
+                    <div class="flex flex-col">
+                         <label class="" for="">Logo</label>
+                         <label class="" for="">movies website</label>                           
+                    </div>
+                    <div class="flex flex-col">
+                         <label class="" for="">Logo</label>
+                         <label class="" for="">movies website</label>                           
+                    </div>
+
+        </div>
+
+        <div class="flex flex-row justify-center items-center gap-[2%] pt-[5%] pb-[5%] text-[180%]">
+         <ion-icon name="logo-facebook"></ion-icon>
+         <ion-icon name="logo-google"></ion-icon>
+         <ion-icon name="logo-instagram"></ion-icon>
+         <ion-icon name="logo-twitter"></ion-icon>
+         <ion-icon name="logo-youtube"></ion-icon>
+        </div>
+
+
+</div>
 
    </div>
    
 
-   <div class="w-full relative  justify-self-end text-white bg-neutral-900 md:pt-[10%] mt-[5%] md:px-[8%] px-[5%] py-[5%] md:pb-[5%] pb-[20%]">
-
-      <div class=" grid grid-cols-2 md:gap-[0%] gap-[10%]  md:flex  md:flex-row md:justify-between border-b-4 md:pb-[10%] pb-[20%]">
-                          <div class="flex flex-col text-[120%] col-span-2">
-                               <label class="text-[150%] font-bold " for="">Logo</label>
-                               <label class="" for="">movies website</label>                           
-                          </div>
-                          <div class="flex flex-col">
-                               <label class="" for="">About us</label>
-                               <label class="" for="">contact</label>                           
-                          </div>
-                          <div class="flex flex-col">
-                               <label class="" for="">movies</label>
-                               <label class="" for="">series</label>                           
-                          </div>
-                          <div class="flex flex-col">
-                               <label class="" for="">Logo</label>
-                               <label class="" for="">movies website</label>                           
-                          </div>
-                          <div class="flex flex-col">
-                               <label class="" for="">Logo</label>
-                               <label class="" for="">movies website</label>                           
-                          </div>
-
-              </div>
-
-              <div class="flex flex-row justify-center items-center gap-[2%] pt-[5%] pb-[5%] text-[180%]">
-               <ion-icon name="logo-facebook"></ion-icon>
-               <ion-icon name="logo-google"></ion-icon>
-               <ion-icon name="logo-instagram"></ion-icon>
-               <ion-icon name="logo-twitter"></ion-icon>
-               <ion-icon name="logo-youtube"></ion-icon>
-              </div>
-
-
-   </div>
 
 
 
