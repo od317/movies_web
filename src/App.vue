@@ -171,7 +171,7 @@ watch(page,()=>{
       <label  for="">Laith</label>
    </div>
 
-  <div class="   w-[100%]  inline-block fixed top-[50%]   items-center z-[100] justify-center ">
+  <div class="   w-[100%]  inline-block sticky top-[90%]   items-center z-[100] justify-center ">
     <div :class="` md:hidden text-gray-400 m-auto   w-[90%]   flex justify-evenly z-[100]
                    ${ search_act ?' rounded-b-md':'rounded-md'} p-2 text-[1.6rem] backdrop-blur-md bg-white/30 transition-all duration-100`">
        
