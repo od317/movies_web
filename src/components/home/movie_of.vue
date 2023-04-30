@@ -58,22 +58,16 @@ let s2 = setTimeout(()=>{
     
     <div class=" absolute w-full h-full translate-y-[1%] bg-gradient-to-t from-c1 "></div>
      
-    <div class="h-full flex justify-center items-center flex-col  mt-[5%]  w-[100%] ">
+    <div class="h-full flex justify-center items-center flex-col  mt-[5%] mb-[5%]  w-[100%] ">
           
-            <div class=" relative  pb-[50%]  border-none outline-none w-[30%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
-             <RouterLink to="/movie/tt0816692" class="hover:text-white">
-               <button class=" relative   w-[30%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
+            <div class=" relative  pb-[140%]  border-none outline-none w-[90%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
+             <RouterLink to="/movie/tt0816692" class="w-[100%] flex justify-center items-center hover:text-white">
+               <button class=" relative   w-[90%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
             </RouterLink>
     </div>
 
 
 
-    <div class="  relative  mt-[5%]   w-full whitespace-nowrap     h-full  overflow-hidden    pb-[40%] ">
-                            <div class="  absolute inline-block  w-[30%] animate-trans-x1 h-[78%]    translate-x-[330%] ml-[5%]  bg-[url('https://images.hdqwalls.com/wallpapers/interstellar-movie-wide.jpg')] bg-cover bg-center"></div>
-                            <div  :class="`absolute inline-block w-[30%] trans-x2 h-[78%] trans-x2  translate-x-[330%] ml-[5%]  bg-[url('https://images.theconversation.com/files/64754/original/wpttp7tt-1416252242.png?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip')] bg-cover bg-center   `"></div>
-                            <div  :class="`absolute inline-block w-[30%] trans-x2 h-[78%] trans-x3  translate-x-[330%] ml-[5%]  bg-[url('https://www.intofilm.org/intofilm-production/scaledcropped/970x546https%3A/s3-eu-west-1.amazonaws.com/images.cdn.filmclub.org/film__18228-interstellar--hi_res-0e1b47af.jpg/film__18228-interstellar--hi_res-0e1b47af.jpg')] bg-cover bg-center`"></div>
-                            <div  :class="`absolute inline-block w-[30%] trans-x2 h-[78%] trans-x4  translate-x-[330%] ml-[5%]  bg-[url('https://mobimg.b-cdn.net/v3/fetch/9f/9fa9fd8686c35cc948e12b1106409ebf.jpeg')] bg-cover bg-center`"></div>
-    </div>
 
 
 

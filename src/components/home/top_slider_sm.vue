@@ -1,8 +1,9 @@
 <template>
     <Carousel class=" pt-[5%]"  :items-to-show="1.3" :wrap-around="true" ref="myCarousel">
       <Slide  :class="` `" v-for="slide in 5" :key="slide">
-        <div  class="carousel__item w-full rounded-md">
-            <div class="pb-[70%] bg-cover bg-center" alt="" :style="` background-image:url(${films[slide-1].img})`"></div>
+        <div  class="carousel__item pb-[70%] w-full relative rounded-md">
+            <div class=" absolute bg-neutral-800 animate-pulse w-full h-full z-[5]"></div>
+            <div class=" absolute  w-full h-full bg-cover bg-center z-[10]" alt="" :style="` background-image:url(${films[slide-1].img})`"></div>
         </div>
       </Slide>
   

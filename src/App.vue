@@ -171,8 +171,8 @@ watch(page,()=>{
       <label  for="">Laith</label>
    </div>
 
-  <div class="top-[91%] fixed flex items-center z-[100] justify-center w-[100%]">
-    <div :class="` md:hidden text-gray-400     w-[90%]   flex justify-evenly z-[100]
+  <div class="   w-[100%]  inline-block fixed top-[50%]   items-center z-[100] justify-center ">
+    <div :class="` md:hidden text-gray-400 m-auto   w-[90%]   flex justify-evenly z-[100]
                    ${ search_act ?' rounded-b-md':'rounded-md'} p-2 text-[1.6rem] backdrop-blur-md bg-white/30 transition-all duration-100`">
        
          <form @submit.prevent="onSubmit" @submit="search()" :class="` absolute backdrop-blur-none bg-c2 w-full flex flex-row justify-between py-2 
@@ -190,20 +190,20 @@ watch(page,()=>{
       </form>
 
 
-         <routerLink @click="page='home'" :class="` z-[100] ${page=='home' ? ' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/">
+         <RouterLink @click="page='home'" :class="` z-[100] ${page=='home' ? ' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/">
             <ion-icon   name="home-outline"></ion-icon>
-         </routerLink>
+         </RouterLink>
         
 
-         <routerLink @click="page='movies'" :class="` z-[100] ${ page=='movies' ? ' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/movies">
+         <RouterLink @click="page='movies'" :class="` z-[100] ${ page=='movies' ? ' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/movies">
             <ion-icon  name="tv-outline"></ion-icon>
-         </routerLink>
+         </RouterLink>
         
 
 
-         <routerLink @click="page='series'" :class="`z-[100] ${page=='series' ?' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/series">
+         <RouterLink @click="page='series'" :class="`z-[100] ${page=='series' ?' translate-y-[-10%] text-c2 hover:text-c2':'text-white'}  transition-all duration-200 `" to="/series">
             <ion-icon name="albums-outline"></ion-icon>
-        </routerLink>
+        </RouterLink>
         
 
         <button @click="search_act  = !search_act" :class="` z-[100] ${search_act ?' translate-y-[-10%]  hover:text-c3':'text-white'}  transition-all duration-200 `" >
@@ -211,7 +211,7 @@ watch(page,()=>{
         </button>
         
     </div>
-    </div>
+  </div>
   
 
     <router-view></router-view>

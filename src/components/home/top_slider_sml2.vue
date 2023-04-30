@@ -93,6 +93,15 @@ let view = (title)=>{
   router.push(`/movie/${title}`)
 }
 
+let b = (num)=>{
+
+if(num==1)
+   forward()
+if(num==3)
+   backward()
+
+}
+
 </script>
 
 
@@ -102,7 +111,7 @@ let view = (title)=>{
       <div :style="`transform:translateX(${trans*-1}%)`" :class="`whitespace-nowrap    ${du ? 'transition-all duration-[500ms]':''} w-[70%] `">
 
 
-        <div  :class="`w-[100%]   px-[2.3%]  relative inline-block mt-[2%] bg-transparent  ${du ? 'transition-all duration-[500ms]':''}
+        <div @click="b(f.num)"  :class="`w-[100%]   px-[2.3%]  relative inline-block mt-[2%] bg-transparent  ${du ? 'transition-all duration-[500ms]':''}
            ${f.num===1 ? ' ':(f.num===3? '':'')}`" 
           v-for="f in films">
                   <div  :class="`pb-[52%]  relative overflow-hidden ${!bo? 'group':''}  w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   bg-transparent  rounded-md `">

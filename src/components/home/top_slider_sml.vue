@@ -129,6 +129,14 @@ let p = (r)=>{
   return [res,rem,rem2]
 }
 
+let b = (num)=>{
+
+  if(num==1)
+     forward()
+  if(num==3)
+     backward()
+
+}
 
 </script>
 
@@ -141,7 +149,7 @@ let p = (r)=>{
       <div :class="` whitespace-nowrap translate-x-[-${trans}%] ${du ? 'transition-all duration-[500ms]':''} `">
 
 
-        <div :class="`w-[50%]  px-[2.3%] inline-block mt-[2%]  
+        <div @click="b(f.num)"  :class="`w-[50%]  px-[2.3%] inline-block mt-[2%]  
            ${f.num===1 ? ' -skew-y-6':(f.num===3? ' skew-y-6':'')} ${du ? 'transition-all duration-[500ms]':''}`" 
           v-for="f in films">
                   <div class="shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] px-[5%] flex flex-row  rounded-md bg-c2">

@@ -135,7 +135,6 @@ let view = (title)=>{
   router.push(`/movie/${title}`)
 }
 
-
 window.scrollTo({
   top: 0,
   left: 0,
