@@ -167,11 +167,10 @@ watch(page,()=>{
 
   <!-- sm nav_bar -->
   
-   <div v-if="page!=='movie'" :class="` md:hidden ${true? ' absolute z-[50]':'pt-[.5rem] pb-[2%]'}  pt-[2%]  text-[150%] w-full flex items-center justify-center`">
-      <label  for="">Laith</label>
-   </div>
 
-  <div class="   w-[100%]  inline-block sticky top-[90%] bottom-[10%]  items-center z-[100] justify-center ">
+
+  <div class="   w-[100%]  block sticky    top-[90%] bottom-[10%]  items-center z-[100] justify-center ">
+    <div class=" absolute w-full">
     <div :class="` md:hidden text-gray-400 m-auto   w-[90%]   flex justify-evenly z-[100]
                    ${ search_act ?' rounded-b-md':'rounded-md'} p-2 text-[1.6rem] backdrop-blur-md bg-white/30 transition-all duration-100`">
        
@@ -210,6 +209,7 @@ watch(page,()=>{
          <ion-icon name="search-outline"></ion-icon>
         </button>
         
+    </div>
     </div>
   </div>
   
