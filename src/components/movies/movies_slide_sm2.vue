@@ -6,10 +6,12 @@
       <Carousel  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
         <Slide class="px-[1%] w-[70%]" v-for="f in films" :key="f">
           <div class="carousel__item w-full">
-              <div class=" pb-[150%] w-full  relative">
+            <RouterLink :to="`/movie/${f.id}`">
+             <div class=" pb-[150%] w-full  relative">
                 <div class="w-full h-full absolute animate-pulse bg-neutral-800"></div>
                 <img :src="f.img" class=" absolute w-full h-full" alt="">
               </div>
+            </RouterLink>  
           </div>
         </Slide>
   

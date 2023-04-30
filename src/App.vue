@@ -102,7 +102,7 @@ watch(page,()=>{
 
 <div class="bg-c1">
 
-<div class="bg-c1 text-white overflow-x-clip min-h-screen">
+<div class="bg-c1 text-white overflow-x-clip ">
     
   
   <!-- lg nav_bar -->
@@ -213,8 +213,9 @@ watch(page,()=>{
     </div>
   </div>
   
-
-    <router-view></router-view>
+    <div class="min-h-screen">
+       <router-view></router-view>
+   </div>
    <div class="hidden">
     <test/>
    </div>
@@ -256,7 +257,7 @@ watch(page,()=>{
         </div>
 
 
-</div>
+   </div>
 
    </div>
    
