@@ -17,7 +17,9 @@
   
       </Carousel>
       <div class="flex items-center justify-start  px-[1.5%] mb-[3%] mt-[2%] text-[130%] flex-grow pr-[2%]" for="">
-          <button class="inline-block ">view more</button>
+        <RouterLink class="hover:text-white" :to="router_to">
+         <button  class=" inline-block cursor-pointer  text-end" >view more</button>
+         </RouterLink>
       </div>
 
     </template>
@@ -29,9 +31,16 @@
     
     let props = defineProps({
         title:String,
-        films:Array
+        films:Array,      
+        type:String,
+        filt:String
     })
-  
+   
+    let filt = props.filt
+    let type =  props.type
+
+    let router_to =  filt.length>0 ? `/search?type=${type}&${filt}` : `/search?type=${type}`
+
     let  breakpoints = {
         // 700px and up
         700: {
@@ -50,5 +59,4 @@
       }
   
     let films = props.films
-    let type = props.title
     </script>

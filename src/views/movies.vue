@@ -259,16 +259,38 @@ window.scrollTo({
     
        <p_slide/>
        <div  class="   md:bg-neutral-900 md:hidden pt-[1%] lg:pt-[6%] grid grid-cols-3 md:grid-cols-5 h-auto  lg:pb-[17%] md:pb-[20%]  lg:grid-cols-6 gap-[1%] px-[1%] md:px-[5%]">
-                 
-                        <RouterLink :to="`/movie/tt10872600`" :class="` relative bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
-                         rounded-sm bg-center  bg-cover pb-[300%]  transition-all duration-500  shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
+                
+                        <div class=" relative pb-[300%]">
+                           
+                           <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>
+
+                           <RouterLink :to="`/movie/tt10872600`" :class="` w-full h-full absolute bg-[url('https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg')] 
+                           rounded-sm bg-center  bg-cover   transition-all duration-500  shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
+                           </RouterLink>
+
+                        </div>
+                      
+                        <div class=" relative pb-[300%]">
+                        
+                           <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>
+
+                           <RouterLink :to="`/movie/tt7888964`" :class="` w-full h-full absolute bg-[url('https://m.media-amazon.com/images/M/MV5BMjM5YTRlZmUtZGVmYi00ZjE2LWIyNzAtOWVhMDk1MDdkYzhjXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_Ratio0.6757_AL_.jpg')] 
+                           rounded-sm bg-center  bg-cover   transition-all duration-500  shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
+                           </RouterLink>
+
+                        </div>
+                                                
+                        <div class=" relative pb-[300%]">
+                        
+                        <div class="w-full h-full absolute bg-neutral-800 animate-pulse"></div>
+
+                        <RouterLink :to="`/movie/tt10648342`" :class="` w-full h-full absolute bg-[url('https://filmfare.wwmindia.com/content/2022/jul/thorloveandthunder51657084424.jpg')] 
+                        rounded-sm bg-center  bg-cover   transition-all duration-500  shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] group`">
                         </RouterLink>
-                     
-                        <RouterLink :to="`/movie/tt7888964`" :class="`relative group bg-[url('https://m.media-amazon.com/images/M/MV5BMjM5YTRlZmUtZGVmYi00ZjE2LWIyNzAtOWVhMDk1MDdkYzhjXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_Ratio0.6757_AL_.jpg')] rounded-sm bg-center bg-cover pb-[100%] md:translate-y-[5%] md:transition-all md:duration-500   shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px]`"> 
-                        </RouterLink>
+
+                        </div>
                        
-                        <RouterLink :to="`/movie/tt10648342`" :class=" `relative group bg-[url('https://filmfare.wwmindia.com/content/2022/jul/thorloveandthunder51657084424.jpg')] rounded-sm bg-center pb-[300%] bg-cover md:translate-y-[9%] md:transition-all md:duration-500  shadow-[rgba(0,_0,_0,_0.25)_0px_25px_50px_-12px] `"> 
-                        </RouterLink>
+
 
                 
        </div>
@@ -680,17 +702,19 @@ window.scrollTo({
                   <div class=" md:hidden px-[5%] w-full justify-center items-center">
                   <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
                      
-                           <div class=" relative w-[100%] mb-[5%]  pb-[50%]">
-                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
-                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
+                           <RouterLink to="/movie/tt1877830" class=" hover:text-white relative w-[100%] mb-[5%]  pb-[50%]">
 
-                              </div>
-
-                           <div class=" relative w-[100%]  pb-[50%]">
+                                <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
                                 <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
-                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
-                        
-                              </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">Batman</div>
+
+                           </RouterLink>
+
+                           <RouterLink to="/movie/tt1392190" class=" relative w-[100%]  pb-[50%]">
+                               <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
+                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')] bg-cover bg-center">  </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">mad max</div>
+                           </RouterLink>
 
                   </div>
 

@@ -100,7 +100,11 @@ let set_type = (t)=>{
 }
 
 
-window.scrollTo({top:0,behavior:'auto'})
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'instant',
+});
 
 </script>
 
@@ -184,7 +188,7 @@ window.scrollTo({top:0,behavior:'auto'})
 <div class=" grid grid-cols-3 mt-[2%] h-auto md:gap-x-[1%] md:gap-y-[1%] md:grid-cols-4 lg:grid-cols-5 md:px-[6%] pb-[29%]">
              <div   v-for="f in movies" :key="f"   class="flex flex-col relative  z-10" >
                   <div class="relative pb-[150.666667%]">
-                        <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+                        <div class=" h-[100%]  animate-pulse absolute   bg-neutral-800  w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
                             <img   @click="movie_push(f.id)" class=" md:hover:scale-105 transition-all duration-200 cursor-pointer absolute h-full w-[100%] rounded-sm" :src="f.image"  alt="">
                         </div>
                         <div class=" relative hidden md:flex  bg-opacity-[50%]   md:p-[22%] lg:p-[15%] w-[100%]  flex-col justify-end whitespace-normal "  for="">
@@ -199,7 +203,7 @@ window.scrollTo({top:0,behavior:'auto'})
 
                 <div v-if="movies.length===0"  v-for="i in 10"   class="flex flex-col relative  z-10" >
                   <div class="relative pb-[150.666667%]">
-                        <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
+                        <div class=" h-[100%]  animate-pulse absolute bg-neutral-800    w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
                         </div>
                         <div class=" relative hidden md:flex  bg-opacity-[50%]   md:p-[22%] lg:p-[15%] w-[100%]  flex-col justify-end whitespace-normal "  for="">
                           <div class=" absolute w-full flex flex-col justify-center h-full bottom-0 left-0">

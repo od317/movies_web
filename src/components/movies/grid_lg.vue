@@ -20,17 +20,10 @@ let title = props.title
 let type =  props.type
 let filt = props.filt
 
-let view = (title)=>{
-  router.push(`/movie/${title}`)
-}
 
-let view2 = (title)=>{
-  if(filt.length>0)
-  router.push(`/search?type=${type}&${filt}`)
-  else
-  router.push(`/search?type=${type}`)
 
-}
+let router_to =  filt.length>0 ? `/search?type=${type}&${filt}` : `/search?type=${type}`
+
 
 
 let films =  props.grid
@@ -97,7 +90,9 @@ let p = (r)=>{
    </div>
    
    <div  class=" items-center  justify-end lg:mt-[5%] mt-[15%] hidden md:flex  pr-[1%] mb-[5%] ">
-         <button @click="view2()" class=" inline-block cursor-pointer  text-end" >view more</button>
+         <RouterLink class="hover:text-white" :to="router_to">
+         <button  class=" inline-block cursor-pointer  text-end" >view more</button>
+         </RouterLink>
    </div>
 </template>
 

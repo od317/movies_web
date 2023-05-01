@@ -54,42 +54,50 @@ let movies2 = ref([
 img:'https://api.time.com/wp-content/uploads/2019/12/1917.jpg',
 name:'1917',
 gen:['Action','Drama','War'],
-rate:'8.8'},
+rate:'8.8',
+id:'tt8579674'},
 {num:1,
 img:'https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg',
 name:'Intersteller',
 gen:['Mystery','Sci fi','Drama'],
-rate:'8.6'},
+rate:'8.6',
+id:'tt0816692'},
 {num:2,
 img:'https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/02/john-wick-4-keanu-reeves.jpg',
 name:'John Wick Chapter 4',
 gen:['Action','Crime','Thriller'],
-rate:'8.2'},
+rate:'8.2',
+id:'tt10366206'},
 {num:3,
 img:'https://m.media-amazon.com/images/M/MV5BMjJmYTNkNmItYjYyZC00MGUxLWJhNWMtZDY4Nzc1MDAwMzU5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
 name:'knives out',
 gen:['Dark comedy','Crime','Drama'],
-rate:'7.9'},
+rate:'7.9',
+id:'tt8946378'},
 {num:4,
 img:'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg',
 name:'Jurassic World 2',
 gen:['Action','Action','Action'],
-rate:'6.1'},
+rate:'6.1',
+id:'tt14833704'},
 {num:5,
 img:'https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_FMjpg_UX1000_.jpg',
 name:'Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train',
 gen:['Anime','Action','Fantasy'],
-rate:'8.2'},
+rate:'8.2',
+id:'tt11032374'},
 {num:6,
 img:'https://m.media-amazon.com/images/I/91i-DXsIHeL._AC_SY606_.jpg',
 name:'birdman',
 gen:['Comedy','Satire','Drama'],
-rate:'7.7'},
+rate:'7.7',
+id:'tt2562232'},
 {num:7,
 img:'https://deadline.com/wp-content/uploads/2019/08/the-rise-of-skywalker-poster.jpg',
 name:'star wars the rise of skywalker',
 gen:['Action','Adventure','Sci Fi'],
-rate:'6.5'}
+rate:'6.5',
+id:'tt2527338'}
 
 ])
 
@@ -205,9 +213,9 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
                              
+                              <RouterLink  :to="`/movie/${ movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</RouterLink>
+                             
                               
-                              <button class="lg:w-[9%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
-
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.
                                    <div class="opacity-[30%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum  </div>
@@ -245,7 +253,8 @@ let p = (r)=>{
                                     <label for="">{{ movies2[0].gen[2] }}</label>
                               </div>
 
-                              <button class="lg:w-[8%] md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</button>
+
+                              <RouterLink :to="`/movie/${movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</RouterLink>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.

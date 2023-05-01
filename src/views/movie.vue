@@ -63,8 +63,8 @@ async function fetchvideo(){
       video.value = data.videoId;
 }
 
-fetchapi()
-fetchvideo()
+//fetchapi()
+//fetchvideo()
 
 let go = (title)=>{
       router.push('/movie/'+title)
