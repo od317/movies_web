@@ -98,7 +98,7 @@ let b = (name)=>{
   <!-- small screen -->
  <div class="header relative md:hidden text-[100%]">
     
-      <div  :style="` background-image:url(${backdrops[0]?backdrops[0].link:''})`" :class="`relative bg-cover bg-center pb-[57%]`">
+      <div  :style="` background-image:url(${backdrops[0]?backdrops[0].link:img})`" :class="`relative  bg-cover ${img_f ? 'bg-center':'bg-bottom'} pb-[65%]`">
             <div  class="absolute w-full h-full bg-zinc-900   bg-opacity-40"></div>
             <div  class="absolute w-full h-full  z-[10] bg-gradient-to-t from-c1 from-10% to-transparent to-90%  bg-opacity-40"></div>
 
@@ -117,7 +117,7 @@ let b = (name)=>{
            <div class="flex flex-row flex-wrap  gap-[7%] w-[100%]">
                                     <div v-if="!date.length" class=" relative pb-[10%] mb-[2%] w-[98%] animate-pulse    bg-neutral-800"></div>
 
-                                    <div class="">
+                                    <div v-if="runtime.length" class="">
                                           {{ runtime }}
                                     </div>
 

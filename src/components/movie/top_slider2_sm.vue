@@ -2,7 +2,7 @@
     <Carousel class=""  :items-to-show="1.1" :wrap-around="false" ref="myCarousel">
       <Slide  :class="` `" v-for="slide in 10" :key="slide">
         <div  class="carousel__item relative w-full  rounded-md ">
-            <img class=" absolute h-full w-full " :src="items[slide-1].link" alt="" >
+            <img v-if="items[slide-1]&&items[slide-1].link" class=" absolute h-full w-full " :src="items[slide-1].link" alt="" >
             <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
         </div>
       </Slide>

@@ -483,61 +483,62 @@ let movies = ref([
 
  <div class="md:hidden grid grid-cols-2 px-[5%] gap-[4%] pb-[20%]">
 
-   <div class="col-span-2 row-span-2  md:flex flex-col justify-center  rounded-sm"> 
-            <div  class=" relative pb-[60%]  overflow-hidden group  ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
-               
-               <div  :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center  transition-all duration-200 `"></div>
-               
+         <RouterLink :to="`/movie/tt6723592`" class="col-span-2 row-span-2  md:flex flex-col justify-center  rounded-sm"> 
+                  <div  class=" relative pb-[60%]  overflow-hidden group  ">
+                     <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+                     
+                     <div  :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://wallpapers.com/images/featured/tu1b44axi1ewo7ya.jpg')] bg-cover bg-center  transition-all duration-200 `"></div>
+                     
+                           </div>
+                  <label :class="` transition-all duration-200 capitalize `" for="">Tenet</label>
+                  <div :class="`  transition-all duration-200`">
+                     <div class="flex flex-row stars" id="stars">
+                                 <div v-for="i in p('7.3')[0]"  class=" star  w-[5%] pb-[5%] relative ">
+                                                <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">
+                                                   
+                                                </div>
+                                                
+
+                                 </div>
+                                 <div v-if="p('7.3')[1]!==0"   class=" star w-[5%] bg-[#FF9529]   pb-[5%] relative ">
+                                    <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                           
+                                    </div>             
+                                    <div  :style="`width:${p('7.3')[1]*10}%`"  :class="` bg-[#FF9529]  h-full absolute `">
+                                                   
+                                    </div>
+
+                                 </div>
+                                 <div v-for="i in p('7.3')[2]"   class=" star w-[5%] bg-[#FF9529]   pb-[5%] relative ">
+                                    <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                           
+                                    </div>             
+                                    <div  :style="`width:0%`"  :class="` bg-[#FF9529]  h-full absolute `">
+                                                   
+                                    </div>
+
+                                 </div>  
                      </div>
-            <label :class="` transition-all duration-200 capitalize `" for="">Tenet</label>
-            <div :class="`  transition-all duration-200`">
-               <div class="flex flex-row stars" id="stars">
-                            <div v-for="i in p('7.3')[0]"  class=" star  w-[5%] pb-[5%] relative ">
-                                            <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">
-                                              
-                                            </div>
-                                            
+                  </div>
 
-                            </div>
-                            <div v-if="p('7.3')[1]!==0"   class=" star w-[5%] bg-[#FF9529]   pb-[5%] relative ">
-                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
-                     
-                              </div>             
-                              <div  :style="`width:${p('7.3')[1]*10}%`"  :class="` bg-[#FF9529]  h-full absolute `">
-                                              
-                              </div>
+               
 
-                            </div>
-                            <div v-for="i in p('7.3')[2]"   class=" star w-[5%] bg-[#FF9529]   pb-[5%] relative ">
-                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
-                     
-                              </div>             
-                              <div  :style="`width:0%`"  :class="` bg-[#FF9529]  h-full absolute `">
-                                              
-                              </div>
-
-                            </div>  
-               </div>
-            </div>
-
+         </RouterLink>
          
-
-         </div>
-    
 
 
          <div v-for="i in movies">
-            <div class=" overflow-hidden group relative pb-[60%] rounded-sm ">
-               <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+          
+            <RouterLink :to="`/movie/${i.id}`">
+               <div class=" overflow-hidden group relative pb-[60%] rounded-sm ">
                
-               <div :style="` background-image:url(${i.img})`" :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   transition-all duration-200 bg-cover bg-center`"></div>
-
-
-  
-
-
-            </div>
+                  <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
+                  
+                  <div :style="` background-image:url(${i.img})`" :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   transition-all duration-200 bg-cover bg-center`"></div>
+               
+               </div>
+            </RouterLink>   
+               
             <label :class="` transition-all duration-200 capitalize`" for="">{{i.name}}</label>
             <div :class="`  transition-all duration-200 `">
                <div class="flex flex-row stars" id="stars">
