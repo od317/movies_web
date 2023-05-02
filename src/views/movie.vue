@@ -288,7 +288,7 @@ let b = (name)=>{
 
                                     <div class=" flex flex-row justify-self-end    w-[50%] gap-[2%] ">
 
-                                          <button class="bg-c2 px-[8%] py-[1%] text-[120%]">view</button>
+                                          <button class="bg-c2 px-[8%] py-[1%] text-[120%]">Watch</button>
                                           <button @click="b('tr')" class=" bg-neutral-800 px-[8%] py-[1%] rounded-sm text-[120%]">Trailer</button>
 
                                     </div>

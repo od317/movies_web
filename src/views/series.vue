@@ -292,7 +292,7 @@ let c1 = ref(`width:${0.75*100}%`)
 
    <!-- sm header --> 
 
-   <div class=" md:hidden flex flex-row pb-[65%] sm1:pb-[50%] w-[100%] relative justify-between ">
+   <div class=" md:hidden flex flex-row pb-[70%] sm1:pb-[50%] w-[100%] relative justify-between ">
           <div class=" absolute bg-[url('https://images7.alphacoders.com/679/679600.jpg')] bg-cover bg-center h-full w-full "></div>
           <div class=" absolute bg-neutral-800 bg-opacity-60 bg-cover bg-center h-full w-full "></div>
           <div class=" absolute w-full pt-[20%] pb-[20%] h-full flex justify-evenly">
@@ -371,7 +371,7 @@ let c1 = ref(`width:${0.75*100}%`)
             <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
             <div  class=" hidden md:block relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
                      <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
-                     <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+                     <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
                      w-full h-full z-[5]"></div>
                      </div>
 
@@ -382,31 +382,32 @@ let c1 = ref(`width:${0.75*100}%`)
                      <div class=" absolute  hidden z-[10]  md:flex flex-row items-end justify-center   to-transparent translate-y-[-100%] h-[100%] w-[100%]  text-[100%] ">
                      
                         <div class="w-[30%] h-full pr-[1%] flex flex-row justify-end items-center ">
-                                 <div class=" rounded-sm w-[80%] h-[80%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://cdn.marvel.com/content/2x/GwenPoster.jpg')] bg-cover bg-center bg-no-repeat"></div>
+                                 <div class=" rounded-sm w-[80%] h-[80%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BODk2NjAyOWMtM2FjZC00MjZhLTkxMjQtZTM3NjJlYTE5MDdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg')] bg-cover bg-center bg-no-repeat"></div>
                         </div>
                         
                         <div class="w-[70%] pl-[5%]  flex flex-col justify-center items-center h-full ">
                                     <div class="w-full h-[80%] ">
-                                             <label class="sm3:text-[150%] text-[110%] sm3:w-[30%] w-[50%]" for="">Spider Man Into The Spider Verse</label>   
+                                             <label class="sm3:text-[150%] text-[110%] sm3:w-[30%] w-[50%] capitalize" for="">Peacemaker</label>   
                                              
                                              <div class="">
-                                                <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                                   <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                                <div class="flex flex-row justify-start items-center sm3:text-[130%] text-[110%] mt-[1%]">
+                                                   <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                                   <label for="">8.3</label>
                                                 </div>
                                              </div>
 
-                                             <div class="mt-[5%] w-[90%] hidden sm3:inline-block">
-                                                Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider-Man. When he meets Peter Parker, he soon realizes 
-                                                that there are many others who share his special, high-flying talents. Miles must now use his newfound skills 
-                                                to battle the evil Kingpin, a hulking madman who can open portals to other 
-                                                universes and pull different versions of Spider-Man into our world.
+                                             <div class="mt-[3%] flex-grow w-[90%] hidden sm3:inline-block">
+                                              Premise. After recovering from the injuries he suffered during the events of The Suicide Squad (2021),
+                                              Christopher Smith / Peacemaker is forced to join the mysterious A.R.G.U.S. black ops squad "Project Butterfly".
+                                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quisquam? Cum voluptas architecto autem doloribus rem dicta ullam illo adipisci sunt, voluptates reiciendis tenetur, maiores totam officiis quam aliquam aliquid?
                                              </div>
 
-                                             <div class="mt-[5%] w-[90%] h-[30%]  overflow-hidden sm3:hidden inline-block">
-                                                Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider... 
-                                             </div>
+                                             <div class="mt-[5%] w-[90%]  line-clamp-3   sm3:hidden ">
+                                                Premise. After recovering from the injuries he suffered during the events of The Suicide Squad (2021),
+                                                 Christopher Smith / Peacemaker is forced to join the mysterious A.R.G.U.S. black ops squad "Project Butterfly".                                            
+                                                 </div>
                                              
-                                             <RouterLink :to="`/movie/tt4633694`" class="hover:text-white">
+                                             <RouterLink :to="`/movie/tt13146488`" class="hover:text-white">
                                              <button class=" bg-c2 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
                                              </RouterLink>
                                     </div>
