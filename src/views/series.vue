@@ -531,40 +531,38 @@ let c1 = ref(`width:${0.75*100}%`)
 
             
 
-            <div class="flex flex-col mt-[5%] w-full   px-[5%] md:px-[0%]">
-               <label class="mb-[5%] text-[150%]" for="">New Trailers</label>
-             
-               <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
-                  <div v-if="tr1" class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
+
+
+
+            <label class="mb-[2%] px-[5%] md:px-[0%] md:mb-[0%] text-[150%]" for="">New Trailers</label>
+            <div class="mt-[5%] overflow-x-hidden group flex justify-center  md:px-[0%] md:pb-[50%] pb-[60%] relative">
+               <div v-if="tr1" class=" absolute w-[90%] md:w-full flex justify-center z-[1] items-center h-full     bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
-                  <iframe v-if="tr1" class="video-y absolute w-full  h-full z-[20]" :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
-                  <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
-                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
-                          <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
-                               <ion-icon class="" name="play-outline"></ion-icon>
+               <iframe v-if="tr1"  class="video-y absolute z-[50] w-[90%] md:w-full h-full " :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
+               <img  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
+                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                          <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
+                              <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
                         </div>
-               </div>
-
-         
-
-               <div  class=" overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] group relative  md:w-[100%] self-center pb-[50%] w-[100%]   mb-[5%] rounded-md">
-                  <div v-if="tr2" class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
-                                <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
-                  </div>
-                  <iframe v-if="tr2" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/3bhBYJYuabg`"></iframe>
-                  <img  :class="` absolute ${!tr2?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg" alt="">
-                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
-                          <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
-                               <ion-icon class="" name="play-outline"></ion-icon>
-                           </button>      
-                        </div>
-               </div>
-
-
 
             </div>
+
+            <div class="mt-[5%] group overflow-x-hidden flex justify-center  md:px-[0%] md:pb-[50%] pb-[60%] relative">
+               <div v-if="tr2" class=" absolute w-[90%] md:w-full flex justify-center z-[1] items-center h-full     bg-black">
+                                <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
+                  </div>
+               <iframe v-if="tr2"  class="video-y absolute z-[50] w-[90%] md:w-full  h-full " :src="`https://www.youtube.com/embed/3bhBYJYuabg`"></iframe>
+               <img  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg" alt="">
+                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                          <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
+                              <ion-icon class="" name="play-outline"></ion-icon>
+                           </button>      
+                        </div>
+
+            </div>
+
 
      </div>
      

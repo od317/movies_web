@@ -100,11 +100,11 @@ let b = (name)=>{
     
       <div  :style="` background-image:url(${backdrops[0]?backdrops[0].link:img})`" :class="`relative  bg-cover ${img_f ? 'bg-center':'bg-bottom'} pb-[65%]`">
             <div  class="absolute w-full h-full bg-zinc-900   bg-opacity-40"></div>
-            <div  class="absolute w-full h-full  z-[10] bg-gradient-to-t from-c1 from-10% to-transparent to-90%  bg-opacity-40"></div>
+            <div  class="absolute w-full h-full md:translate-y-[0%] translate-y-[1%]  z-[10] bg-gradient-to-t from-c1 from-10% to-transparent to-90%  bg-opacity-40"></div>
 
        </div>
       
-       <div class="flex flex-col px-[5%]">
+       <div class="flex flex-col mt-[1%] px-[5%]">
 
            <label class="flex flex-row justify-start items-center" for=""><ion-icon name="star"></ion-icon>{{ rate }}</label>
 
