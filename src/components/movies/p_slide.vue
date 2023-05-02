@@ -204,7 +204,7 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
                              
-                              <RouterLink  :to="`/movie/${ movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</RouterLink>
+                              <RouterLink  :to="`/movie/${ movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 hover:text-white text-center">View movie</RouterLink>
                              
                               
                               <div class="w-[40%] relative "> 
@@ -229,7 +229,7 @@ let p = (r)=>{
                               </div>
 
 
-                              <RouterLink :to="`/movie/${movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 text-center">View movie</RouterLink>
+                              <RouterLink :to="`/movie/${movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 hover:text-white text-center">View movie</RouterLink>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.

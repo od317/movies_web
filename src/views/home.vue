@@ -214,8 +214,8 @@ window.scrollTo({
 <movie_of/>
 
 
-<div class="flex w-full justify-center  pb-[2%]">
-     <label class="text-[150%]" for="">recommended</label>
+<div class="flex w-full justify-center   pb-[2%]">
+     <label class="text-[150%] " for="">recommended</label>
 </div>
 
 <div class="hidden md:block relative  ">

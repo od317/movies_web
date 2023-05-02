@@ -83,6 +83,7 @@ let search = ()=>{
 
 
 watch(page,()=>{
+
      if(page.value=='search'){
            let s = setTimeout(()=>{
                 hide.value=true
@@ -93,6 +94,11 @@ watch(page,()=>{
      } 
 })
 
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'instant',
+});
 
 </script>
 
@@ -100,9 +106,9 @@ watch(page,()=>{
 
 <template>
 
-<div class="bg-c1">
+<div :class="``">
 
-<div class="bg-c1 text-white overflow-x-clip ">
+<div class="bg-c1 dark:bg-black text-white overflow-x-clip ">
     
   
   <!-- lg nav_bar -->
@@ -213,6 +219,7 @@ watch(page,()=>{
     </div>
   </div>
   
+
     <div class="min-h-screen">
        <router-view></router-view>
    </div>

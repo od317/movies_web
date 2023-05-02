@@ -90,7 +90,7 @@ let p = (r)=>{
    </div>
    
    <div  class=" items-center  justify-end lg:mt-[5%] mt-[15%] hidden md:flex  pr-[1%] mb-[5%] ">
-         <RouterLink class="hover:text-white" :to="router_to">
+         <RouterLink class="hover:text-c3 transition-all duration-200" :to="router_to">
          <button  class=" inline-block cursor-pointer  text-end" >view more</button>
          </RouterLink>
    </div>
