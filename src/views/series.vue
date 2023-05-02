@@ -202,7 +202,6 @@ let view = (title)=>{
 
 let stars = document.getElementById('stars')
 
-console.log(stars)
 let c1 = ref(`width:${0.75*100}%`)
 </script>
 
@@ -301,12 +300,9 @@ let c1 = ref(`width:${0.75*100}%`)
           </div>
           <div class=" absolute w-full h-full flex flex-col justify-end pb-[2%] pl-[5%] ">
                 <label class="w-[60%] mb-[1%] text-[100%] sm2:text-[150%]" for="">it's always sunny in philadelphia </label>
-                <label class="text-start flex justify-start items-start text-[80%] sm2:text-[95%] mb-[2%]" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
+                <label class=" flex justify-start text-center items-center text-[90%] sm2:text-[95%] mb-[2%]" for="">
+                     <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                     <label>7.9</label>
                   </label>
                 <label class="text-[60%] sm2:text-[90%] w-[98%]" for="">Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.
                    The gang, five raging alcoholic narcissists, run a failing dive bar in South Philadelphia</label>
@@ -534,14 +530,14 @@ let c1 = ref(`width:${0.75*100}%`)
 
 
 
-            <label class="mb-[2%] px-[5%] md:px-[0%] md:mb-[0%] text-[150%]" for="">New Trailers</label>
+            <label class="mb-[2%] px-[5%] md:px-[0%] md:mb-[0%] mt-[2%] md:mt-[0%] text-[150%]" for="">New Trailers</label>
             <div class="mt-[5%] overflow-x-hidden group flex justify-center  md:px-[0%] md:pb-[50%] pb-[60%] relative">
                <div v-if="tr1" class=" absolute w-[90%] md:w-full flex justify-center z-[1] items-center h-full     bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr1"  class="video-y absolute z-[50] w-[90%] md:w-full h-full " :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
                <img  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
-                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
@@ -555,7 +551,7 @@ let c1 = ref(`width:${0.75*100}%`)
                   </div>
                <iframe v-if="tr2"  class="video-y absolute z-[50] w-[90%] md:w-full  h-full " :src="`https://www.youtube.com/embed/3bhBYJYuabg`"></iframe>
                <img  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg" alt="">
-                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      

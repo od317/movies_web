@@ -726,14 +726,14 @@ window.scrollTo({
 
 
       
-            <label class="mb-[2%] md:mb-[0%] px-[5%] md:px-[0%] text-[150%]" for="">New Trailers</label>
+            <label class="mb-[2%] md:mb-[0%] px-[5%] md:px-[0%] mt-[2%] md:mt-[0%] text-[150%]" for="">New Trailers</label>
             <div class="mt-[5%] overflow-x-hidden group flex justify-center  md:px-[0%] md:pb-[50%] pb-[60%] relative">
                <div v-if="tr1" class=" absolute w-[90%] md:w-full flex justify-center z-[1] items-center h-full     bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr1"  class="video-y absolute z-[50] w-[90%] md:w-full h-full " :src="`https://www.youtube.com/embed/32RAq6JzY-w`"></iframe>
                <img  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2023/03/Fast-X.jpg?fit=1392%2C696&ssl=1" alt="">
-                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                  <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
@@ -747,7 +747,7 @@ window.scrollTo({
                   </div>
                <iframe v-if="tr2"  class="video-y absolute z-[50] w-[90%] md:w-full  h-full " :src="`https://www.youtube.com/embed/JqcncLPi9zw`"></iframe>
                <img  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://thedisinsider.com/wp-content/uploads/2021/10/image0-2021-10-19T101922.749.jpeg" alt="">
-                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
+                  <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
                            </button>      
