@@ -517,7 +517,7 @@ let c1 = ref(`width:${0.75*100}%`)
 
                            </RouterLink>
 
-                           <RouterLink to="/movie/tt3581920" class=" relative w-[100%]  pb-[50%]">
+                           <RouterLink to="/movie/tt3581920" class=" hover:text-white relative w-[100%]  pb-[50%]">
                                <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
                                 <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg')] bg-cover bg-center">  </div>
                                 <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">the last of us</div>

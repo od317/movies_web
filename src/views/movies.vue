@@ -710,7 +710,7 @@ window.scrollTo({
 
                            </RouterLink>
 
-                           <RouterLink to="/movie/tt1392190" class=" relative w-[100%]  pb-[50%]">
+                           <RouterLink to="/movie/tt1392190" class=" hover:text-white relative w-[100%]  pb-[50%]">
                                <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
                                 <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://images.hdqwalls.com/wallpapers/mad-max-fury-road-movie.jpg')] bg-cover bg-center">  </div>
                                 <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">mad max</div>
