@@ -100,6 +100,24 @@ let set_type = (t)=>{
 }
 
 
+let p = (r)=>{
+  if(r)
+  r = r.split('.')
+  else
+  return [1,2,3]
+  let res = r.length>1 ? parseInt(parseInt(parseInt((r[0]+r[1]))/2.0)/10):parseInt(parseInt(parseInt((r[0]))/2.0))
+  
+  let rem  = r.length>1 ? (parseInt(parseInt((r[0]+r[1]))/2.0)%10):(parseInt(parseInt((r[0]+'0'))/2.0)%10)
+
+  let rem2 = 5-res
+
+  rem2 = rem>0 ? rem2-1:rem2
+
+
+  return [res,rem,rem2]
+}
+
+
 window.scrollTo({
   top: 0,
   left: 0,
@@ -141,7 +159,7 @@ window.scrollTo({
     :class="` bg-c2 rounded-b-sm transform w-full scale-0 group-hover:scale-100 absolute 
   transition duration-150 ease-in-out origin-top min-w-32`"
   >
-    <li v-for="g in gens" @click="set_gen(g)" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${gen===g?'text-blue-500':''} `">{{ g }}</li>
+    <li v-for="g in gens" @click="set_gen(g)" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c3 hover:text-white ${gen===g?'bg-c3':''} `">{{ g }}</li>
 
   </ul>
     </div>
@@ -170,9 +188,9 @@ window.scrollTo({
    :class="` bg-c2 rounded-b-sm transform w-full scale-0 group-hover:scale-100 absolute 
  transition duration-150 ease-in-out origin-top min-w-32`"
  >
-   <li  @click="set_type('all')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='all'?'text-blue-500':''} `">all</li>
-   <li  @click="set_type('movie')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='movie'?'text-blue-500':''} `">movie</li>
-   <li  @click="set_type('series')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c1 ${type==='series'?'text-blue-500':''} `">series</li>
+   <li  @click="set_type('all')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c3 hover:text-white ${type==='all'?'bg-c3':''} `">all</li>
+   <li  @click="set_type('movie')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c3 hover:text-white ${type==='movie'?'bg-c3':''} `">movie</li>
+   <li  @click="set_type('series')" :class="`rounded-b-sm px-3 cursor-pointer py-1 w-full hover:bg-c3 hover:text-white ${type==='series'?'bg-c3':''} `">series</li>
 
  </ul>
    </div>
@@ -186,17 +204,43 @@ window.scrollTo({
 </div>
 
 <div class=" grid grid-cols-3 mt-[2%] h-auto md:gap-x-[1%] md:gap-y-[1%] md:grid-cols-4 lg:grid-cols-5 md:px-[6%] pb-[29%]">
-             <div   v-for="f in movies" :key="f"   class="flex flex-col relative  z-10" >
-                  <div class="relative pb-[150.666667%]">
+             <div   v-for="f in movies" :key="f"   class="flex flex-col relative  z-10" > 
+                <div class="relative pb-[150.666667%]">
                         <div class=" h-[100%]  animate-pulse absolute   bg-neutral-800  w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
                             <img   @click="movie_push(f.id)" class=" md:hover:scale-105 transition-all duration-200 cursor-pointer absolute h-full w-[100%] rounded-sm" :src="f.image"  alt="">
                         </div>
                         <div class=" relative hidden md:flex  bg-opacity-[50%]   md:p-[22%] lg:p-[15%] w-[100%]  flex-col justify-end whitespace-normal "  for="">
                           <div class=" absolute w-full flex flex-col justify-center h-full bottom-0 left-0">
                           <label class="truncate" for="">{{ f.title }}</label>
-                          <label for="">
-                            <ion-icon name="star-outline"></ion-icon>
-                          </label>
+                          <div class="flex flex-row stars" id="stars">
+                                    <div v-for="i in p(f.imDbRating)[0]"  class=" star  w-[10%] pb-[10%] relative ">
+                                                    <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">
+                                                      
+                                                    </div>
+                                                    
+
+                                    </div>
+                                    <div v-if="p(f.imDbRating)[1]!==0"   class=" star w-[10%] bg-[#FF9529]   pb-[10%] relative ">
+                                      <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                            
+                                      </div>             
+                                      <div  :style="`width:${p(f.imDbRating)[1]*10}%`"  :class="`  bg-[#FF9529]  h-full absolute `">
+                                                      
+                                      </div>
+
+                                    </div>
+
+                                    <div v-for="i in p(f.imDbRating)[2]"   class=" star w-[10%] bg-[#FF9529]   pb-[10%] relative ">
+                              <div   :class="` star bg-c1 h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%] transparent  absolute `">
+                     
+                              </div>             
+                              <div  :style="`width:0%`"  :class="` bg-[#FF9529]  h-full absolute `">
+                                              
+                              </div>
+
+                                   </div>
+
+                          </div>
                         </div>
                         </div>
                 </div> 
@@ -253,5 +297,8 @@ window.scrollTo({
         100%{ left: 150%}
     }
 
-  
+    .star{
+   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+       }
+
 </style>

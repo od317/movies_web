@@ -538,7 +538,7 @@ let c1 = ref(`width:${0.75*100}%`)
                   <div v-if="tr1" class=" absolute w-full flex justify-center items-center h-full  mr-[3%]   bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
-                  <iframe v-if="tr1" class="video-y absolute w-full  h-full " :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
+                  <iframe v-if="tr1" class="video-y absolute w-full  h-full z-[20]" :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
                   <img  :class="` absolute ${!tr1?'':' translate-x-[100%] opacity-[0%]'} duration-[500ms] transition-all  w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
                   <div  @click="tr1=true" :class="` absolute ${!tr1?'':' translate-x-[50%] opacity-[0%]'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-full h-full `">
                           <button class=" text-[200%] group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
