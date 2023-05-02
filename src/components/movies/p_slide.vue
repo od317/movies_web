@@ -193,18 +193,9 @@ let p = (r)=>{
                         <div v-for="i in length-1" :class="` absolute w-full h-full flex flex-col ${cur===movies2[i].num? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms`">
                               <label class="text-[150%] mb-[1%] mt-[4%] lg:mt-[0%] capitalize" for="">{{ movies2[i].name }}</label>
                               
-                                    <div class="flex flex-row stars text-[50%] mb-[2%]" id="stars">
-                                                <div v-for="i in p(movies2[i].rate)[0]"  class=" star  w-[2%] pb-[2%] relative ">
-                                                                  <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
-                                                                  </div>
-                                                </div>
-                                                <div v-if="p(movies2[i].rate)[1]!==0"   class=" star w-[2%] bg-transparent    pb-[2%] relative ">
-                                           
-                                                      <div   :class="` star bg-transparent h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%]   absolute `">
-                                                      </div>             
-                                                      <div  :style="`width:${p(movies2[i].rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">      
-                                                      </div>
-                                                </div>
+                                    <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">{{movies2[i].rate}}</label>
                                     </div>
                             
                               <div class="lg:w-[17%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
@@ -226,26 +217,10 @@ let p = (r)=>{
                         <div :class="` absolute w-full h-full flex flex-col ${cur===movies2[0].num? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms`">
                               <label class="text-[150%] mb-[1%] capitalize" for="">{{ movies2[0].name }}</label>
                               
-                              <div class="flex flex-row stars text-[50%] mb-[2%]" id="stars">
-                                                <div v-for="i in p(movies2[0].rate)[0]"  class=" star  w-[2%] pb-[2%] relative ">
-                                                                  <div  :style="c1"  :class="` bg-white w-full h-full absolute `">
-                                                                  </div>
-                                                </div>
-                                                <div v-if="p(movies2[0].rate)[1]!==0"   class=" star w-[2%]    pb-[2%] relative ">
-                                               
-
-
-                                                      <div   :class="` star bg-transparent h-[93%] w-[93%] translate-x-[3.75%] translate-y-[3.75%]   absolute `">
-                                                      </div>    
-                                                               
-                                                      <div  :style="`width:${p(movies2[0].rate)[1]*10}%`"  :class="` bg-white  h-full absolute `">      
-                                                      </div>
-
-                                                </div>
-
-
-
-                                    </div>
+                              <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">{{movies2[0].rate}}</label>
+                              </div>
                             
                               <div class="lg:w-[17%] w-[30%] mb-[2%] flex flex-row text-[110%] justify-between">
                                     <label for="">{{ movies2[0].gen[0] }}</label>

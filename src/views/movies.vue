@@ -360,8 +360,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">spider man no way home</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">8.2</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>
@@ -396,8 +397,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">No Body</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">7.4</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>
@@ -431,8 +433,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">Thor love and thunder</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">6.2</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>
@@ -466,8 +469,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">Logan</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">8.1</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>
@@ -501,8 +505,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">John Wick Chapter 4</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">8.2</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>
@@ -536,8 +541,9 @@ window.scrollTo({
                                  <div class="w-[80%] h-full pl-[5%]">
                                           <label class="lg:text-[180%] text-[120%] sm3:text-[140%] capitalize" for="">the sucide squad</label>
                                      
-                                          <div class="flex flex-row sm3:text-[150%] text-[110%] mt-[1%]">
-                                            <ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon><ion-icon name="star-outline"></ion-icon>
+                                          <div class="flex flex-row items-center text-[150%] mb-[2%]" id="stars">
+                                          <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                          <label for="">7.2</label>
                                           </div>
 
                                           <p class="lg:w-[90%] lg:mt-[2%] hidden sm3:inline-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius exercitationem laboriosam at provident quidem aliquid? Nihil labore impedit quis ea, aliquam voluptate beatae velit, amet esse consequuntur optio repellat iure!</p>

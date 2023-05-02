@@ -71,7 +71,7 @@ module.exports = {
           'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
         },
         '100%': {
-          'transform':'translateY(100%)',
+          'transform':'translateY(140%)',
           'opacity':'0',
           'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
         },
@@ -83,7 +83,7 @@ module.exports = {
           'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
         },
         '100%': {
-          'transform':'translateX(-100%)',
+          'transform':'translateX(-140%)',
           'opacity':'0',
            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
         },
@@ -94,7 +94,7 @@ module.exports = {
           'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
         },
         '100%': {
-          'transform':'translateY(-100%)',
+          'transform':'translateY(-140%)',
            'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
         },
       },
@@ -105,7 +105,7 @@ module.exports = {
           'animation-timing-function':'cubic-bezier(0.8, 0, 1, 1)'
         },
         '100%': {
-          'transform':'translateX(100%)',
+          'transform':'translateX(140%)',
           'opacity':'0',
           'animation-timing-function': 'cubic-bezier(0, 0, 0.2, 1)'
         },
