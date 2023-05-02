@@ -106,7 +106,10 @@ let b = (name)=>{
       
        <div class="flex flex-col mt-[1%] px-[5%]">
 
-           <label class="flex flex-row justify-start items-center" for=""><ion-icon name="star"></ion-icon>{{ rate }}</label>
+           <label class="flex flex-row justify-start items-center text-center" for="">
+               <ion-icon class="text-[#FF9529]" name="star"></ion-icon>
+               <label>{{ rate }}</label>
+          </label>
 
            <label class="text-[150%] font-bold mt-[2%]" for="">
             {{name}}
