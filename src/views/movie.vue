@@ -63,8 +63,8 @@ async function fetchvideo(){
       video.value = data.videoId;
 }
 
-//fetchapi()
-//fetchvideo()
+fetchapi()
+fetchvideo()
 
 let go = (title)=>{
       router.push('/movie/'+title)
@@ -257,7 +257,7 @@ let b = (name)=>{
                                                 <ion-icon class=" text-orange-500 translate-y-[-2%]" name="star"></ion-icon>{{ rate }}
                                           </div>
 
-                                          <div class="">
+                                          <div v-if="runtime.length>0" class="">
                                                 {{ runtime }}
                                           </div>
 

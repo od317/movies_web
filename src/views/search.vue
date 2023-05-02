@@ -115,7 +115,7 @@ window.scrollTo({
 
 
 
-<div class=" md:px-[6%] mb-[1rem] flex flex-row md:justify-start justify-evenly md:pt-[10%] ">
+<div class=" md:px-[6%] mb-[1rem] pt-[5%] flex flex-row md:justify-start justify-evenly md:pt-[10%] ">
   
    <div class="group relative inline-block md:mr-[2%]  text-white z-20">
  

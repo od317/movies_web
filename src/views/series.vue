@@ -310,8 +310,10 @@ let c1 = ref(`width:${0.75*100}%`)
                   </label>
                 <label class="text-[60%] sm2:text-[90%] w-[98%]" for="">Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.
                    The gang, five raging alcoholic narcissists, run a failing dive bar in South Philadelphia</label>
-                 <button class="w-[30%] mt-[2%] text-[90%] py-[2%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
-          </div>
+                   <RouterLink class=" hover:text-white" to="/movie/tt0472954">
+                    <button class="w-[30%] mt-[2%] text-[90%] py-[2%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
+                   </RouterLink>
+                  </div>
    </div>
    
 
@@ -427,6 +429,7 @@ let c1 = ref(`width:${0.75*100}%`)
                 <slide_sm2 :type="type" title="recommended series " filt=""  :title="t1" :films="g2"/>
             </div>
 
+           
             <div class="  mt-[9%] md:pb-[2%]  md:pt-[1%]">
             
             <label class="  ml-[1rem] md:ml-[0%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
@@ -434,11 +437,14 @@ let c1 = ref(`width:${0.75*100}%`)
                <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
                   
                   <div class=" cursor-pointer rounded-sm group overflow-hidden  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
-                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
+                     <RouterLink :to="`/movie/tt5753856`">
+
+                       <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
                         <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_FMjpg_UX1000_.jpg')]"></div>
                         <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                         <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]">Dark</div>
-
+                  
+                     </RouterLink>
                   
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
@@ -455,11 +461,12 @@ let c1 = ref(`width:${0.75*100}%`)
                      </div>
 
                   <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]  bg-cover bg-center">
-                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
-                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg')]"></div>
-                     <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
-                        <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%] capitalize">The last of us</div>
-                  
+                     <RouterLink :to="`/movie/tt3581920`">
+                           <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
+                           <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg')]"></div>
+                           <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
+                           <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%] capitalize">The last of us</div>
+                     </RouterLink>                 
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
 
@@ -474,14 +481,14 @@ let c1 = ref(`width:${0.75*100}%`)
                   </div>
             
                   <div class=" cursor-pointer rounded-sm group shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden relative w-[30%] pb-[45%]   bg-cover bg-center">
+                     <RouterLink :to="`/movie/tt2861424`">
 
-                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
-
-                     <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg')]"></div>
-
-                     <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
+                        <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-neutral-800 animate-pulse "></div>
+                        <div class=" absolute h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]  bg-cover bg-center shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_FMjpg_UX1000_.jpg')]"></div>
+                        <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[0%] group-hover:bg-opacity-[40%]  transition-all duration-200 z-[1] h-[97%] w-[95%]  translate-y-[1.5%] translate-x-[2.5%]"></div>
                         <div class="  absolute  flex items-center justify-center   opacity-[0%] group-hover:opacity-[100%]  transition-all duration-200 h-[97%] text-white z-[2] w-[95%]  translate-y-[1.5%] translate-x-[2.5%] capitalize">rick and morty</div>
-                  
+                     
+                     </RouterLink>                  
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] group-hover:translate-x-[198%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
                         <div class=" absolute bg-gray-50 translate-y-[99.4%] translate-x-[-198%] group-hover:translate-x-[0%] group-hover:bg-c3 transition-all duration-[700ms] w-full h-full "></div>
 
@@ -500,23 +507,25 @@ let c1 = ref(`width:${0.75*100}%`)
                </div>
        
                <div class=" md:hidden px-[5%] w-full justify-center items-center">
-               <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
-                  
-                        <div class=" relative w-[100%] mb-[5%]  pb-[50%]">
-                             <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
-                             <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
-
-                           </div>
-
-                        <div class=" relative w-[100%]  pb-[50%]">
-                             <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://rare-gallery.com/mocahbig/1375854-the-batman-2022-movie-4k-pc-wallpaper.jpg')] bg-cover bg-center">  </div>
-                             <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full">Batman</div>
+                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
                      
-                           </div>
+                           <RouterLink to="/movie/tt5753856" class=" hover:text-white relative w-[100%] mb-[5%]  pb-[50%]">
 
-               </div>
+                                <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
+                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_FMjpg_UX1000_.jpg')] bg-cover bg-center">  </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">Dark</div>
 
-               </div>
+                           </RouterLink>
+
+                           <RouterLink to="/movie/tt3581920" class=" relative w-[100%]  pb-[50%]">
+                               <div class=" absolute w-full h-full bg-neutral-900 animate-pulse"></div>
+                                <div class=" absolute w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/M/MV5BZGUzYTI3M2EtZmM0Yy00NGUyLWI4ODEtN2Q3ZGJlYzhhZjU3XkEyXkFqcGdeQXVyNTM0OTY1OQ@@._V1_FMjpg_UX1000_.jpg')] bg-cover bg-center">  </div>
+                                <div class="  absolute bg-neutral-900 flex items-center justify-center   bg-opacity-[40%]  transition-all duration-200 z-[1] h-full w-full capitalize">the last of us</div>
+                           </RouterLink>
+
+                  </div>
+
+                  </div>
 
             </div>
 
