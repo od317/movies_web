@@ -1,5 +1,5 @@
 <template>
-    <Carousel class=""  :items-to-show="1.1" :wrap-around="false" ref="myCarousel">
+    <Carousel class=""  :items-to-show="1.1"  ref="myCarousel">
       <Slide  :class="` `" v-for="slide in 10" :key="slide">
         <div  class="carousel__item relative w-full  rounded-md ">
             <img v-if="items[slide-1]&&items[slide-1].link" class=" absolute h-full w-full " :src="items[slide-1].link" alt="" >
@@ -13,7 +13,7 @@
   
   <script setup>
   import { defineComponent } from 'vue'
-  import { Carousel, Navigation, Slide } from 'vue3-carousel'
+  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   
   import 'vue3-carousel/dist/carousel.css'
 

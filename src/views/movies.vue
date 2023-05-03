@@ -300,7 +300,7 @@ window.scrollTo({
       <div class="    md:px-[10%] ">
 
         
-            <div  class="md:hidden">
+            <div  class="md:hidden overflow-x-hidden">
                 <slide_sm2  :title="t1" :filt="`gen=Action`" :films="g1" :type="type"/>
             </div>
 
