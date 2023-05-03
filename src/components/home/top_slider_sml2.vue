@@ -15,7 +15,7 @@ let films = ref([
   img:'https://wallpapersmug.com/download/2048x1152/a00b73/a-quiet-place-part-2-2020.jpg',
   title:'a quiet place 2',
   id:'tt6644200',
-  rate:'7.2',
+  rate:'7.5',
   num:1
  },
  {
@@ -139,7 +139,7 @@ if(num==3)
                                           <label for="">{{f.rate}}</label>
                               </div>
 
-                               <label class="  line-clamp-3 md2:line-clamp-none break-words whitespace-normal" for="">
+                               <label class="  line-clamp-3 md2:line-clamp-4 lg:line-clamp-none break-words whitespace-normal" for="">
                                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus quam mollitia obcaecati eum iste eaque cum, minus repellat commodi, 
                                   similique qui illo? Dolorum, dignissimos reiciendis facere asperiores perspiciatis harum eveniet.dignissimos reiciendis facere asperiores perspiciatis harum eveniet.dignissimos 
                                 </label>

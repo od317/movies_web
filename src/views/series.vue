@@ -332,43 +332,35 @@ let c1 = ref(`width:${0.75*100}%`)
 
 
 
-            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched movie:</label>
-            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
+            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched series:</label>
+            <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
             <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
-            <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+            <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
               w-full h-full z-[5]"></div>
              <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
             </div>
-             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
-                  <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
-                  <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
-                  <label class="text-start flex justify-start items-start" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class="bg-c2 p-[2%] rounded">view movie</button>
+
+            <div class=" z-[10] font-bold absolute w-full md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
+               <label class="text-[180%] w-[80%] mb-[1%] capitalize" for="">Peace Maker</label>
+               <div class="flex flex-row justify-start items-center sm3:text-[130%] text-[130%] mt-[0%]">
+                                                   <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                                   <label for="">8.3</label>
                </div>
-            </div>
-            <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
-               <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>
-               <label class="text-start flex justify-start items-start text-[120%]" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class=" w-[20%] text-[110%] text-center bg-c2 p-[2%] mt-[5%] text-white  inline-block ">view</button>   
+               <div class=" line-clamp-3 text-[120%] w-[90%] ">
+                                              Premise. After recovering from the injuries he suffered during the events of The Suicide Squad (2021),
+                                              Christopher Smith / Peacemaker is forced to join the mysterious A.R.G.U.S. black ops squad "Project Butterfly".
+                                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quisquam? Cum voluptas architecto autem doloribus rem dicta ullam illo adipisci sunt, voluptates reiciendis tenetur, maiores totam officiis quam aliquam aliquid?
+               </div>
+            <RouterLink :to="`/movie/tt13146488`" class="hover:text-white mt-[5%]  w-[30%]">
+                                             <button class=" w-full text-[110%] text-center bg-c2 p-[5%]  text-white  inline-block">view movie</button>
+               </RouterLink>  
             </div>
 
 
             </div>
 
 
-            <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched movie:</label>
+            <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched series:</label>
             <div  class=" hidden md:block relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
                      <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
                      <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
@@ -431,7 +423,7 @@ let c1 = ref(`width:${0.75*100}%`)
             
             <label class="  ml-[1rem] md:ml-[0%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
                <div class=" hidden md:flex w-full justify-center items-center">
-               <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
+               <div  class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
                   
                   <div class=" cursor-pointer rounded-sm group overflow-hidden  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
                      <RouterLink :to="`/movie/tt5753856`">
@@ -504,7 +496,7 @@ let c1 = ref(`width:${0.75*100}%`)
                </div>
        
                <div class=" md:hidden px-[5%] w-full justify-center items-center">
-                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
+                  <div  class="  relative  px-[0%] flex flex-col justify-between pb-[5%]   ">
                      
                            <RouterLink to="/movie/tt5753856" class=" hover:text-white relative w-[100%] mb-[5%]  pb-[50%]">
 
@@ -537,7 +529,7 @@ let c1 = ref(`width:${0.75*100}%`)
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr1"  class="video-y absolute z-[50] w-[90%] md:w-full h-full " :src="`https://www.youtube.com/embed/Znsa4Deavgg`"></iframe>
-               <img  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://images6.alphacoders.com/103/1038319.jpg" alt="">
+               <div  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all bg-cover bg-center  w-[90%] md:w-full h-full cursor-pointer rounded-md bg-[url('https://images6.alphacoders.com/103/1038319.jpg')]`" alt=""></div>
                   <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
@@ -551,7 +543,7 @@ let c1 = ref(`width:${0.75*100}%`)
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr2"  class="video-y absolute z-[50] w-[90%] md:w-full  h-full " :src="`https://www.youtube.com/embed/3bhBYJYuabg`"></iframe>
-               <img  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg" alt="">
+               <div  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md bg-cover bg-center bg-[url('https://sportshub.cbsistatic.com/i/2021/11/03/d67f829d-f830-46e1-98ea-2ae62a7d24df/dc-titans-season-5-4-confirmed-brenton-thwaites-interview.jpg')]`" alt=""></div>
                   <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>

@@ -311,7 +311,7 @@ window.scrollTo({
 
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched movie:</label>
-            <div v-motion-slide-visible-once-left class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
+            <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
             <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
             <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
               w-full h-full z-[5]"></div>
@@ -637,7 +637,7 @@ window.scrollTo({
             
                <label class="  ml-[1rem] md:ml-[0%] md:mt-[] text-[150%] mb-[5%] md:mb-[2%]" for="">Top New :</label>
                   <div class=" hidden md:flex w-full justify-center items-center">
-                  <div v-motion-slide-visible-once-bottom class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
+                  <div  class="  relative  px-[0%] flex flex-row justify-between pb-[5%]   md:w-[95%]">
                      
                      <div class=" cursor-pointer rounded-sm group overflow-hidden shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  relative w-[30%] pb-[45%]  bg-cover bg-center">
                         <RouterLink :to="`/movie/tt1877830`">
@@ -738,7 +738,7 @@ window.scrollTo({
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr1"  class="video-y absolute z-[50] w-[90%] md:w-full h-full " :src="`https://www.youtube.com/embed/32RAq6JzY-w`"></iframe>
-               <img  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2023/03/Fast-X.jpg?fit=1392%2C696&ssl=1" alt="">
+               <div  :class="` absolute ${!tr1?'':'hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md bg-cover bg-center bg-[url('https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2023/03/Fast-X.jpg?fit=1392%2C696&ssl=1')]`"  alt=""></div>
                   <div  @click="tr1=true" :class="` absolute ${!tr1?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
@@ -752,7 +752,7 @@ window.scrollTo({
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>
                   </div>
                <iframe v-if="tr2"  class="video-y absolute z-[50] w-[90%] md:w-full  h-full " :src="`https://www.youtube.com/embed/JqcncLPi9zw`"></iframe>
-               <img  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md`" src="https://thedisinsider.com/wp-content/uploads/2021/10/image0-2021-10-19T101922.749.jpeg" alt="">
+               <div  :class="` absolute ${!tr2?'':' hidden'} duration-[500ms] transition-all  w-[90%] md:w-full h-full cursor-pointer rounded-md bg-cover bg-center bg-[url('https://thedisinsider.com/wp-content/uploads/2021/10/image0-2021-10-19T101922.749.jpeg')]`"  alt=""></div>
                   <div  @click="tr2=true" :class="` absolute ${!tr2?'':' hidden'} duration[500ms] transition-all   cursor-pointer bg-zinc-900 bg-opacity-30 flex justify-center items-center w-[90%] h-full md:w-full `">
                           <button class=" text-[200%]  group-hover:text-[280%] transform-all duration-200 rounded-full relative ">
                               <ion-icon class="" name="play-outline"></ion-icon>
