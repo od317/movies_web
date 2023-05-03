@@ -203,6 +203,13 @@ let view = (title)=>{
 let stars = document.getElementById('stars')
 
 let c1 = ref(`width:${0.75*100}%`)
+
+window.scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'instant',
+});
+
 </script>
 
 <template>
