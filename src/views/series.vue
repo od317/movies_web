@@ -249,7 +249,7 @@ window.scrollTo({
                       <RouterLink to="/movie/tt0386676">                   
                         <div  class=" cursor-pointer absolute pb-[18%] w-[18%]  lg:translate-y-[16.3%] md:translate-y-[32.3%] translate-x-[312%] bg-[url('https://tv-fanatic-res.cloudinary.com/iu/s--ZCvgnNPQ--/f_auto,q_auto/v1371070346/the-office-poster')] bg-cover bg-center c5 z-[10]"></div>
                         <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[18%] md:translate-y-[34%] translate-x-[322%] bg-slate-700   animate-pulse z-[5] c5 "></div>
-                        <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.5%]   z-[4] c5 
+                        <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.3%]   z-[4] c5 
                         animate-gradient-x
                         bg-gradient-to-r 
                         from-blue-400 
@@ -299,7 +299,7 @@ window.scrollTo({
 
    <!-- sm header --> 
 
-   <div class=" md:hidden flex flex-row pb-[70%] sm1:pb-[50%] w-[100%] relative justify-between ">
+   <div class=" md:hidden flex flex-row pb-[90%] sm1:pb-[70%] w-[100%] relative justify-between ">
           <div class=" absolute bg-[url('https://images7.alphacoders.com/679/679600.jpg')] bg-cover bg-center h-full w-full "></div>
           <div class=" absolute bg-neutral-800 bg-opacity-60 bg-cover bg-center h-full w-full "></div>
           <div class=" absolute w-full pt-[20%] pb-[20%] h-full flex justify-evenly">
@@ -340,32 +340,31 @@ window.scrollTo({
 
 
             <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched series:</label>
-            <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
-            <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
-            <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
-              w-full h-full z-[5]"></div>
-             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
-            </div>
+            <RouterLink :to="`/movie/tt13146488`" class="w-full h-full hover:text-white">
+                  <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[75%] ">
+                        <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
+                        <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
+                        w-full h-full z-[5]"></div>
+                        <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
+                        </div>
 
-            <div class=" z-[10] font-bold absolute w-full md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
-               <label class="text-[180%] w-[80%] mb-[1%] capitalize" for="">Peace Maker</label>
-               <div class="flex flex-row justify-start items-center sm3:text-[130%] text-[130%] mt-[0%]">
-                                                   <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
-                                                   <label for="">8.3</label>
-               </div>
-               <div class=" line-clamp-3 text-[120%] w-[90%] ">
-                                              Premise. After recovering from the injuries he suffered during the events of The Suicide Squad (2021),
-                                              Christopher Smith / Peacemaker is forced to join the mysterious A.R.G.U.S. black ops squad "Project Butterfly".
-                                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quisquam? Cum voluptas architecto autem doloribus rem dicta ullam illo adipisci sunt, voluptates reiciendis tenetur, maiores totam officiis quam aliquam aliquid?
-               </div>
-            <RouterLink :to="`/movie/tt13146488`" class="hover:text-white mt-[5%]  w-[30%]">
-                                             <button class=" w-full text-[110%] text-center bg-c2 p-[5%]  text-white  inline-block">view movie</button>
-               </RouterLink>  
-            </div>
+                        <div class=" z-[10] font-bold absolute w-full md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
+                           <label class="text-[150%] w-[80%] mb-[1%] capitalize" for="">Peace Maker</label>
+                           <div class="flex flex-row justify-start items-center sm3:text-[130%] text-[130%] mt-[0%]">
+                                                               <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                                               <label for="">8.3</label>
+                           </div>
+                           <div class=" line-clamp-3 text-[120%] w-[90%] ">
+                                                         Premise. After recovering from the injuries he suffered during the events of The Suicide Squad (2021),
+                                                         Christopher Smith / Peacemaker is forced to join the mysterious A.R.G.U.S. black ops squad "Project Butterfly".
+                                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quisquam? Cum voluptas architecto autem doloribus rem dicta ullam illo adipisci sunt, voluptates reiciendis tenetur, maiores totam officiis quam aliquam aliquid?
+                           </div>
+
+                        </div>
 
 
-            </div>
-
+                  </div>
+            </RouterLink>
 
             <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched series:</label>
             <div  class=" hidden md:block relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">

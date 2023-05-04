@@ -190,6 +190,7 @@ let g2 = [
 ]
 
 
+
 let tr1 = ref(false)
 let tr2 = ref(false)
 
@@ -310,40 +311,30 @@ window.scrollTo({
 
 
 
-            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched movie:</label>
-            <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
-            <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
-            <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
-              w-full h-full z-[5]"></div>
-             <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
-            </div>
-             <div class=" absolute hidden z-[10] md:flex flex-col items-end justify-center  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] backdrop-blur-md bg-white/30 translate-y-[-100%] h-[40%] w-full  text-[100%] c2">
-                  <div class=" h-full flex items-start gap-[5%] justify-center flex-col w-[25%] lg:w-[20%] ">
-                  <label class=" text-[100%]  flex items-start justify-start text-center" for="">SPIDER MAN ..</label>
-                  <label class="text-start flex justify-start items-start" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class="bg-c2 p-[2%] rounded">view movie</button>
-               </div>
-            </div>
-            <div class=" z-[10] font-bold absolute md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
-               <label class="text-[120%] w-[80%] mb-[5%]" for="">Spider man into the spide verse</label>
-               <label class="text-start flex justify-start items-start text-[120%]" for="">
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                     <ion-icon name="star-outline"></ion-icon>
-                  </label>
-               <button class=" w-[20%] text-[110%] text-center bg-c2 p-[2%] mt-[5%] text-white  inline-block ">view</button>   
-            </div>
+            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden capitalize " for="">Most Watched movie:</label>
+            <RouterLink :to="`/movie/tt4633694`" class="w-full h-full hover:text-white">
+                  <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[75%] ">
+                        <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
+                        <div  class="rounded-sm absolute bg-[url('https://api.time.com/wp-content/uploads/2018/12/spider-man-spider-woman.jpg')] bg-cover bg-center bg-no-repeat  p-0
+                        w-full h-full z-[5]"></div>
+                        <div class="md:hidden z-[6] absolute bg-zinc-800 bg-opacity-40 h-full w-full "></div>             
+                        </div>
+
+                        <div class=" z-[10] font-bold absolute w-full md:hidden translate-y-[-100%] h-full flex flex-col justify-end pb-[2%] px-[3%]">
+                           <label class="text-[150%] w-[50%] mb-[1%] capitalize" for="">Spider man into the spider verse</label>
+                           <div class="flex flex-row justify-start items-center sm3:text-[130%] text-[130%] mt-[0%]">
+                                                               <ion-icon class=" text-[#FF9529] " name="star"></ion-icon>
+                                                               <label for="">8.4</label>
+                           </div>
+                           <div class=" line-clamp-3 text-[120%] w-[90%] ">
+                              Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales suddenly develops mysterious powers that transform him into the one and only Spider-Man. When he meets Peter Parker, he soon realizes that there are many others who share his special, high-flying talents. Miles must now use his newfound skills to battle the evil Kingpin, a hulking madman who can open portals to other universes and pull different versions of Spider-Man into our world.
+                           </div>
+
+                        </div>
 
 
-            </div>
+                  </div>
+            </RouterLink>
 
       <div class="hidden md:block text-[150%] mb-[2%] capitalize">recommended:</div>
 
@@ -732,7 +723,7 @@ window.scrollTo({
 
 
       
-            <label class="mb-[2%] md:mb-[0%] px-[5%] md:px-[0%] mt-[2%] md:mt-[0%] text-[150%]" for="">New Trailers</label>
+            <label class="mb-[2%] md:mb-[0%] px-[5%] md:px-[0%] mt-[8%] md:mt-[0%] text-[150%]" for="">New Trailers</label>
             <div class="mt-[5%] overflow-x-hidden group flex justify-center  md:px-[0%] md:pb-[50%] pb-[60%] relative">
                <div v-if="tr1" class=" absolute w-[90%] md:w-full flex justify-center z-[1] items-center h-full     bg-black">
                                 <div class=" absolute w-16 h-16 border-t-4 border-r-4 animate-spin  rounded-full border-t-white"></div>

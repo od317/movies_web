@@ -108,7 +108,7 @@ window.scrollTo({
 
 <div :class="``">
 
-<div class="bg-c1 dark:bg-black text-white overflow-x-clip ">
+<div class="bg-c1  text-white overflow-x-clip ">
     
   
   <!-- lg nav_bar -->
