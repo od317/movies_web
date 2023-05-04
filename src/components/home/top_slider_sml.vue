@@ -213,7 +213,7 @@ let b = (num)=>{
                                       </div>
 
                                   <RouterLink :to="`/movie/${f.id}`" class="hover:text-white">
-                                     <button  class=" self-start place-self-end bg-c1 p-1 mt-[5%] lg:text-[1rem] lg:mt-[10%] rounded-md">View Movie</button>
+                                     <button  class=" self-start place-self-end bg-c1 hover:bg-c3 transition-all duration-200  px-[7%] py-[2%] mt-[5%] lg:text-[1rem] lg:mt-[10%] rounded-md">View Movie</button>
                                   </RouterLink>
 
                               </div>

@@ -144,7 +144,7 @@ if(num==3)
                                   similique qui illo? Dolorum, dignissimos reiciendis facere asperiores perspiciatis harum eveniet.dignissimos reiciendis facere asperiores perspiciatis harum eveniet.dignissimos 
                                 </label>
 
-                                <RouterLink :to="`/movie/${f.id}`" class=" cursor-pointer md:w-[20%] mt-[4%] mb-[1%] py-[.5%] rounded-sm bg-c2 hover:text-white text-center">View movie</RouterLink>
+                                <RouterLink :to="`/movie/${f.id}`" class=" cursor-pointer md:w-[20%] mt-[4%] mb-[1%] py-[.5%] hover:bg-c3  transition-all duration-200 rounded-sm bg-c2 hover:text-white text-center">View movie</RouterLink>
 
  
                         </div>

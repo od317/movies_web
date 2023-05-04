@@ -365,7 +365,7 @@ window.scrollTo({
 
                                           </div>
                                           <RouterLink :to="`/movie/tt10872600`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 hover:bg-c3  transition-all duration-200 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 
@@ -403,7 +403,7 @@ window.scrollTo({
                                           </div>
 
                                           <RouterLink :to="`/movie/tt7888964`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%] hover:bg-c3  transition-all duration-200">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 
@@ -439,7 +439,7 @@ window.scrollTo({
                                           </div>
 
                                           <RouterLink :to="`/movie/tt10648342`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%] hover:bg-c3  transition-all duration-200">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 
@@ -475,7 +475,7 @@ window.scrollTo({
                                           </div>
 
                                           <RouterLink :to="`/movie/tt3315342`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%] hover:bg-c3  transition-all duration-200">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 
@@ -511,7 +511,7 @@ window.scrollTo({
                                           </div>
 
                                           <RouterLink :to="`/movie/tt10366206`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%] hover:bg-c3  transition-all duration-200">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 
@@ -547,7 +547,7 @@ window.scrollTo({
                                           </div>
 
                                           <RouterLink :to="`/movie/tt6334354`" class="hover:text-white">
-                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%]">view</button>
+                                          <button class="bg-c2 rounded-sm py-[.5%] w-[10%] mt-[2%] mr-[2%] hover:bg-c3  transition-all duration-200">view</button>
                                           </RouterLink>
                                           <button @click="s_a2()" class="bg-white cursor-pointer z-[10] text-black rounded-sm py-[.5%] w-[10%] mt-[2%]">return</button>
 

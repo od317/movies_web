@@ -222,7 +222,7 @@ window.scrollTo({
                       <div class="w-[62%] h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   z-[10] bg-cover absolute c4 
                       animate-gradient-x
                       bg-gradient-to-r 
-                      from-blue-400 
+                      from-c2
                       to-orange-500 
                       via-purple-500"></div>
                       
@@ -239,7 +239,7 @@ window.scrollTo({
                            <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[79.6%] md:translate-y-[96.8%] translate-x-[382%]   z-[4] c5
                            animate-gradient-x
                            bg-gradient-to-r 
-                           from-blue-400 
+                           from-c2
                            to-orange-500 
                            via-purple-500
                            "></div>
@@ -252,7 +252,7 @@ window.scrollTo({
                         <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[322.3%]   z-[4] c5 
                         animate-gradient-x
                         bg-gradient-to-r 
-                        from-blue-400 
+                        from-c2
                         to-orange-500 
                         via-purple-500"></div>
                      </RouterLink>
@@ -263,7 +263,7 @@ window.scrollTo({
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[22%] md:translate-y-[38%] translate-x-[441.7%]    animate-pulse z-[4] c5 
                       animate-gradient-x
                       bg-gradient-to-r 
-                      from-blue-400 
+                      from-c2
                       to-orange-500 
                       via-purple-500"></div>
                      </RouterLink>
@@ -274,7 +274,7 @@ window.scrollTo({
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[322.5%]  z-[4] c5 
                       animate-gradient-x
                       bg-gradient-to-r 
-                      from-blue-400 
+                      from-c2
                       to-orange-500 
                       via-purple-500"></div>
                      </RouterLink>
@@ -285,7 +285,7 @@ window.scrollTo({
                       <div class=" absolute pb-[17.5%] w-[17.5%]  lg:translate-y-[141.3%] md:translate-y-[157.3%] translate-x-[441.7%]     z-[4] c5 
                       animate-gradient-x
                       bg-gradient-to-r 
-                      from-blue-400 
+                      from-c2
                       to-orange-500 
                       via-purple-500"></div>
                      </RouterLink>
@@ -314,7 +314,7 @@ window.scrollTo({
                 <label class="text-[60%] sm2:text-[90%] w-[98%]" for="">Five friends with big egos and small brains are the proprietors of an Irish pub in Philadelphia.
                    The gang, five raging alcoholic narcissists, run a failing dive bar in South Philadelphia</label>
                    <RouterLink class=" hover:text-white" to="/movie/tt0472954">
-                    <button class="w-[30%] mt-[2%] text-[90%] py-[2%] sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
+                    <button class="w-[30%] mt-[2%] text-[90%] py-[2%]  sm1:py-[2%] sm2:w-[20%] sm1:w-[25%] rounded-md  bg-c2">view series</button>  
                    </RouterLink>
                   </div>
    </div>
@@ -339,7 +339,7 @@ window.scrollTo({
 
 
 
-            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched series:</label>
+            <label  class="mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%] md:hidden " for="">Most Watched series :</label>
             <RouterLink :to="`/movie/tt13146488`" class="w-full h-full hover:text-white">
                   <div  class=" relative backdrop-blur-md  md:hidden md:mx-[0] mx-[2%] mt-[2%] text-[75%] ">
                         <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
@@ -366,7 +366,7 @@ window.scrollTo({
                   </div>
             </RouterLink>
 
-            <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched series:</label>
+            <label  class=" hidden md:block mt-[20%] md:mt-[5%] mx-[2%] md:mx-[0] text-[150%]" for="">Most Watched series :</label>
             <div  class=" hidden md:block relative backdrop-blur-md   md:mx-[0] mx-[2%] mt-[2%] text-[100%] ">
                      <div class=" relative pb-[70%] z-[5] md:pb-[45%] ">
                      <div  class="rounded-sm absolute bg-[url('https://images7.alphacoders.com/119/1199831.jpg')] bg-cover bg-center bg-no-repeat  p-0
@@ -406,7 +406,7 @@ window.scrollTo({
                                                  </div>
                                              
                                              <RouterLink :to="`/movie/tt13146488`" class="hover:text-white">
-                                             <button class=" bg-c2 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
+                                             <button class=" bg-c2 hover:bg-c3 transition-all duration-200 text-[110%] rounded-md py-[1%] px-[1%] mt-[5%]">view movie</button>
                                              </RouterLink>
                                     </div>
                         </div>

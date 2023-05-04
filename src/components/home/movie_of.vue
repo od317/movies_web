@@ -24,7 +24,7 @@ let s2 = setTimeout(()=>{
                 <div class=" absolute w-full h-full bg-gradient-to-t from-c1  "></div>      
                 <div class=" absolute transition-all duration-150 h-[80%] w-[25%] rounded-sm translate-y-[15%] translate-x-[10%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center "></div>
                 <RouterLink to="/movie/tt0816692" class="hover:text-white">
-                  <div class=" cursor-pointer absolute w-[25%] h-[10%] translate-y-[950%] translate-x-[10%] bg-c2 text-white text-center flex items-center justify-center rounded-md">view movie</div>
+                  <div class=" cursor-pointer absolute w-[25%] h-[10%] translate-y-[950%] translate-x-[10%] bg-c2 hover:bg-c3  transition-all duration-200 text-white text-center flex items-center justify-center rounded-md">view movie</div>
                 </RouterLink>
                 <div class=" absolute w-[65%] translate-y-[15%]   translate-x-[50%] h-[80%] ">
                      <div class=" relative    overflow-hidden w-full whitespace-nowrap row flex flex-col     h-full">
@@ -62,7 +62,7 @@ let s2 = setTimeout(()=>{
           
             <div class=" relative  pb-[140%]  border-none outline-none w-[90%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
              <RouterLink to="/movie/tt0816692" class="w-[100%] flex justify-center items-center hover:text-white">
-               <button class=" relative   w-[90%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
+               <button class=" relative   w-[90%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
             </RouterLink>
     </div>
 

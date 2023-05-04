@@ -45,8 +45,8 @@ let p = (r)=>{
 </script>
 <template>
 
-   <div class="w-full mb-[1rem] capitalize text-[120%]" for="">
-     {{ title }} 
+   <div class="w-full mb-[1rem]  capitalize text-[130%]" for="">
+     {{ title }} : 
    </div>
    <div class="bg-gradient-to-r from-c2 to-c1 h-[.5rem] w-full mb-[1rem]"></div>
    <div class="grid grid-cols-4  lg:grid-cols-6 gap-y-[5%] gap-x-[3%] mb-[3%]">
@@ -55,7 +55,7 @@ let p = (r)=>{
                     <div class="w-full h-full absolute bg-neutral-800 rounded-md animate-pulse"></div>  
                     <VLazyImage   class=" absolute  w-full cursor-pointer rounded-md h-full lazy" :src="f.img" alt=""/>
                   </RouterLink>
-                   <label class="break-words truncate capitalize" for="">{{ f.title }}</label>
+                   <label class="break-words truncate capitalize " for="">{{ f.title }}</label>
                    <div class="flex flex-row stars" id="stars">
                             <div v-for="i in p(f.rate)[0]"  class=" star  w-[12%] pb-[12%] relative ">
                                             <div  :style="c1"  :class="` bg-[#FF9529] w-full h-full absolute `">

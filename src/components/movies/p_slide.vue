@@ -31,7 +31,7 @@ img:'https://i.etsystatic.com/21028910/r/il/cdd6d8/2845936897/il_1080xN.28459368
 name:'John Wick Chapter 4',
 gen:['Action','Action','Action']},
 {num:4,
-img:'https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_FMjpg_UX1000_.jpg',
+img:'https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg',
 name:'John Wick Chapter 4',
 gen:['Action','Action','Action']},
 {num:5,
@@ -43,7 +43,7 @@ img:'https://m.media-amazon.com/images/I/91i-DXsIHeL._AC_SY606_.jpg',
 name:'John Wick Chapter 4',
 gen:['Action','Action','Action']},
 {num:7,
-img:'https://deadline.com/wp-content/uploads/2019/08/the-rise-of-skywalker-poster.jpg',
+img:'https://m.media-amazon.com/images/M/MV5BMzM5NjUxOTEyMl5BMl5BanBnXkFtZTgwNjEyMDM0MDE@._V1_.jpg',
 name:'John Wick Chapter 4',
 gen:['Action','Action','Action']}
 
@@ -75,11 +75,11 @@ gen:['Dark comedy','Crime','Drama'],
 rate:'7.9',
 id:'tt8946378'},
 {num:4,
-img:'https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_FMjpg_UX1000_.jpg',
-name:'Jurassic World 2',
-gen:['Action','Action','Action'],
-rate:'6.1',
-id:'tt14833704'},
+img:'https://m.media-amazon.com/images/M/MV5BODhkZGE0NDQtZDc0Zi00YmQ4LWJiNmUtYTY1OGM1ODRmNGVkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg',
+name:'Lady Bird',
+gen:['indie','drama','comedy'],
+rate:'7.4',
+id:'tt4925292'},
 {num:5,
 img:'https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_FMjpg_UX1000_.jpg',
 name:'Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train',
@@ -94,10 +94,10 @@ rate:'7.7',
 id:'tt2562232'},
 {num:7,
 img:'https://deadline.com/wp-content/uploads/2019/08/the-rise-of-skywalker-poster.jpg',
-name:'star wars the rise of skywalker',
-gen:['Action','Adventure','Sci Fi'],
-rate:'6.5',
-id:'tt2527338'}
+name:'The Grand Budapest Hotel',
+gen:['comedy','indie','crime'],
+rate:'8.1',
+id:'tt2278388'}
 
 ])
 
@@ -175,10 +175,10 @@ let p = (r)=>{
             <div :class="` ${cur===1? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://rare-gallery.com/uploads/posts/979135-Interstellar-movie-movies-astronaut-sea.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===2? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/02/john-wick-4-keanu-reeves.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===3? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://cdn.theatlantic.com/thumbor/gfEC-kjBeTO3jJzafQ4WrEvTBVk=/0x256:4000x2506/1600x900/media/img/mt/2019/11/knives_out_KO_D10_04517_R_rgb/original.jpg')] bg-cover bg-center`"></div>
-            <div :class="` ${cur===4? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://sfanytime-images-prod-http2.secure2.footprint.net/MEDIAM/86619dcb-65e4-4cf6-91db-a93000f18f7d_MEDIAM_32bda4db-124b-40f0-8143-8b2dfd987c6a.jpg?w=1125&fm=pjpg&s=63e07ea0150d5d854249fc798f6029dc')] bg-cover bg-center`"></div>
+            <div :class="` ${cur===4? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://m.media-amazon.com/images/M/MV5BMjQ5ODM5OGUtNzZmNi00MWVlLWFkOTctYzljYzYxY2QwYzU3XkEyXkFqcGdeQXVyNTAzMTY4MDA@._V1_.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===5? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://m.media-amazon.com/images/M/MV5BMzEwYjhkYjUtMGRjOS00ZTAxLWEyM2QtYWUwYmEyM2FmOWZmXkEyXkFqcGdeQXVyNzM3NDY3OTA@._V1_.jpg')] bg-cover bg-center`"></div>
             <div :class="` ${cur===6? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://mobimg.b-cdn.net/v3/fetch/72/72ff70586d5f4a7055ff379230e73add.jpeg')] bg-cover bg-center`"></div>
-            <div :class="` ${cur===7? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://images.hdqwalls.com/wallpapers/rey-rise-of-skywalker-4k-r6.jpg')] bg-cover bg-center`"></div>
+            <div :class="` ${cur===7? ' opacity-[100%]': 'opacity-[0%]' } transition-all duration-200ms absolute w-full h-full bg-[url('https://c4.wallpaperflare.com/wallpaper/215/294/324/movie-the-grand-budapest-hotel-hilltop-hotel-wallpaper-preview.jpg')] bg-cover bg-center`"></div>
             
             
             
@@ -204,7 +204,7 @@ let p = (r)=>{
                                     <label for="">{{ movies2[i].gen[2] }}</label>
                               </div>
                              
-                              <RouterLink  :to="`/movie/${ movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 hover:text-white text-center">View movie</RouterLink>
+                              <RouterLink  :to="`/movie/${ movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 hover:bg-c3 z-[10] transition-all duration-200 hover:text-white text-center">View movie</RouterLink>
                              
                               
                               <div class="w-[40%] relative "> 
@@ -229,7 +229,7 @@ let p = (r)=>{
                               </div>
 
 
-                              <RouterLink :to="`/movie/${movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md bg-c2 hover:text-white text-center">View movie</RouterLink>
+                              <RouterLink :to="`/movie/${movies2[cur].id}`" class="lg:w-[8%] cursor-pointer md:w-[20%] mb-[2%] py-[.5%] rounded-md  bg-c2 hover:bg-c3 z-[10] transition-all duration-200 hover:text-white text-center">View movie</RouterLink>
 
                               <div class="w-[40%] relative "> 
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio deleniti temporibus similique cupiditate maiores dolorem, nulla sunt quam dolorum alias, vero natus. Id iste veritatis molestias accusantium laudantium. At, ad.
@@ -252,7 +252,8 @@ let p = (r)=>{
 
                     <div @click="click(1)"  :class="` cursor-pointer  ${cur===movies[1].num ? '  p-[0%]':'p-[1%]'} ${click_on? 'transition-all duration-200':''}  overflow-hidden absolute w-[15%]   translate-x-[27.333%] h-full  ${n1?' opacity-[100%]  ':' opacity-[0%] transition-all duration-[500ms]'}`">
                         <img :class="`w-full  ${cur===movies[1].num ? '':''}  `" :src="movies[1].img" alt="">
-                    </div>
+                    
+                  </div>
                     
                     <div @click="click(2)" :class="` cursor-pointer ${cur===movies[2].num ? ' p-[0%] ':'p-[1%]'}  ${click_on? 'transition-all duration-200':''}   overflow-hidden absolute w-[15%] translate-x-[154.666%] h-full  `">
                           <img :class="`w-full  ${cur===movies[2].num ? ' ':''}`" :src="movies[2].img" alt="">
