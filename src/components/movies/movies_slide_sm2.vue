@@ -3,7 +3,7 @@
       <label  class="px-[1.5%] mb-[3%] text-[150%]" for="">{{ title }} :
       </label>
     </div>
-      <Carousel  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
+      <Carousel class="md:hidden"  :settings="settings" :breakpoints="breakpoints" :wrap-around="true">
         <Slide class="px-[1%] w-[70%]" v-for="f in films" :key="f">
           <div class="carousel__item w-full">
             <RouterLink :to="`/movie/${f.id}`">
@@ -27,6 +27,8 @@
     <script setup>
     import { defineComponent } from 'vue'
     import { Carousel, Navigation, Slide } from 'vue3-carousel'
+    import { defineProps, reactive, toRef,ref } from "vue";
+
     import 'vue3-carousel/dist/carousel.css'
     
     let props = defineProps({
