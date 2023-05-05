@@ -52,7 +52,7 @@ let s2 = setTimeout(()=>{
 <div class="md:hidden mb-[5%] px-[5%] border-none outline-none ">
 
   <label class="text-[180%] mb-[2%] " for="">Movie of the week:</label>
-  <div class="flex flex-col justify-center   relative items-start border-none outline-none bg-no-repeat  bg-[url('https://images3.alphacoders.com/551/551456.jpg')] bg-cover bg-center">
+      <div class="flex flex-col justify-center   relative items-start border-none outline-none bg-no-repeat  bg-[url('https://images3.alphacoders.com/551/551456.jpg')] bg-cover bg-center">
     
     <div class=" absolute w-full h-full bg-neutral-800 bg-opacity-40"></div>
     
@@ -60,8 +60,9 @@ let s2 = setTimeout(()=>{
      
     <div class="h-full flex justify-center items-center flex-col  mt-[5%] mb-[5%]  w-[100%] ">
           
-            <div class=" relative  pb-[140%]  border-none outline-none w-[90%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></div>
-             <RouterLink to="/movie/tt0816692" class="w-[100%] flex justify-center items-center hover:text-white">
+        <RouterLink to="/movie/tt0816692" class=" relative  pb-[140%]  border-none outline-none w-[90%] shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://m.media-amazon.com/images/I/71LNVGVpWYL.jpg')] bg-cover bg-center"></RouterLink>
+      
+            <RouterLink to="/movie/tt0816692" class="w-[100%] flex justify-center items-center hover:text-white">
                <button class=" relative   w-[90%] cursor-pointer  shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  bg-c2 mt-[2%] rounded-sm py-[1%] bg-cover bg-center">view movie</button>
             </RouterLink>
     </div>

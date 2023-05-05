@@ -123,6 +123,7 @@ if(num==3)
         <div @click="b(f.num)"  :class="`w-[100%]   px-[2.3%]  relative inline-block mt-[2%] bg-transparent  ${du ? 'transition-all duration-[500ms]':''}
            ${f.num===1 ? ' ':(f.num===3? '':'')}`" 
           v-for="f in films">
+          <RouterLink class="hover:text-white cursor-default" :to="`/movie/${f.id}`">
                   <div  :class="`pb-[52%]  relative overflow-hidden ${!bo? 'group':''}  w-full h-full shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]   bg-transparent  rounded-md `">
                        <div  class=" absolute w-full  h-full rounded-md bg-neutral-900 animate-pulse bg-opacity-30  bg-cover bg-center"></div>
                         <img  :src="f.img" class=" absolute w-full h-full rounded-md  bg-cover bg-center"/>
@@ -151,6 +152,7 @@ if(num==3)
                       
 
                   </div>
+                </RouterLink>
         </div>
 
 
