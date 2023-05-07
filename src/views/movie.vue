@@ -35,8 +35,10 @@ async function fetchapi() {
     //k_zdj1as3m
     // key: 018dc97373a6a1d76d6603c4e0396419
     
+    
     let resp  = await fetch(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
     
+    console.log(`https://imdb-api.com/en/API/Title/k_zdj1as3m/${title}/FullActor,Posters`)
     
     let data =  resp? await resp.json(): {}
     img.value = data.image ? data.image : 'https://image.tmdb.org/t/p/original/jtVl3nN5bJ4t7pgakLfGJmOrqZm.jpg'
@@ -313,7 +315,7 @@ let b = (name)=>{
                                        <label class=" text-[130%] mb-[1%]" for="">Actors</label>
                                        
                                        <div class="flex flex-row">
-                                             <div v-if="!cast[i-1].name=='Rebecca Ferguson'" v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
+                                             <div  v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
                                                 <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
                                                       <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
                                                       <div v-if="cast[i-1]" class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>
