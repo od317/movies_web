@@ -313,7 +313,7 @@ let b = (name)=>{
                                        <label class=" text-[130%] mb-[1%]" for="">Actors</label>
                                        
                                        <div class="flex flex-row">
-                                             <div v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
+                                             <div v-if="!cast[i-1].name=='Rebecca Ferguson'" v-for="i in 5" class="w-[12%] flex flex-col items-center  mr-[2%] ">
                                                 <div  class="  w-full pb-[100%] relative    rounded-full  bg-center bg-cover"  >
                                                       <div class=" absolute w-full h-full bg-neutral-800 animate-pulse rounded-full"></div>   
                                                       <div v-if="cast[i-1]" class="w-full h-full absolute rounded-full bg-cover bg-center " :style="` background-image:url(${cast[i-1].image})`"></div>

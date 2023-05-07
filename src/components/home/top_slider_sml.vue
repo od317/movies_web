@@ -157,7 +157,7 @@ let b = (num)=>{
                          <div class="w-[50%]  pb-[50%]  relative">
                            <div class="animate-pulse absolute bg-slate-700 w-[100%] h-full z-[20]  shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md"></div>
                            <div class="z-[30] overflow-hidden h-full absolute w-full shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)] translate-y-[-15%] rounded-md">
-                                <img :src="f.img" class=" z-[30] min-h-full  w-full  rounded-md" alt="">
+                                <div :style="` background-image:url(${f.img})`" class=" bg-cover bg-center z-[30] min-h-full  w-full  rounded-md"></div>
                            </div>
                         </div>
 
