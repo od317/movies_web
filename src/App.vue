@@ -175,8 +175,8 @@ window.scrollTo({
   
 
 
-  <div class="   w-[100%]  block sticky top-[90vh]  items-center z-[100] justify-center ">
-    <div class=" absolute w-full">
+  <div class="   w-[100%]  block  relative  items-center z-[100] justify-center ">
+    <div class=" nav w-full">
     <div :class="` md:hidden text-gray-400 m-auto   w-[90%]   flex justify-evenly z-[100]
                    ${ search_act ?' rounded-b-md':'rounded-md'} p-2 text-[1.6rem] backdrop-blur-md bg-white/30 transition-all duration-100`">
        
@@ -292,6 +292,12 @@ body{
 }
 
 
-
+.nav{
+display: flex;
+position: fixed;
+bottom: 2%;
+left: 0;
+right: 0;
+}
 
 </style>
