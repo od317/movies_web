@@ -169,7 +169,7 @@ window.scrollTo({
    <RouterLink :to="`/movie/${f.id}`">
    <div class="relative pb-[140.666667%]">
                         <div class=" h-[100%]  animate-pulse absolute   bg-slate-700 w-[100%]  z-[-1]  shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)]  "></div>
-                            <img    class="md:transition-all cursor-pointer  ease-in-out md:duration-300 rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  md:hover:shadow-none md:hover:p-1 absolute h-full w-[100%]" :src="f.img"  alt="">
+                            <img    class="md:transition-all cursor-pointer lazy ease-in-out md:duration-300 rounded-md shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]  md:hover:shadow-none md:hover:p-1 absolute h-full w-[100%]" :src="f.img"  alt="">
    </div>
 </RouterLink>
      <label class="text-[110%] truncate w-[90%]" for="">{{f.title}}</label>
@@ -238,6 +238,4 @@ window.scrollTo({
 .star{
    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
-
-
 </style>

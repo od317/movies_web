@@ -254,14 +254,14 @@ let movies = ref([
     
          <div>
          <RouterLink :to="`/movie/${movies[0].id}`">
-                  <div @mouseover="l=2" @mouseleave="l=0" class=" cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden group relative pb-[60%] rounded-sm ">
+                  <div @mouseover="l=2" @mouseleave="l=0" class=" lazy cursor-pointer shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] overflow-hidden group relative pb-[60%] rounded-sm ">
                      <div  class=" absolute w-full h-full animate-pulse    bg-slate-700"></div>
                      
-                     <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://www.shortlist.com/media/images/2020/05/tenet-inception-1590160214-1Mpm-column-width-inline.jpg')] ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
-                     <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://variety.com/wp-content/uploads/2020/04/tenet-nolan.jpg')] bg-cover bg-center ${l==1?'opacity-100':'opacity-0'} transition-all duration-200 `"></div>
-                     <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://i.pinimg.com/736x/58/3d/7c/583d7c00d9192c47256f61abb247a7d1.jpg')] ${l==3?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
-                     <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2019/03/13132847/CM-CONTROL-IT-540x305.png')] ${l==5?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
-                     <div :class="` absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://d1nslcd7m2225b.cloudfront.net/Pictures/1024x536/4/9/7/1156497_dark-knight-rises.jpg')] ${l==4?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
+                     <div :class="`  absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://www.shortlist.com/media/images/2020/05/tenet-inception-1590160214-1Mpm-column-width-inline.jpg')] ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
+                     <div :class="`  absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://variety.com/wp-content/uploads/2020/04/tenet-nolan.jpg')] bg-cover bg-center ${l==1?'opacity-100':'opacity-0'} transition-all duration-200 `"></div>
+                     <div :class="`  absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://i.pinimg.com/736x/58/3d/7c/583d7c00d9192c47256f61abb247a7d1.jpg')] ${l==3?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
+                     <div :class="`  absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2019/03/13132847/CM-CONTROL-IT-540x305.png')] ${l==5?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
+                     <div :class="`  absolute w-full h-full rounded-sm shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] bg-[url('https://d1nslcd7m2225b.cloudfront.net/Pictures/1024x536/4/9/7/1156497_dark-knight-rises.jpg')] ${l==4?'opacity-100':'opacity-0'} transition-all duration-200 bg-cover bg-center`"></div>
 
 
                               <div :class="` ${l==0||l==2?'opacity-100':'opacity-0'} transition-all duration-200 absolute  pb-[100%] bg-gray-50  translate-x-[-99%] w-full  translate-y-[-90%] ${ !bo? 'group-hover:translate-y-[0%] group-hover:bg-c3':''} transition-all duration-[500ms] `"></div>
@@ -584,5 +584,7 @@ let movies = ref([
 .star{
    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
+
+
 
 </style>

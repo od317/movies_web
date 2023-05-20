@@ -1,12 +1,14 @@
 <script setup>
 
-import { ref, watch } from 'vue';
+import { ref, watch,onMounted } from 'vue';
 import test from './test.vue'
 import {useRouter} from 'vue-router'
-
 import { useRoute } from "vue-router";
 
 const route = useRoute();
+
+
+
 
 // do a `console.log(route)` to see route attributes (fullPath, hash, params, path...)
 watch(
